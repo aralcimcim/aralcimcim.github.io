@@ -7,8 +7,8 @@ nav: true
 nav_order: 2
 ---
 
-## Letter Explainer
+## RAGz
 
-A Python web application that turns short PDF letters into plain-language explanations and action checklists in English or German. Each item includes quotations and page references from the original document.
+A Python web application for exploring public neuroscience clinical trial protocols. It combines local semantic search, trial comparisons, and optional AI explanations with quotations from the source records.
 
-[Read about the project]({{ '/projects/letter-explainer/' | relative_url }}) · [View code on GitHub](https://github.com/aralcimcim/letter-explainer)
+[Read about the project]({{ '/projects/ragz/' | relative_url }}) · [View code on GitHub](https://github.com/aralcimcim/ragz)
