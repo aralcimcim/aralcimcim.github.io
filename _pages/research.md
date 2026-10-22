@@ -32,3 +32,4 @@ Course assignments and projects in machine learning, statistics, and computer sc
 - [Hands-on AI II](https://github.com/aralcimcim/Hands-on-AI-II)
 - [Machine Learning — Supervised Techniques](https://github.com/aralcimcim/Machine-Learning-Supervised-Techniques)
 - [Machine Learning — Unsupervised Techniques](https://github.com/aralcimcim/Machine-Learning-Unsupervised-Techniques)
+- [Reinforcement Learning](https://github.com/aralcimcim/reinlear)
