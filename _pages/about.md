@@ -2,10 +2,10 @@
 layout: about
 title: About
 permalink: /
-subtitle: Machine learning engineer
+subtitle: ""
 
 selected_papers: false
-social: true
+social: false
 
 announcements:
   enabled: false
@@ -25,5 +25,3 @@ My portfolio brings together research and applied machine learning projects.
 
 - BSc in Artificial Intelligence — coursework not yet completed (4 courses remaining), thesis completed.
 - MSc in Cognitive Science — coursework completed; thesis not completed.
-
-Find my code and repositories on [GitHub](https://github.com/aralcimcim).
