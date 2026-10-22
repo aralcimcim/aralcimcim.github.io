@@ -14,11 +14,11 @@ latest_posts:
   enabled: false
 ---
 
-Machine learning engineer with a background in artificial intelligence, cognitive neuroscience (JKU Linz, University of Vienna, Medical University of Vienna).
+Machine learning engineer with a background in artificial intelligence and cognitive neuroscience (JKU Linz, University of Vienna, Medical University of Vienna).
 
 My portfolio brings together research and applied machine learning projects.
 
-- [Research]({{ '/research/' | relative_url }}) — including my Chemprop-conditioned diffusion work.
+- [Research]({{ '/research/' | relative_url }}) — includes ML courses I have completed and my thesis work on Chemprop-conditioned diffusion.
 - [Industry]({{ '/industry/' | relative_url }}) — applied projects and case studies.
 
 ## Education
