@@ -7,11 +7,7 @@ first_name: Aral
 last_name: Cimcim
 contact_note: >
   Find my projects on GitHub.
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Aral Cimcim — machine learning engineer with a background in artificial intelligence, cognitive neuroscience and media art.
-footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+description: > # the ">" symbol means to ignore newlines until "footer_text: ""
 keywords: machine learning, artificial intelligence, cognitive neuroscience, research, portfolio
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
