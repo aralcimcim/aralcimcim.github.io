@@ -14,7 +14,7 @@ latest_posts:
   enabled: false
 ---
 
-Machine Learning Engineer with a background in Artificial Intelligence and Cognitive Neuroscience (JKU Linz, University of Vienna, Medical University of Vienna).
+Machine Learning Engineer with a background in Artificial Intelligence and Cognitive Science (JKU Linz, University of Vienna, Medical University of Vienna).
 
 My portfolio brings together mathematics, applied machine learning (ML), and software engineering. My previous research explored molecular property prediction using graph neural networks and geometric deep learning. Alongside this work, I develop practical ML applications and build software that makes ML useful and accessible.
 Here, I share my projects, methods, and what I learn along the way.
