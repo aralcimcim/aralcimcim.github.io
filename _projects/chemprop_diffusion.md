@@ -13,8 +13,6 @@ My research code investigates molecular property prediction using score-based di
 
 The work builds on the DiffPred framework and compares a Chemprop classifier with a Chemprop-conditioned diffusion model.
 
-[View the research repository](https://github.com/aralcimcim/bsc)
-
 ## Method
 
 A Chemprop message-passing network encodes each molecule as a graph, using atom and bond features. These molecular representations condition a diffusion model that learns to denoise noisy property targets.
