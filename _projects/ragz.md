@@ -10,11 +10,16 @@ category: Industry
 
 ## Overview
 
-RAGz is a visual research workspace for public clinical trial protocols related to Alzheimer's disease, Parkinson's disease, and mild cognitive impairment. Users combine topic, question, and study-filter cards on a draggable canvas to define the evidence they want to explore.
+RAGz is a visual research workspace for public clinical trial protocols across 13 neuroscience topics, including neurodegeneration, epilepsy, multiple sclerosis, stroke, brain injury, migraine, sleep disorders, ADHD, and autism. Users combine topic, question, and study-filter cards on a draggable canvas to define the evidence they want to explore.
 
 [View the code on GitHub](https://github.com/aralcimcim/ragz)
 
-![RAGz canvas connecting topics and question cards to retrieved trial records]({{ '/assets/img/projects/ragz-canvas.png' | relative_url }})
+<figure class="project-preview">
+  <a href="{{ '/assets/img/projects/ragz-canvas.png' | relative_url }}" target="_blank" rel="noopener">
+    <img src="{{ '/assets/img/projects/ragz-canvas.png' | relative_url }}" alt="RAGz canvas connecting topics and question cards to retrieved trial records" width="1440" height="793" loading="lazy">
+  </a>
+  <figcaption>Application workspace. Select the image to view it at full resolution.</figcaption>
+</figure>
 
 ## How it works
 
