@@ -14,14 +14,15 @@ latest_posts:
   enabled: false
 ---
 
-Machine learning engineer with a background in artificial intelligence and cognitive neuroscience (JKU Linz, University of Vienna, Medical University of Vienna).
+Machine Learning Engineer with a background in Artificial Intelligence and Cognitive Neuroscience (JKU Linz, University of Vienna, Medical University of Vienna).
 
-My portfolio brings together research and applied machine learning projects.
+My portfolio brings together mathematics, applied machine learning (ML), and software engineering. My previous research explored molecular property prediction using graph neural networks and geometric deep learning. Alongside this work, I develop practical ML applications and build software that makes ML useful and accessible. 
+Here, I share my projects, methods, and what I learn along the way.
 
-- [Research]({{ '/research/' | relative_url }}) — includes ML courses I have completed and my thesis work on Chemprop-conditioned diffusion.
+- [Research]({{ '/research/' | relative_url }}) — includes ML courses I have completed and my thesis work on Chemprop-conditioned Diffusion.
 - [Industry]({{ '/industry/' | relative_url }}) — applied projects and case studies.
 
 ## Education
 
-- BSc in Artificial Intelligence — coursework not yet completed (4 courses remaining), thesis completed.
-- MSc in Cognitive Science — coursework completed; thesis not completed.
+- BSc in Artificial Intelligence — coursework not yet completed (4 courses remaining), thesis completed. (GPA 2.1)
+- MSc in Cognitive Science — coursework completed; thesis not completed. (GPA 1.7)
