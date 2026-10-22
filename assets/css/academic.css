@@ -110,3 +110,218 @@ html body .navbar {
     max-height: none;
   }
 }
+
+/* Research page: structured academic workspace. */
+html body .navbar {
+  border-top: 4px solid #0080fe;
+}
+html body .navbar .navbar-nav .nav-item.active > .nav-link {
+  color: #0080fe !important;
+}
+.research-workspace {
+  --research-blue: #0080fe;
+}
+.research-intro {
+  padding: 0 0 2rem;
+}
+html body .research-kicker {
+  display: block;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  color: #0066cb;
+}
+.research-intro > p {
+  max-width: 700px;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin: 0.65rem 0 1rem;
+}
+.research-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.research-tags span {
+  border: 1px solid #cce5ff;
+  background: #edf6ff;
+  color: #0058af;
+  border-radius: 5px;
+  padding: 4px 11px;
+  font:
+    12px/1.7 "Segoe UI",
+    sans-serif;
+}
+.research-feature {
+  padding: 2rem;
+  border: 1px solid #cce5ff;
+  border-left: 5px solid #0080fe;
+  border-radius: 10px;
+  background: linear-gradient(115deg, #edf6ff, #fff 85%);
+}
+html body .research-feature h2 {
+  margin: 0.7rem 0 1rem;
+  padding: 0;
+  border: 0;
+  color: #173655;
+  font-size: 2rem;
+}
+.research-feature p {
+  max-width: 740px;
+}
+.research-method {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1.2rem 0 1.6rem;
+  font:
+    12px/1.6 "Segoe UI",
+    sans-serif;
+  color: #42566d;
+}
+.research-method span {
+  background: white;
+  border: 1px solid #d6e6f6;
+  padding: 6px 9px;
+  border-radius: 5px;
+}
+.research-method b {
+  color: #0080fe;
+}
+html body a.research-cta {
+  display: inline-flex;
+  gap: 20px;
+  align-items: center;
+  background: #0080fe;
+  color: #fff;
+  padding: 11px 17px;
+  border-radius: 5px;
+  font:
+    600 14px/1.5 "Segoe UI",
+    sans-serif;
+  text-decoration: none;
+}
+html body a.research-cta:hover {
+  background: #0066cb;
+}
+.research-section {
+  margin-top: 3rem;
+}
+.research-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 1rem;
+}
+.research-section-heading > span {
+  font:
+    600 12px/1 "Segoe UI",
+    sans-serif;
+  color: #0066cb;
+  background: #edf6ff;
+  border: 1px solid #cce5ff;
+  padding: 10px;
+  border-radius: 5px;
+}
+html body .research-section-heading h2 {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  color: #173655;
+}
+.research-timeline {
+  margin-left: 15px;
+  padding-left: 25px;
+  border-left: 2px solid #cce5ff;
+}
+.school-entry {
+  position: relative;
+  display: grid;
+  grid-template-columns: 155px minmax(0, 1fr);
+  gap: 20px;
+  padding: 1.35rem 0;
+  border-bottom: 1px solid #e3ebf3;
+}
+.school-entry::before {
+  content: "";
+  position: absolute;
+  left: -32px;
+  top: 29px;
+  width: 12px;
+  height: 12px;
+  background: #0080fe;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #0080fe;
+}
+.school-date {
+  color: #0066cb;
+  font:
+    600 12px/1.8 "Segoe UI",
+    sans-serif;
+  padding-top: 4px;
+}
+html body .school-entry h3 {
+  color: #173655;
+  font-size: 1.25rem;
+  margin: 0 0 0.4rem;
+}
+.school-entry p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0.35rem 0;
+}
+.school-entry .school-place {
+  font:
+    12px/1.7 "Segoe UI",
+    sans-serif;
+  color: #607187;
+}
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+html body .course-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 14px 17px;
+  border: 1px solid #dae5f0;
+  border-radius: 6px;
+  background: #fff;
+  color: #243f5a;
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration: none;
+}
+.course-card > span:last-child {
+  color: #0080fe;
+}
+html body .course-card:hover {
+  border-color: #0080fe;
+  background: #edf6ff;
+  color: #0058af;
+}
+html body .research-workspace a:focus-visible {
+  outline: 3px solid #0080fe;
+  outline-offset: 4px;
+}
+@media (max-width: 600px) {
+  .research-feature {
+    padding: 1.3rem;
+  }
+  .school-entry {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+  .research-intro > p {
+    font-size: 1.15rem;
+  }
+}
