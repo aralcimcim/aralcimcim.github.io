@@ -2,35 +2,43 @@
 layout: page
 title: RAGz
 permalink: /projects/ragz/
-description: Public neuroscience trial exploration with semantic search and cited explanations.
+description: An interactive research canvas connecting neuroscience trial questions to source evidence.
+img: assets/img/projects/ragz-canvas.png
 importance: 1
 category: Industry
 ---
 
 ## Overview
 
-RAGz explores public clinical trial protocols related to Alzheimer's disease, Parkinson's disease, and mild cognitive impairment. Users can filter registry records, compare up to three trials, and search for evidence about study design, interventions, primary outcomes, and participant criteria.
+RAGz is a visual research workspace for public clinical trial protocols related to Alzheimer's disease, Parkinson's disease, and mild cognitive impairment. Users combine topic, question, and study-filter cards on a draggable canvas to define the evidence they want to explore.
 
 [View the code on GitHub](https://github.com/aralcimcim/ragz)
 
+![RAGz canvas connecting topics and question cards to retrieved trial records]({{ '/assets/img/projects/ragz-canvas.png' | relative_url }})
+
 ## How it works
 
-The app downloads a bounded snapshot of public ClinicalTrials.gov records, splits protocol fields into passages, and embeds them locally with FastEmbed. SQLite stores the records and vectors, and cosine similarity ranks passages within the selected trials.
+The app downloads a bounded snapshot of public ClinicalTrials.gov records, splits protocol fields into passages, and embeds them locally with FastEmbed. SQLite stores the records and vectors. Topic cards combine with OR, while study-filter categories narrow the scope. Each question card gets its own semantic search, and the results are interleaved.
+
+Retrieved trials appear as connected source nodes. Users can open a node to inspect its passages and registry link, compare up to three trials, and export their research map as JSON. Connections describe the search scope and retrieved records; they do not assert biological relationships or causation.
 
 Optional Gemini explanations use only the retrieved passages. Each generated claim must include a source identifier and a supporting quotation. The app rejects unknown sources and quotations that do not match the retrieved text.
 
 ## Implementation
 
-- Streamlit interface with topic, registry status, and study type filters.
+- An interactive canvas built with a local Streamlit component, JavaScript, and SVG.
+- Draggable concept cards, undo, automatic arrangement, reset, and map export.
+- Keyboard controls and a mobile-friendly list view.
 - Local CPU embeddings and an SQLite vector store.
 - Trial comparisons and evidence passages linked to registry records.
 - Optional structured Gemini output validated with Pydantic.
 - Public data only, without patient uploads or personal health questions.
+- A tested Docker image with bundled starter data and a CPU embedding model.
 
 ## Testing and limitations
 
-Nine automated tests cover record normalization, passage splitting, retrieval filters, vector storage, and citation validation. The interface and retrieval were also checked against a starter snapshot of 25 public trials.
+Nineteen automated tests cover record normalization, passage splitting, retrieval filters, vector storage, map validation, combined-question retrieval, and citation validation. Browser checks verify dragging, node movement, map search, source inspection, export, undo, and mobile layout. The packaged Docker app was also checked with real public trial records.
 
 RAGz is a research education prototype. It describes study protocols, not clinical recommendations. Planned outcomes are not study findings, and results tables are not indexed. The snapshot is limited and may become outdated. Matching a quotation does not guarantee that the model interprets it correctly.
 
-**Tools:** Python, Streamlit, ClinicalTrials.gov API, FastEmbed, NumPy, SQLite, Pydantic, and Gemini API.
+**Tools:** Python, Streamlit, JavaScript, SVG, ClinicalTrials.gov API, FastEmbed, NumPy, SQLite, Pydantic, Gemini API, and Docker.
