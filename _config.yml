@@ -7,9 +7,9 @@ first_name: Aral
 last_name: Cimcim
 contact_note: ""
 description: >
-  Aral Cimcim — machine learning engineer with a background in artificial intelligence and cognitive neuroscience.
+  Aral Cimcim — machine learning engineer with a background in artificial intelligence and cognitive science.
 footer_text: ""
-keywords: machine learning, artificial intelligence, cognitive neuroscience, research, portfolio
+keywords: machine learning, artificial intelligence, cognitive science, research, portfolio
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🧠 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 apple_touch_icon: # image name in /assets/img/ (or a rooted path / absolute URL) used for iOS home-screen bookmarks; needs a real 180x180 PNG, since Safari ignores the emoji favicon above. Left empty, iOS falls back to a screenshot of the page.
