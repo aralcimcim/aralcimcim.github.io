@@ -8,9 +8,17 @@ nav_order: 1
 ---
 
 <div class="research-workspace">
-<div class="research-intro"><span class="research-kicker">RESEARCH & LEARNING</span><p>Exploring the connections between molecular machine learning, cognition, and intelligent systems.</p><div class="research-tags"><span>Molecular ML</span><span>Cognitive science</span><span>Generative models</span></div></div>
+<div class="research-intro"><span class="research-kicker">RESEARCH & LEARNING</span><p>Exploring the connections between molecular machine learning, computational pathology, cognition, and intelligent systems.</p><div class="research-tags"><span>Molecular ML</span><span>Computational pathology</span><span>Cognitive science</span><span>Generative models</span></div></div>
 
 <section class="research-feature">
+<span class="research-kicker">2026–2027 · JKU LINZ</span>
+<h2>Reasoning-Guided Vision-Language Models for WSI Report Generation</h2>
+<p>This project develops a machine learning framework that analyzes pathology whole-slide images (WSIs) to generate structured medical reports. The model aims to make its reasoning explicit and link report statements to supporting visual evidence on the slide. The goal is to support pathologists with accurate, interpretable reports whose conclusions can be checked against the original images.</p>
+<div class="research-method"><span>Whole-slide images</span><b aria-hidden="true">→</b><span>Reasoning &amp; visual evidence</span><b aria-hidden="true">→</b><span>Structured reports</span></div>
+<p><strong>Supervisors</strong><br>Prof. Erich Kobler — Institute of Machine Learning (IML), JKU Linz<br>Dr. Sabina Köfler — Institute for Pathology and Molecular Pathology, JKU Linz</p>
+</section>
+
+<section class="research-feature research-section">
 <span class="research-kicker">FEATURED RESEARCH</span>
 <h2>Chemprop-conditioned diffusion</h2>
 <p>Molecular property prediction with score-based diffusion conditioned on Chemprop graph representations. My research code investigates toxicity classification on Tox21 and compares diffusion predictions with a Chemprop baseline.</p>
