@@ -8,8 +8,8 @@
 
 html:root,
 html[data-theme="light"] {
-  --global-theme-color: #18385c !important;
-  --global-hover-color: #254e78 !important;
+  --global-theme-color: #0080fe !important;
+  --global-hover-color: #0066cb !important;
   --global-hover-text-color: #ffffff !important;
   --global-text-color: #202c39 !important;
   --global-bg-color: #ffffff !important;
@@ -34,17 +34,17 @@ html body h4 {
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.25;
-  color: #18385c;
+  color: #0080fe;
 }
 
 html body a {
-  color: #18385c;
+  color: #0080fe;
   text-underline-offset: 0.19em;
 }
 
 html body a:hover,
 html body a:focus-visible {
-  color: #254e78;
+  color: #0066cb;
 }
 
 html body .post-title {
