@@ -33,3 +33,5 @@ Course assignments and projects in machine learning, statistics, and computer sc
 - [Machine Learning — Supervised Techniques](https://github.com/aralcimcim/Machine-Learning-Supervised-Techniques)
 - [Machine Learning — Unsupervised Techniques](https://github.com/aralcimcim/Machine-Learning-Unsupervised-Techniques)
 - [Reinforcement Learning](https://github.com/aralcimcim/reinlear)
+- [Computer Vision](https://github.com/aralcimcim/computer_vision)
+- [LSTMs and Transformers](https://github.com/aralcimcim/lstm_transformer)
