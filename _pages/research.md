@@ -9,9 +9,9 @@ nav_order: 1
 
 ## Chemprop-conditioned diffusion
 
-My research work on Chemprop-conditioned diffusion.
+Molecular property prediction with score-based diffusion conditioned on Chemprop graph representations. My research code investigates toxicity classification on Tox21 and compares diffusion predictions with a Chemprop baseline.
 
-[View project]({{ '/projects/chemprop-diffusion/' | relative_url }})
+[Read about the project]({{ '/projects/chemprop-diffusion/' | relative_url }}) · [Code on GitHub](https://github.com/aralcimcim/bsc)
 
 ## Coursework
 
