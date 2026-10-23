@@ -30,6 +30,7 @@ nav_order: 1
 <div class="research-timeline">
 <article class="school-entry"><div class="school-date">11–14 July 2024</div><div><h3>Oxford Machine Learning Summer School (OxML)</h3><p class="school-place">University of Oxford, Mathematical Institute, Oxford, UK</p><p>Representation Learning and Generative AI.</p></div></article>
 <article class="school-entry"><div class="school-date">15–20 August 2022</div><div><h3>Dynamic Field Theory (DFT) Online Summer School</h3><p class="school-place">Institute for Neuroinformatics, Ruhr-Universität Bochum, Germany · Online</p><p>Neuronal Dynamics for Embodied Cognition.</p></div></article>
+<article class="school-entry"><div class="school-date">11–29 July 2022</div><div><h3>Neuromatch Academy (NMA)</h3><p>Computational Neuroscience Summer School.</p></div></article>
 <article class="school-entry"><div class="school-date">4–8 July 2022</div><div><h3>9th Baltic-Nordic Summer School on Neuroinformatics (BNNI)</h3><p class="school-place">Jagiellonian University, Kraków, Poland</p><p>Understanding Neurons, Cognition and Behavior Through Neuroinformatics and Artificial Intelligence. Workshop on Deep Learning Methods for EEG Data.</p></div></article>
 <article class="school-entry"><div class="school-date">27–29 June 2022</div><div><h3>11th IMPRS NeuroCom</h3><p class="school-place">Leipzig, Germany</p><p>Max Planck Research School on Neuroscience of Communication: Function, Structure, and Plasticity. Workshop on Deep Learning and Its Application in Vision Research.</p></div></article>
 </div></section>
