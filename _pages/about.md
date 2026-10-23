@@ -25,3 +25,7 @@ latest_posts:
 **Artificial Intelligence · JKU Linz**
 
 BSc: 5 courses left for graduation; thesis completed. GPA: 2.1.
+
+{% if site.visit_notification_url and site.visit_notification_url != "" %}
+<script defer src="{{ '/assets/js/visit-notifier.js' | relative_url }}" data-endpoint="{{ site.visit_notification_url | escape }}"></script>
+{% endif %}
