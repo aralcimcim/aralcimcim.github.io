@@ -20,6 +20,8 @@ latest_posts:
   <p>I also build applications for searching and inspecting source evidence, with retrieval evaluations that make their strengths and limitations visible.</p>
 </div>
 
+<script defer src="{{ '/assets/js/home-confetti.js' | relative_url }}?v=1"></script>
+
 {% if site.visit_notification_url and site.visit_notification_url != "" %}
 <script defer src="{{ '/assets/js/visit-notifier.js' | relative_url }}" data-endpoint="{{ site.visit_notification_url | escape }}"></script>
 {% endif %}
