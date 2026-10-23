@@ -39,4 +39,11 @@ A molecular evidence explorer combining chemical similarity and semantic search 
 
 A Telegram bot that sends me “toitoitoi 🎉” when someone visits my homepage. It runs on Cloudflare Workers.
 
+<figure class="project-preview" style="max-width: 322px;">
+  <a href="{{ '/toitoi_img/toi.png' | relative_url }}" target="_blank" rel="noopener">
+    <img src="{{ '/toitoi_img/toi.png' | relative_url }}" alt="Toitoitoi bot sending homepage visit notifications in Telegram" width="322" height="322" loading="lazy">
+  </a>
+  <figcaption>Homepage visit notifications in Telegram.</figcaption>
+</figure>
+
 [View code on GitHub](https://github.com/aralcimcim/aralcimcim.github.io/tree/main/_services/visit-notifier)
