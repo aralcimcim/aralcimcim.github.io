@@ -2,13 +2,13 @@
 layout: page
 title: Research
 permalink: /research/
-description: Research projects, summer schools, and coursework in machine learning and cognitive science.
+description: Research projects, summer schools, and coursework in machine learning and artificial intelligence.
 nav: true
 nav_order: 1
 ---
 
 <div class="research-workspace">
-<div class="research-intro"><span class="research-kicker">RESEARCH & LEARNING</span><p>Exploring the connections between molecular machine learning, computational pathology, cognition, and intelligent systems.</p><div class="research-tags"><span>Molecular ML</span><span>Computational pathology</span><span>Cognitive science</span><span>Generative models</span></div></div>
+<div class="research-intro"><span class="research-kicker">RESEARCH & LEARNING</span><p>Exploring the connections between molecular machine learning, computational pathology, and intelligent systems.</p><div class="research-tags"><span>Molecular ML</span><span>Computational pathology</span><span>Evidence retrieval</span><span>Generative models</span></div></div>
 
 <section class="research-feature">
 <span class="research-kicker">2026–2027 · JKU LINZ</span>

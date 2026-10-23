@@ -2,7 +2,7 @@
 layout: page
 title: RAGz
 permalink: /projects/ragz/
-description: An interactive research canvas connecting neuroscience trial questions to source evidence.
+description: An interactive research canvas connecting clinical trial questions to source evidence.
 img: assets/img/projects/ragz-canvas.png
 importance: 1
 category: Industry

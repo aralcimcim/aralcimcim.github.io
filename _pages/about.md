@@ -14,12 +14,16 @@ latest_posts:
   enabled: false
 ---
 
-Machine Learning Engineer with a background in Artificial Intelligence and Cognitive Science (JKU Linz, University of Vienna, Medical University of Vienna).
-
-My portfolio brings together mathematics, applied machine learning (ML), and software engineering. My previous research explored molecular property prediction using graph neural networks and geometric deep learning. Alongside this work, I develop practical ML applications and build software that makes ML useful and accessible.
-Here, I share my projects, methods, and what I learn along the way.
+<div class="home-intro">
+  <span class="research-kicker">MACHINE LEARNING ENGINEER</span>
+  <p class="home-lead">Machine learning for molecules,<br>images, and evidence.</p>
+  <p>I work at the intersection of applied machine learning, mathematics, and software engineering. My research explores molecular property prediction with graph neural networks and diffusion models, alongside vision-language models for computational pathology.</p>
+  <p>I also build applications for searching and inspecting source evidence, with retrieval evaluations that make their strengths and limitations visible.</p>
+  <div class="home-focus"><span>Graph learning</span><span>Generative models</span><span>Evidence retrieval</span></div>
+</div>
 
 ## Education
 
-- BSc in Artificial Intelligence — coursework not yet completed (4 courses remaining), thesis completed. (GPA 2.1)
-- MSc in Cognitive Science — coursework completed; thesis not completed. (GPA 1.7)
+**Artificial Intelligence · JKU Linz**
+
+BSc coursework in progress (4 courses remaining); thesis completed. GPA: 2.1.

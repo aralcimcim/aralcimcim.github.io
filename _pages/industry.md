@@ -7,9 +7,11 @@ nav: true
 nav_order: 2
 ---
 
+<div class="industry-intro"><span class="research-kicker">SELECTED APPLICATIONS</span><p>Applied ML tools built around inspectable evidence, local retrieval, and measurable results.</p></div>
+
 ## RAGz
 
-A visual research workspace for public neuroscience clinical trial protocols. Drag and combine topics, questions, and study filters on an interactive canvas, then explore connected source records and cited explanations.
+A visual research workspace for public clinical trial protocols. Drag and combine topics, questions, and study filters on an interactive canvas, then explore connected source records and cited explanations.
 
 <figure class="project-preview">
   <a href="{{ '/assets/img/projects/ragz-canvas.png' | relative_url }}" target="_blank" rel="noopener">

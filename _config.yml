@@ -7,11 +7,11 @@ first_name: Aral
 last_name: Cimcim
 contact_note: ""
 description: >
-  Aral Cimcim — machine learning engineer with a background in artificial intelligence and cognitive science.
+  Aral Cimcim — machine learning engineer working on molecular ML, computational pathology, and evidence retrieval.
 footer_text: ""
-keywords: machine learning, artificial intelligence, cognitive science, research, portfolio
+keywords: machine learning, artificial intelligence, graph neural networks, retrieval, computational pathology, portfolio
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: 🧠 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: favicon.svg # Local monogram favicon.
 apple_touch_icon: # image name in /assets/img/ (or a rooted path / absolute URL) used for iOS home-screen bookmarks; needs a real 180x180 PNG, since Safari ignores the emoji favicon above. Left empty, iOS falls back to a screenshot of the page.
 
 url: "https://aralcimcim.github.io" # the base hostname & protocol for your site
