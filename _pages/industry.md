@@ -2,12 +2,12 @@
 layout: page
 title: Industry
 permalink: /industry/
-description: Applied machine learning projects and case studies.
+description: Applied machine learning projects and software tools.
 nav: true
 nav_order: 2
 ---
 
-<div class="industry-intro"><span class="research-kicker">SELECTED APPLICATIONS</span><p>Applied ML tools built around inspectable evidence, local retrieval, and measurable results.</p></div>
+<div class="industry-intro"><span class="research-kicker">SELECTED APPLICATIONS</span><p>Applied machine learning, evidence retrieval, and small software tools.</p></div>
 
 ## RAGz
 
@@ -34,3 +34,9 @@ A molecular evidence explorer combining chemical similarity and semantic search 
 </figure>
 
 [Read about the project]({{ '/projects/moleculizer/' | relative_url }}) · [View code on GitHub](https://github.com/aralcimcim/moleculizer)
+
+## Toitoitoi
+
+A Telegram bot that sends me “toitoitoi 🎉” when someone visits my homepage. It runs on Cloudflare Workers.
+
+[View code on GitHub](https://github.com/aralcimcim/aralcimcim.github.io/tree/main/_services/visit-notifier)
