@@ -6,78 +6,326 @@
   font-display: swap;
 }
 
+/* Original editorial palette and typography; shared by every portfolio page. */
 html:root,
 html[data-theme="light"] {
-  --global-theme-color: #16834a !important;
-  --global-hover-color: #116738 !important;
-  --global-hover-text-color: #ffffff !important;
-  --global-text-color: #202c39 !important;
-  --global-bg-color: #ffffff !important;
-  --global-divider-color: #dce5df !important;
-  --global-code-bg-color: #eff5f1 !important;
+  --global-theme-color: #b5472b !important;
+  --global-hover-color: #86331f !important;
+  --global-hover-text-color: #fff !important;
+  --global-text-color: #27272a !important;
+  --global-bg-color: #faf9f6 !important;
+  --global-divider-color: #dedbd5 !important;
+  --global-code-bg-color: #f0eeea !important;
 }
 
 html body {
-  font-family: "STIX Two Text", "Latin Modern Roman", Georgia, serif !important;
-  font-size: 19px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-size: 17px;
   font-weight: 400;
-  line-height: 1.72;
-  color: #202c39;
-  background: #ffffff;
+  line-height: 1.8;
+  color: #27272a;
+  background: #faf9f6;
+  -webkit-font-smoothing: antialiased;
 }
-
+html body .container {
+  max-width: 1000px;
+}
+html body .container[role="main"] {
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
 html body h1,
 html body h2,
 html body h3,
 html body h4 {
   font-family: "STIX Two Text", Georgia, serif !important;
   font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.25;
-  color: #16834a;
+  color: #242426;
+  letter-spacing: -0.025em;
+  line-height: 1.18;
 }
-
-html body a {
-  color: #16834a;
-  text-underline-offset: 0.19em;
-}
-
-html body a:hover,
-html body a:focus-visible {
-  color: #116738;
-}
-
 html body .post-title {
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: 0.6rem;
+  font-size: clamp(2.7rem, 6vw, 4rem);
+  margin-bottom: 0.7rem;
+  letter-spacing: -0.045em;
 }
-
-html body .post-description {
-  font-size: 1.03rem;
-  color: #586b60;
+html body .post-description,
+html body .desc {
+  color: #68635e;
+  font-size: 15px;
+  max-width: 700px;
+  line-height: 1.7;
 }
-
+html body .post-header {
+  margin-bottom: 2.7rem;
+}
 html body article h2 {
-  margin-top: 2.2rem;
-  padding-bottom: 0.35rem;
-  border-bottom: 1px solid #dce5df;
+  margin-top: 2.8rem;
+  margin-bottom: 1.1rem;
+  font-size: 2rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid #dedbd5;
 }
-
-html body article img {
-  max-width: 100%;
-  height: auto;
+html body a {
+  color: #b5472b;
+  text-underline-offset: 0.22em;
+  text-decoration-thickness: 1px;
 }
-
+html body article p a {
+  text-decoration: underline;
+}
+html body a:hover {
+  color: #86331f;
+}
+html body a:focus-visible {
+  outline: 2px solid #b5472b;
+  outline-offset: 5px;
+  border-radius: 2px;
+}
+html body .navbar {
+  background: #faf9f6 !important;
+  border-top: 3px solid #b5472b;
+  border-bottom: 1px solid #dedbd5;
+  box-shadow: none;
+}
+html body .navbar .navbar-brand {
+  font:
+    600 18px/1.5 "STIX Two Text",
+    Georgia,
+    serif;
+  color: #27272a;
+}
+html body .navbar .nav-link {
+  color: #55514d;
+  font-size: 14px;
+}
+html body .navbar .navbar-nav .nav-item.active > .nav-link {
+  color: #b5472b !important;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+}
+html body .research-kicker {
+  display: block;
+  font:
+    600 11px/1.6 ui-monospace,
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+  letter-spacing: 0.1em;
+  color: #b5472b;
+}
+.home-intro {
+  max-width: 780px;
+}
+html body .home-lead {
+  font:
+    500 clamp(1.7rem, 4vw, 2.4rem)/1.28 "STIX Two Text",
+    Georgia,
+    serif;
+  letter-spacing: -0.02em;
+  color: #292725;
+  margin: 1rem 0 1.5rem;
+}
+.home-intro > p:not(.home-lead) {
+  max-width: 720px;
+  color: #514d48;
+}
+.home-focus {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 24px;
+  padding: 1.2rem 0 0.6rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid #dedbd5;
+  color: #68635e;
+  font:
+    12px/2.2 ui-monospace,
+    Consolas,
+    monospace;
+}
+.home-focus span::before {
+  content: "↗ ";
+  color: #b5472b;
+}
+.research-intro {
+  padding-bottom: 2rem;
+}
+.research-intro > p,
+.industry-intro > p {
+  max-width: 730px;
+  font:
+    400 1.4rem/1.5 "STIX Two Text",
+    Georgia,
+    serif;
+  margin: 0.7rem 0 1rem;
+  color: #514d48;
+}
+.research-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+.research-tags span {
+  color: #68635e;
+  font:
+    12px/1.8 ui-monospace,
+    Consolas,
+    monospace;
+}
+.research-tags span + span::before {
+  content: "/";
+  color: #b5472b;
+  margin-right: 18px;
+}
+.research-feature {
+  position: relative;
+  background: #fffefa;
+  border: 1px solid #e1dcd5;
+  border-left: 3px solid #b5472b;
+  padding: 2rem 2.2rem;
+  border-radius: 2px;
+}
+html body .research-feature h2 {
+  margin: 0.8rem 0 1.2rem;
+  padding: 0;
+  border: 0;
+  font-size: clamp(1.65rem, 3vw, 2.15rem);
+  max-width: 800px;
+}
+.research-feature p {
+  font-size: 16px;
+  color: #514d48;
+  max-width: 800px;
+}
+.research-feature p:last-child {
+  margin-bottom: 0;
+}
+.research-method {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  align-items: center;
+  margin: 1.5rem 0;
+  font:
+    11px/1.8 ui-monospace,
+    Consolas,
+    monospace;
+  color: #68635e;
+}
+.research-method span {
+  border-bottom: 1px solid #d9d2c8;
+  padding: 4px 0;
+}
+.research-method b {
+  color: #b5472b;
+}
+html body a.research-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 25px;
+  background: #b5472b;
+  color: white;
+  border: 1px solid #b5472b;
+  padding: 10px 16px;
+  border-radius: 2px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+html body a.research-cta:hover {
+  background: #86331f;
+  border-color: #86331f;
+}
+.research-section {
+  margin-top: 2.4rem;
+}
+.research-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}
+.research-section-heading > span {
+  color: #b5472b;
+  font:
+    12px/1 ui-monospace,
+    Consolas,
+    monospace;
+}
+html body .research-section-heading h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.research-timeline {
+  border-top: 1px solid #dedbd5;
+}
+.school-entry {
+  display: grid;
+  grid-template-columns: 155px minmax(0, 1fr);
+  gap: 24px;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #dedbd5;
+}
+.school-date {
+  font:
+    12px/1.8 ui-monospace,
+    Consolas,
+    monospace;
+  color: #b5472b;
+  padding-top: 4px;
+}
+html body .school-entry h3 {
+  font-size: 1.3rem;
+  margin: 0 0 0.5rem;
+}
+.school-entry p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0.35rem 0;
+}
+.school-entry .school-place {
+  color: #68635e;
+  font-size: 12px;
+}
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 30px;
+}
+html body .course-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid #dedbd5;
+  color: #3f3b37;
+  font-size: 14px;
+  line-height: 1.6;
+  text-decoration: none;
+}
+.course-card > span:last-child {
+  color: #b5472b;
+}
+html body .course-card:hover {
+  color: #b5472b;
+  background: #f3eee7;
+}
 .project-preview {
   width: 100%;
   max-width: 100%;
   margin: 1.6rem 0;
   overflow: hidden;
-  border: 1px solid #dce5df;
-  border-radius: 8px;
-  background: #f8fbf9;
+  border: 1px solid #dedbd5;
+  border-radius: 3px;
+  background: #fff;
 }
-
+html body article img {
+  max-width: 100%;
+  height: auto;
+}
 html body .project-preview img {
   display: block;
   width: 100%;
@@ -87,229 +335,29 @@ html body .project-preview img {
   object-fit: contain;
   margin: 0;
 }
-
 .project-preview figcaption {
-  padding: 0.6rem 0.9rem;
-  border-top: 1px solid #dce5df;
-  font-family: "Segoe UI", sans-serif;
-  font-size: 12px;
-  color: #586b60;
+  padding: 0.65rem 1rem;
+  border-top: 1px solid #dedbd5;
+  font-size: 11px;
+  line-height: 1.6;
+  color: #68635e;
+  background: #f4f1ec;
 }
-
-html body .navbar {
-  border-bottom: 1px solid #dce5df;
-  box-shadow: none;
+html body article table {
+  font-size: 14px;
 }
-
 @media (max-width: 600px) {
   html body {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 1.75;
   }
-  html body .project-preview img {
-    max-height: none;
+  html body .container[role="main"] {
+    padding-top: 0.5rem;
+    padding-bottom: 3rem;
   }
-}
-
-/* Research page: structured academic workspace. */
-html body .navbar {
-  border-top: 4px solid #16834a;
-}
-html body .navbar .navbar-nav .nav-item.active > .nav-link {
-  color: #16834a !important;
-}
-.research-workspace {
-  --research-accent: #16834a;
-}
-.research-intro {
-  padding: 0 0 2rem;
-}
-html body .research-kicker {
-  display: block;
-  font-family: "Segoe UI", sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.15em;
-  font-weight: 700;
-  color: #116738;
-}
-.research-intro > p {
-  max-width: 700px;
-  font-size: 1.3rem;
-  line-height: 1.5;
-  margin: 0.65rem 0 1rem;
-}
-.research-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.research-tags span {
-  border: 1px solid #cce7d6;
-  background: #eef8f1;
-  color: #145c36;
-  border-radius: 5px;
-  padding: 4px 11px;
-  font:
-    12px/1.7 "Segoe UI",
-    sans-serif;
-}
-.research-feature {
-  padding: 2rem;
-  border: 1px solid #cce7d6;
-  border-left: 5px solid #16834a;
-  border-radius: 10px;
-  background: linear-gradient(115deg, #eef8f1, #fff 85%);
-}
-html body .research-feature h2 {
-  margin: 0.7rem 0 1rem;
-  padding: 0;
-  border: 0;
-  color: #203e2d;
-  font-size: 2rem;
-}
-.research-feature p {
-  max-width: 740px;
-}
-.research-method {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 1.2rem 0 1.6rem;
-  font:
-    12px/1.6 "Segoe UI",
-    sans-serif;
-  color: #42566d;
-}
-.research-method span {
-  background: white;
-  border: 1px solid #d6e9dc;
-  padding: 6px 9px;
-  border-radius: 5px;
-}
-.research-method b {
-  color: #16834a;
-}
-html body a.research-cta {
-  display: inline-flex;
-  gap: 20px;
-  align-items: center;
-  background: #16834a;
-  color: #fff;
-  padding: 11px 17px;
-  border-radius: 5px;
-  font:
-    600 14px/1.5 "Segoe UI",
-    sans-serif;
-  text-decoration: none;
-}
-html body a.research-cta:hover {
-  background: #116738;
-}
-.research-section {
-  margin-top: 3rem;
-}
-.research-section-heading {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 1rem;
-}
-.research-section-heading > span {
-  font:
-    600 12px/1 "Segoe UI",
-    sans-serif;
-  color: #116738;
-  background: #eef8f1;
-  border: 1px solid #cce7d6;
-  padding: 10px;
-  border-radius: 5px;
-}
-html body .research-section-heading h2 {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  color: #203e2d;
-}
-.research-timeline {
-  margin-left: 15px;
-  padding-left: 25px;
-  border-left: 2px solid #cce7d6;
-}
-.school-entry {
-  position: relative;
-  display: grid;
-  grid-template-columns: 155px minmax(0, 1fr);
-  gap: 20px;
-  padding: 1.35rem 0;
-  border-bottom: 1px solid #e3ece6;
-}
-.school-entry::before {
-  content: "";
-  position: absolute;
-  left: -32px;
-  top: 29px;
-  width: 12px;
-  height: 12px;
-  background: #16834a;
-  border: 3px solid white;
-  border-radius: 50%;
-  box-shadow: 0 0 0 1px #16834a;
-}
-.school-date {
-  color: #116738;
-  font:
-    600 12px/1.8 "Segoe UI",
-    sans-serif;
-  padding-top: 4px;
-}
-html body .school-entry h3 {
-  color: #203e2d;
-  font-size: 1.25rem;
-  margin: 0 0 0.4rem;
-}
-.school-entry p {
-  font-size: 16px;
-  line-height: 1.6;
-  margin: 0.35rem 0;
-}
-.school-entry .school-place {
-  font:
-    12px/1.7 "Segoe UI",
-    sans-serif;
-  color: #607187;
-}
-.course-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-}
-html body .course-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-  padding: 14px 17px;
-  border: 1px solid #dbe8df;
-  border-radius: 6px;
-  background: #fff;
-  color: #243f5a;
-  font-size: 16px;
-  line-height: 1.5;
-  text-decoration: none;
-}
-.course-card > span:last-child {
-  color: #16834a;
-}
-html body .course-card:hover {
-  border-color: #16834a;
-  background: #eef8f1;
-  color: #145c36;
-}
-html body .research-workspace a:focus-visible {
-  outline: 3px solid #16834a;
-  outline-offset: 4px;
-}
-@media (max-width: 600px) {
+  html body .post-header {
+    margin-bottom: 2rem;
+  }
   .research-feature {
     padding: 1.3rem;
   }
@@ -320,7 +368,17 @@ html body .research-workspace a:focus-visible {
   .course-grid {
     grid-template-columns: 1fr;
   }
-  .research-intro > p {
-    font-size: 1.15rem;
+  .research-tags {
+    gap: 6px 12px;
+  }
+  .research-tags span + span::before {
+    margin-right: 12px;
+  }
+  .research-intro > p,
+  .industry-intro > p {
+    font-size: 1.25rem;
+  }
+  html body .project-preview img {
+    max-height: none;
   }
 }
