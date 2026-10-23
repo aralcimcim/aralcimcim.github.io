@@ -45,10 +45,3 @@ node --test worker.test.mjs
 ```
 
 Tests mock Telegram; they do not contact the bot or send a real message. They cover fixed private-chat routing, rejecting other origins and malformed events, preflight handling, missing secrets, group-chat rejection, and sanitized delivery failures.
-
-## Primary documentation
-
-- [Telegram bot creation and tokens](https://core.telegram.org/bots/tutorial#obtain-your-bot-token)
-- [Telegram Bot API](https://core.telegram.org/bots/api)
-- [Cloudflare Worker secrets and deployment](https://developers.cloudflare.com/workers/configuration/secrets/)
-- [Cloudflare Workers pricing](https://developers.cloudflare.com/workers/platform/pricing/)
