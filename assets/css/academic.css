@@ -8,13 +8,13 @@
 
 html:root,
 html[data-theme="light"] {
-  --global-theme-color: #0080fe !important;
-  --global-hover-color: #0066cb !important;
+  --global-theme-color: #16834a !important;
+  --global-hover-color: #116738 !important;
   --global-hover-text-color: #ffffff !important;
   --global-text-color: #202c39 !important;
   --global-bg-color: #ffffff !important;
-  --global-divider-color: #dbe1e7 !important;
-  --global-code-bg-color: #eef3f8 !important;
+  --global-divider-color: #dce5df !important;
+  --global-code-bg-color: #eff5f1 !important;
 }
 
 html body {
@@ -34,17 +34,17 @@ html body h4 {
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.25;
-  color: #0080fe;
+  color: #16834a;
 }
 
 html body a {
-  color: #0080fe;
+  color: #16834a;
   text-underline-offset: 0.19em;
 }
 
 html body a:hover,
 html body a:focus-visible {
-  color: #0066cb;
+  color: #116738;
 }
 
 html body .post-title {
@@ -54,13 +54,13 @@ html body .post-title {
 
 html body .post-description {
   font-size: 1.03rem;
-  color: #536477;
+  color: #586b60;
 }
 
 html body article h2 {
   margin-top: 2.2rem;
   padding-bottom: 0.35rem;
-  border-bottom: 1px solid #dbe1e7;
+  border-bottom: 1px solid #dce5df;
 }
 
 html body article img {
@@ -73,9 +73,9 @@ html body article img {
   max-width: 100%;
   margin: 1.6rem 0;
   overflow: hidden;
-  border: 1px solid #dbe1e7;
+  border: 1px solid #dce5df;
   border-radius: 8px;
-  background: #f8fafc;
+  background: #f8fbf9;
 }
 
 html body .project-preview img {
@@ -90,14 +90,14 @@ html body .project-preview img {
 
 .project-preview figcaption {
   padding: 0.6rem 0.9rem;
-  border-top: 1px solid #dbe1e7;
+  border-top: 1px solid #dce5df;
   font-family: "Segoe UI", sans-serif;
   font-size: 12px;
-  color: #536477;
+  color: #586b60;
 }
 
 html body .navbar {
-  border-bottom: 1px solid #dbe1e7;
+  border-bottom: 1px solid #dce5df;
   box-shadow: none;
 }
 
@@ -112,13 +112,13 @@ html body .navbar {
 
 /* Research page: structured academic workspace. */
 html body .navbar {
-  border-top: 4px solid #0080fe;
+  border-top: 4px solid #16834a;
 }
 html body .navbar .navbar-nav .nav-item.active > .nav-link {
-  color: #0080fe !important;
+  color: #16834a !important;
 }
 .research-workspace {
-  --research-blue: #0080fe;
+  --research-accent: #16834a;
 }
 .research-intro {
   padding: 0 0 2rem;
@@ -129,7 +129,7 @@ html body .research-kicker {
   font-size: 11px;
   letter-spacing: 0.15em;
   font-weight: 700;
-  color: #0066cb;
+  color: #116738;
 }
 .research-intro > p {
   max-width: 700px;
@@ -143,9 +143,9 @@ html body .research-kicker {
   gap: 8px;
 }
 .research-tags span {
-  border: 1px solid #cce5ff;
-  background: #edf6ff;
-  color: #0058af;
+  border: 1px solid #cce7d6;
+  background: #eef8f1;
+  color: #145c36;
   border-radius: 5px;
   padding: 4px 11px;
   font:
@@ -154,16 +154,16 @@ html body .research-kicker {
 }
 .research-feature {
   padding: 2rem;
-  border: 1px solid #cce5ff;
-  border-left: 5px solid #0080fe;
+  border: 1px solid #cce7d6;
+  border-left: 5px solid #16834a;
   border-radius: 10px;
-  background: linear-gradient(115deg, #edf6ff, #fff 85%);
+  background: linear-gradient(115deg, #eef8f1, #fff 85%);
 }
 html body .research-feature h2 {
   margin: 0.7rem 0 1rem;
   padding: 0;
   border: 0;
-  color: #173655;
+  color: #203e2d;
   font-size: 2rem;
 }
 .research-feature p {
@@ -182,18 +182,18 @@ html body .research-feature h2 {
 }
 .research-method span {
   background: white;
-  border: 1px solid #d6e6f6;
+  border: 1px solid #d6e9dc;
   padding: 6px 9px;
   border-radius: 5px;
 }
 .research-method b {
-  color: #0080fe;
+  color: #16834a;
 }
 html body a.research-cta {
   display: inline-flex;
   gap: 20px;
   align-items: center;
-  background: #0080fe;
+  background: #16834a;
   color: #fff;
   padding: 11px 17px;
   border-radius: 5px;
@@ -203,7 +203,7 @@ html body a.research-cta {
   text-decoration: none;
 }
 html body a.research-cta:hover {
-  background: #0066cb;
+  background: #116738;
 }
 .research-section {
   margin-top: 3rem;
@@ -218,9 +218,9 @@ html body a.research-cta:hover {
   font:
     600 12px/1 "Segoe UI",
     sans-serif;
-  color: #0066cb;
-  background: #edf6ff;
-  border: 1px solid #cce5ff;
+  color: #116738;
+  background: #eef8f1;
+  border: 1px solid #cce7d6;
   padding: 10px;
   border-radius: 5px;
 }
@@ -228,12 +228,12 @@ html body .research-section-heading h2 {
   margin: 0;
   border: 0;
   padding: 0;
-  color: #173655;
+  color: #203e2d;
 }
 .research-timeline {
   margin-left: 15px;
   padding-left: 25px;
-  border-left: 2px solid #cce5ff;
+  border-left: 2px solid #cce7d6;
 }
 .school-entry {
   position: relative;
@@ -241,7 +241,7 @@ html body .research-section-heading h2 {
   grid-template-columns: 155px minmax(0, 1fr);
   gap: 20px;
   padding: 1.35rem 0;
-  border-bottom: 1px solid #e3ebf3;
+  border-bottom: 1px solid #e3ece6;
 }
 .school-entry::before {
   content: "";
@@ -250,20 +250,20 @@ html body .research-section-heading h2 {
   top: 29px;
   width: 12px;
   height: 12px;
-  background: #0080fe;
+  background: #16834a;
   border: 3px solid white;
   border-radius: 50%;
-  box-shadow: 0 0 0 1px #0080fe;
+  box-shadow: 0 0 0 1px #16834a;
 }
 .school-date {
-  color: #0066cb;
+  color: #116738;
   font:
     600 12px/1.8 "Segoe UI",
     sans-serif;
   padding-top: 4px;
 }
 html body .school-entry h3 {
-  color: #173655;
+  color: #203e2d;
   font-size: 1.25rem;
   margin: 0 0 0.4rem;
 }
@@ -289,7 +289,7 @@ html body .course-card {
   justify-content: space-between;
   gap: 15px;
   padding: 14px 17px;
-  border: 1px solid #dae5f0;
+  border: 1px solid #dbe8df;
   border-radius: 6px;
   background: #fff;
   color: #243f5a;
@@ -298,15 +298,15 @@ html body .course-card {
   text-decoration: none;
 }
 .course-card > span:last-child {
-  color: #0080fe;
+  color: #16834a;
 }
 html body .course-card:hover {
-  border-color: #0080fe;
-  background: #edf6ff;
-  color: #0058af;
+  border-color: #16834a;
+  background: #eef8f1;
+  color: #145c36;
 }
 html body .research-workspace a:focus-visible {
-  outline: 3px solid #0080fe;
+  outline: 3px solid #16834a;
   outline-offset: 4px;
 }
 @media (max-width: 600px) {
