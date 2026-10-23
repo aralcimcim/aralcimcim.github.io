@@ -564,7 +564,7 @@ third_party_libraries:
     version: "5.5.0"
   google_fonts:
     url:
-      fonts: "/assets/css/academic.css" # Local academic font and site-specific styles.
+      fonts: "/assets/css/academic.css?v=20261023-home-fix" # Versioned local font and portfolio styles.
   highlightjs:
     integrity:
       css:
