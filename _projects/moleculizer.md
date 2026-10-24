@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Moleculizer
+title: Molescope
 permalink: /projects/moleculizer/
 description: Molecular evidence retrieval combining chemical similarity, semantic search, and cited summaries.
 img: assets/img/projects/moleculizer.png
@@ -10,13 +10,13 @@ category: Industry
 
 ## Overview
 
-Moleculizer explores public molecular evidence using a molecule's SMILES representation and an evidence question. It combines structure-based retrieval with semantic search, keeping the source measurements and assay context visible.
+Molescope explores public molecular evidence using a molecule's SMILES representation and an evidence question. It combines structure-based retrieval with semantic search, keeping the source measurements and assay context visible.
 
 [View the code on GitHub](https://github.com/aralcimcim/moleculizer)
 
 <figure class="project-preview">
   <a href="{{ '/assets/img/projects/moleculizer.png' | relative_url }}" target="_blank" rel="noopener">
-    <img src="{{ '/assets/img/projects/moleculizer.png' | relative_url }}" alt="Moleculizer interface with dataset selection and molecular search controls" width="1440" height="861" loading="lazy">
+    <img src="{{ '/assets/img/projects/moleculizer.png' | relative_url }}" alt="Molescope interface with dataset selection and molecular search controls" width="1440" height="861" loading="lazy">
   </a>
   <figcaption>Application workspace. Select the image to view it at full resolution.</figcaption>
 </figure>
@@ -52,6 +52,6 @@ Twenty-two automated tests cover dataset parsing, missing labels, solubility uni
 
 **Retrieval evaluation:** Across eight assistant-authored compound-name/identifier text questions on frozen snapshots from all four datasets, supporting evidence appeared in the top five for **2/8 questions with Combined ranking (25% Hit@5)** and **5/8 with Text only (62.5%)**. Eight separate exact-SMILES controls scored 8/8 in both modes, which measures identity lookup rather than semantic retrieval. [Labels, results, and reproducible evaluation](https://github.com/aralcimcim/moleculizer/tree/main/evaluation) include the misses. This is a small development set requiring independent review; it does not establish analogue-discovery or answer quality.
 
-Moleculizer retrieves existing dataset evidence; it does not predict activity or implement Chemprop predictions. Structural similarity does not establish shared biological activity. Binding data and Tox21 screening labels do not establish clinical toxicity or safety. The bounded snapshots are not comprehensive literature reviews, and matching a quotation does not guarantee a correct interpretation.
+Molescope retrieves existing dataset evidence; it does not predict activity or implement Chemprop predictions. Structural similarity does not establish shared biological activity. Binding data and Tox21 screening labels do not establish clinical toxicity or safety. The bounded snapshots are not comprehensive literature reviews, and matching a quotation does not guarantee a correct interpretation.
 
 **Tools:** Python, Streamlit, RDKit, FastEmbed, NumPy, SQLite, Pydantic, Gemini API, and Docker.
