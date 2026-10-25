@@ -85,7 +85,7 @@ test("skip link and selected work CTA lead to real targets", async ({ page }) =>
   await page.getByRole("link", { name: "View selected work" }).click();
   await expect(page).toHaveURL(/#selected-work$/);
   await expect(page.locator(".home-work .work-row")).toHaveCount(4);
-  await expect(page.locator(".portfolio-header").getByRole("link", { name: "CV (PDF)" })).toHaveAttribute("href", `${prefix}/profile/vita_en.pdf`);
+  await expect(page.locator(".portfolio-footer").getByRole("link", { name: "CV (PDF)" })).toHaveAttribute("href", `${prefix}/profile/vita_en.pdf`);
 });
 
 test("project routes, images and local downloads remain available", async ({ page, request }) => {

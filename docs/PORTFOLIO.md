@@ -5,14 +5,14 @@ The personal site keeps Jekyll, the pinned al-folio gems, and the existing GitHu
 ## Source map
 
 - `_pages/about.md`: homepage introduction, selected work, Research/Industry pathways, and About.
-- `profile/foto.png`, `profile/vita_en.pdf`: the supplied portrait and unmodified personal CV. CSS clips the portrait inside a circular teal frame; the original image is retained. The CV is linked from the homepage, navigation, and footer.
+- `profile/foto.png`, `profile/vita_en.pdf`: the supplied portrait and unmodified personal CV. CSS clips the portrait inside a circular cyan frame; the original image is retained. The CV link is available in the footer.
 - `_data/socials.yml`: GitHub and the contact email verified from the supplied CV.
 - `_data/selected_work.yml`: four curated projects, factual status, metadata, asset paths, and verified project/code links.
 - `_includes/work-preview.liquid`: shared homepage and Industry project previews.
 - `_includes/header.liquid`, `_includes/footer.liquid`: shared navigation and footer.
 - `_includes/head.liquid`: retains the pinned theme's integrations, loads the local stylesheet last, and applies `relative_url` to its asset links.
 - `_layouts/default.liquid`: retains the theme layout, adds the skip-link target, and removes its extra top-margin utility.
-- `assets/css/academic.css`: shared color, typography, width, spacing, component, and responsive styles. Uses local STIX Two Text and system sans-serif; no new font service.
+- `assets/css/academic.css`: shared color, typography, width, spacing, component, and responsive styles. Neon cyan marks buttons, borders, and highlights; darker cyan keeps links and headings readable against the light background. Uses local STIX Two Text and system sans-serif; no new font service.
 - `assets/js/portfolio-nav.js`: menu state, Escape/outside-click handling, focus return, and breakpoint handling. The toggle appears only after its handlers are installed. Navigation stays visible without JavaScript.
 - `assets/img/projects/{chemprop,pathology}-method.svg`: schematic methods based on the existing research descriptions. These are diagrams, not research results or medical images.
 - `_pages/research.md`, `_pages/industry.md`: coherent section pages. Detailed `_projects` content, project URLs, original screenshots, and downloads remain intact.
