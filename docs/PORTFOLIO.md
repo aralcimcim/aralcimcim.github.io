@@ -19,8 +19,6 @@ The personal site keeps Jekyll, the pinned al-folio gems, and the existing GitHu
 - `_config.yml`: content width, document-flow navigation, and exclusion of test/output directories from deployment.
 - `.al-folio-overrides.yml`: the four reviewed theme overrides, with pinned upstream and local hashes for drift checking.
 
-The toitoitoi project entry and homepage visit-notification integration have been removed. The retired Worker source remains under the excluded `_services/` directory for reference, and the old bot screenshots are excluded from site output. Browser checks still intercept the retired endpoint to guard against notifications when testing an older build.
-
 ## Build and preview
 
 Use the Ruby/Bundler versions supported by the existing deployment and its locked dependencies:

@@ -2,11 +2,6 @@ const { test, expect } = require("@playwright/test");
 const path = require("node:path");
 const prefix = process.env.PORTFOLIO_BASE_PATH || "";
 
-test.beforeEach(async ({ page }) => {
-  // Guard against notifications when checking an older build of the site.
-  await page.route("**/aral-toitoitoi.aralcimcim.workers.dev/**", (route) => route.fulfill({ status: 204 }));
-});
-
 for (const width of [375, 768, 1024, 1440]) {
   for (const route of ["", "research/", "industry/"]) {
     test(`${route || "home"} at ${width}px: layout, assets, headings and console`, async ({ page }) => {

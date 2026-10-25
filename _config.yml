@@ -227,8 +227,6 @@ include: ["_pages"]
 exclude:
   - test/
   - output/
-  - _services/
-  - toitoi_img/
   - _posts/
   - _news/
   - _books/

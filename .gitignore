@@ -20,7 +20,7 @@ vendor
 __pycache__/
 *.pyc
 
-# Telegram and Worker credentials stay local.
+# Local environment and deployment credentials.
 .env
 .env.*
 !.env.example
