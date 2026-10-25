@@ -12,14 +12,14 @@ The personal site keeps Jekyll, the pinned al-folio gems, and the existing GitHu
 - `_includes/header.liquid`, `_includes/footer.liquid`: shared navigation and an intentionally empty footer override.
 - `_includes/head.liquid`: retains the pinned theme's integrations, loads the local stylesheet last, and applies `relative_url` to its asset links.
 - `_layouts/default.liquid`: retains the theme layout, adds the skip-link target, and removes its extra top-margin utility.
-- `assets/css/academic.css`: shared color, typography, width, spacing, component, and responsive styles. A green base supports a colorful petri-dish background: two decorative CSS layers with slow pigment and colony motion, behind dark forest text. The layers ignore pointer events and stop animating under reduced-motion preferences. The CV link has a light purple text highlight. Uses locally hosted Latin Modern Roman for LaTeX-style typography, with CSS highlights limited to key headline phrases, technical terms, and project titles; no external font service. Body copy scales from 20 to 22 pixels, supporting text is at least 16 pixels, and navigation and action links use 18-pixel text. Secondary text uses a darker green for contrast.
+- `assets/css/academic.css`: shared color, typography, width, spacing, component, and responsive styles. A green base supports a colorful petri-dish background: two static decorative CSS layers with pastel pigment and colony shapes behind dark forest text. The layers ignore pointer events and contain no animation. The CV link has a light purple text highlight. Uses locally hosted Latin Modern Roman for LaTeX-style typography, with CSS highlights limited to key headline phrases, technical terms, and project titles; no external font service. Body copy scales from 20 to 22 pixels, supporting text is at least 16 pixels, and navigation and action links use 18-pixel text. Secondary text uses a darker green for contrast.
 - `assets/js/portfolio-nav.js`: menu state, Escape/outside-click handling, focus return, and breakpoint handling. The toggle appears only after its handlers are installed. Navigation stays visible without JavaScript.
 - Research previews: the molecular machine learning and pathology entries use text without images. The original method SVG files are retained but are not rendered in the previews. Application previews keep their original screenshots.
 - `_pages/research.md`, `_pages/industry.md`: coherent section pages. Detailed `_projects` content, project URLs, original screenshots, and downloads remain intact.
 - `_config.yml`: content width, document-flow navigation, and exclusion of test/output directories from deployment.
 - `.al-folio-overrides.yml`: the four reviewed theme overrides, with pinned upstream and local hashes for drift checking.
 
-The existing homepage visit notifier is preserved. No analytics or external service was added. Browser checks intercept its endpoint so QA does not send visit notifications.
+The toitoitoi project entry and homepage visit-notification integration have been removed. The retired Worker source remains under the excluded `_services/` directory for reference, and the old bot screenshots are excluded from site output. Browser checks still intercept the retired endpoint to guard against notifications when testing an older build.
 
 ## Build and preview
 

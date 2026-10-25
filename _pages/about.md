@@ -41,7 +41,3 @@ description: Aral Cimcim — machine learning engineer working on graph neural n
     <div><p>My work combines applied machine learning, mathematics, and software engineering. I study how graph representations and generative models can support scientific prediction.</p><p>My background includes multivariate calculus, numerical optimization, software development with a specialization on machine learning in Life Sciences; in particular, <span class="text-highlight">geometric deep learning and diffusion models</span> trained on large-scale molecular datasets.</p><a class="text-link" href="mailto:{{ site.data.socials.email }}">Have a question or a project in mind? Get in touch <span aria-hidden="true">↗</span></a></div>
   </section>
 </article>
-
-{% if site.visit_notification_url and site.visit_notification_url != "" %}
-<script defer src="{{ '/assets/js/visit-notifier.js' | relative_url }}" data-endpoint="{{ site.visit_notification_url | escape }}"></script>
-{% endif %}

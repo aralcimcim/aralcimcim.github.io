@@ -69,7 +69,7 @@ body {
   isolation: isolate;
   background: linear-gradient(135deg, #eef8e4 0%, #d1e9c7 48%, #accfaa 100%);
 }
-/* Translucent pigment and colony membranes drift behind the real page text. */
+/* Static pastel pigment and colony membranes sit behind the real page text. */
 body::before,
 body::after {
   content: "";
@@ -83,7 +83,6 @@ body::before {
     radial-gradient(ellipse at 12% 20%, #efbddb 0%, transparent 40%), radial-gradient(ellipse at 88% 18%, #f7ce9e 0%, transparent 36%),
     radial-gradient(ellipse at 72% 82%, #c8b8ed 0%, transparent 38%), radial-gradient(ellipse at 22% 84%, #b1dfc6 0%, transparent 42%);
   filter: blur(18px);
-  animation: petri-pigment 28s ease-in-out infinite alternate;
 }
 body::after {
   z-index: -1;
@@ -95,23 +94,6 @@ body::after {
     radial-gradient(circle 190px at 77% 82%, #b5a1d6 0% 16%, #e1d3f2 19% 58%, #bba6d9 59% 61%, transparent 63%),
     radial-gradient(circle 55px at 47% 17%, #e2b0c4 0% 28%, #f3d7e3 31% 65%, transparent 68%),
     radial-gradient(circle 75px at 58% 60%, #a6d3bb 0% 22%, #d4ecdd 25% 60%, transparent 63%);
-  animation: petri-colonies 36s ease-in-out infinite alternate;
-}
-@keyframes petri-pigment {
-  from {
-    transform: translate3d(-2%, -1%, 0) rotate(-3deg) scale(1);
-  }
-  to {
-    transform: translate3d(3%, 2%, 0) rotate(4deg) scale(1.06);
-  }
-}
-@keyframes petri-colonies {
-  from {
-    transform: translate3d(1%, 2%, 0) rotate(3deg) scale(1);
-  }
-  to {
-    transform: translate3d(-2%, -2%, 0) rotate(-4deg) scale(1.08);
-  }
 }
 
 html body {
@@ -712,24 +694,6 @@ html body .project-preview img {
   font-size: var(--text-small);
   border-top: 1px solid var(--line);
 }
-.side-project {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--line);
-}
-.side-project-content {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 180px;
-  gap: 48px;
-  align-items: center;
-}
-.side-project-content img {
-  width: 180px;
-  height: 180px;
-}
-html body .side-project h2 {
-  margin: 8px 0 16px;
-}
 
 @media (max-width: 1023px) {
   .hero-bottom {
@@ -855,10 +819,6 @@ html body .side-project h2 {
   }
   .research-method {
     gap: 8px;
-  }
-  .side-project-content {
-    grid-template-columns: 1fr;
-    gap: 24px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

@@ -3,7 +3,7 @@ const path = require("node:path");
 const prefix = process.env.PORTFOLIO_BASE_PATH || "";
 
 test.beforeEach(async ({ page }) => {
-  // Preserve the notifier integration without generating real visit messages in QA.
+  // Guard against notifications when checking an older build of the site.
   await page.route("**/aral-toitoitoi.aralcimcim.workers.dev/**", (route) => route.fulfill({ status: 204 }));
 });
 
@@ -98,7 +98,6 @@ test("project routes, images and local downloads remain available", async ({ pag
     "assets/pdf/example_pdf.pdf",
     "assets/img/projects/moleculizer.png",
     "assets/img/projects/ragz-canvas.png",
-    "toitoi_img/toi.png",
     "profile/foto.png",
     "profile/vita_en.pdf",
   ]) {
