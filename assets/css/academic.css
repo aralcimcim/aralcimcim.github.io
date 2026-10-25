@@ -149,7 +149,7 @@ html body .portfolio-brand {
   letter-spacing: -0.04em;
   white-space: nowrap;
 }
-.portfolio-brand span {
+.portfolio-brand [aria-hidden="true"] {
   color: var(--accent);
 }
 .portfolio-menu {
@@ -171,11 +171,6 @@ html body .portfolio-menu a[aria-current="page"] {
   text-underline-offset: 8px;
   text-decoration-color: var(--highlight);
 }
-html body .portfolio-menu .nav-github {
-  padding-left: 28px;
-  border-left: 1px solid var(--line);
-  color: var(--accent);
-}
 .portfolio-menu-toggle {
   display: none;
   align-items: center;
@@ -188,11 +183,11 @@ html body .portfolio-menu .nav-github {
   font-size: 14px;
   cursor: pointer;
 }
-.portfolio-menu-toggle span {
+.portfolio-menu-toggle > [aria-hidden="true"] {
   font-size: 20px;
   line-height: 1;
 }
-.portfolio-menu-toggle[aria-expanded="true"] span {
+.portfolio-menu-toggle[aria-expanded="true"] > [aria-hidden="true"] {
   transform: rotate(45deg);
 }
 .skip-link {
@@ -245,16 +240,8 @@ html body .portrait-crop img {
   gap: 18px;
   align-items: baseline;
   margin-bottom: 22px;
-}
-.hero-identity span:first-child {
   font-weight: 600;
   font-size: 17px;
-}
-.hero-identity span:last-child {
-  padding-left: 18px;
-  border-left: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 14px;
 }
 html body .home-hero h1 {
   margin: 0;
@@ -494,7 +481,9 @@ html body .home-about h2 {
   margin: 12px 0 0;
   font-size: clamp(1.9rem, 3.5vw, 2.6rem);
 }
-.heading-highlight {
+/* Inline backgrounds follow wrapped text and remain visible without JavaScript. */
+.text-highlight {
+  display: inline;
   background: var(--highlight-hover);
   color: inherit;
   padding-inline: 0.05em;
@@ -679,19 +668,6 @@ html body .side-project h2 {
   margin: 8px 0 16px;
 }
 
-/* A real footer in document flow, shared across all routes. */
-.portfolio-footer {
-  border-top: 1px solid var(--line);
-  background: transparent;
-}
-.footer-inner {
-  padding-block: 32px;
-  font-size: 12px;
-}
-.footer-inner p {
-  margin: 0;
-}
-
 @media (max-width: 1023px) {
   .hero-bottom {
     align-items: flex-start;
@@ -742,10 +718,6 @@ html body .side-project h2 {
   html body .portfolio-menu a {
     min-height: 48px;
   }
-  html body .portfolio-menu .nav-github {
-    padding-left: 0;
-    border-left: 0;
-  }
   .hero-identity {
     flex-direction: column;
     gap: 2px;
@@ -761,10 +733,6 @@ html body .side-project h2 {
   }
   .hero-heading h1 {
     grid-column: 1 / -1;
-  }
-  .hero-identity span:last-child {
-    padding-left: 0;
-    border: 0;
   }
   html body .home-hero h1 {
     font-size: clamp(2.7rem, 8.9vw, 4.2rem);
