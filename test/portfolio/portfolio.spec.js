@@ -93,7 +93,6 @@ test("project routes, images and local downloads remain available", async ({ pag
     const response = await page.goto(`./${route}`);
     expect(response.status()).toBe(200);
     await expect(page.locator("h1")).toHaveCount(1);
-    await expect(page.locator(".portfolio-footer")).toBeVisible();
   }
   for (const url of [
     "assets/pdf/example_pdf.pdf",

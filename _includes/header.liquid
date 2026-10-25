@@ -1,4 +1,4 @@
-<a class="skip-link" href="#main-content">Skip to content</a>
+<a class="skip-link" href="#main-content"><span class="text-highlight">Skip to content</span></a>
 <header class="portfolio-header">
   <nav class="portfolio-nav container" aria-label="Main navigation">
     <a
@@ -7,7 +7,7 @@
       {% if page.url == '/' %}
         aria-current="page"
       {% endif %}
-      >Aral Cimcim<span aria-hidden="true">.</span></a
+      ><span class="text-highlight">Aral Cimcim</span><span aria-hidden="true" class="text-highlight">.</span></a
     >
     <button
       class="portfolio-menu-toggle collapsed"
@@ -16,7 +16,7 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      Menu <span aria-hidden="true">+</span>
+      <span class="text-highlight">Menu</span> <span aria-hidden="true" class="text-highlight">+</span>
     </button>
     <div class="portfolio-menu" id="portfolio-menu">
       <a
@@ -24,18 +24,17 @@
         {% if page.url contains '/research/' or page.category == 'Research' %}
           aria-current="page"
         {% endif %}
-        >Research</a
+        ><span class="text-highlight">Research</span></a
       >
       <a
         href="{{ '/industry/' | relative_url }}"
         {% if page.url contains '/industry/' or page.category == 'Industry' %}
           aria-current="page"
         {% endif %}
-        >Industry</a
+        ><span class="text-highlight">Industry</span></a
       >
-      <a href="{{ '/' | relative_url }}#about">About</a>
-      <a href="mailto:{{ site.data.socials.email }}">Contact</a>
-      <a class="nav-github" href="https://github.com/{{ site.data.socials.github_username }}">GitHub <span aria-hidden="true">↗</span></a>
+      <a href="{{ '/' | relative_url }}#about"><span class="text-highlight">About</span></a>
+      <a href="mailto:{{ site.data.socials.email }}"><span class="text-highlight">Contact</span></a>
     </div>
   </nav>
   {% if site.enable_progressbar %}
