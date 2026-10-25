@@ -65,8 +65,55 @@ body {
   line-height: 1.75;
   color: var(--ink);
   min-height: 100vh;
+  position: relative;
+  isolation: isolate;
   background: linear-gradient(135deg, #eef8e4 0%, #d1e9c7 48%, #accfaa 100%);
 }
+/* Translucent pigment and colony membranes drift behind the real page text. */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: -12vmax;
+  pointer-events: none;
+}
+body::before {
+  z-index: -2;
+  background:
+    radial-gradient(ellipse at 12% 20%, #efbddb 0%, transparent 40%), radial-gradient(ellipse at 88% 18%, #f7ce9e 0%, transparent 36%),
+    radial-gradient(ellipse at 72% 82%, #c8b8ed 0%, transparent 38%), radial-gradient(ellipse at 22% 84%, #b1dfc6 0%, transparent 42%);
+  filter: blur(18px);
+  animation: petri-pigment 28s ease-in-out infinite alternate;
+}
+body::after {
+  z-index: -1;
+  opacity: 0.48;
+  background:
+    radial-gradient(circle 150px at 13% 30%, #d6a3cf 0% 18%, #f1cfe5 20% 55%, #c79ac3 56% 58%, transparent 60%),
+    radial-gradient(circle 230px at 88% 22%, #efc487 0% 15%, #f9e3b4 18% 60%, #deb985 61% 62%, transparent 64%),
+    radial-gradient(circle 95px at 26% 78%, #a4c99c 0% 23%, #d3e8b8 26% 61%, #acc99c 62% 64%, transparent 66%),
+    radial-gradient(circle 190px at 77% 82%, #b5a1d6 0% 16%, #e1d3f2 19% 58%, #bba6d9 59% 61%, transparent 63%),
+    radial-gradient(circle 55px at 47% 17%, #e2b0c4 0% 28%, #f3d7e3 31% 65%, transparent 68%),
+    radial-gradient(circle 75px at 58% 60%, #a6d3bb 0% 22%, #d4ecdd 25% 60%, transparent 63%);
+  animation: petri-colonies 36s ease-in-out infinite alternate;
+}
+@keyframes petri-pigment {
+  from {
+    transform: translate3d(-2%, -1%, 0) rotate(-3deg) scale(1);
+  }
+  to {
+    transform: translate3d(3%, 2%, 0) rotate(4deg) scale(1.06);
+  }
+}
+@keyframes petri-colonies {
+  from {
+    transform: translate3d(1%, 2%, 0) rotate(3deg) scale(1);
+  }
+  to {
+    transform: translate3d(-2%, -2%, 0) rotate(-4deg) scale(1.08);
+  }
+}
+
 html body {
   padding: 0;
 }
@@ -257,16 +304,12 @@ html body .home-hero h1 {
   margin: 0;
   max-width: 1000px;
   font-size: clamp(3rem, 6.4vw, 5.5rem);
-  line-height: 1.02;
+  line-height: 1.08;
   letter-spacing: -0.025em;
 }
-.home-hero em {
-  color: var(--accent);
-  font-style: normal;
+.hero-word {
+  color: inherit;
   white-space: nowrap;
-}
-.mobile-line-break {
-  display: none;
 }
 .hero-bottom {
   display: flex;
@@ -327,6 +370,15 @@ html body .text-link {
   font-weight: 600;
   text-decoration: underline;
 }
+html body .cv-link {
+  --highlight-hover: #e2ccf6;
+  color: #352347;
+}
+html body .cv-link:hover {
+  --highlight-hover: #d5b6ee;
+  color: #352347;
+}
+
 .eyebrow,
 .research-kicker {
   display: block;
@@ -746,12 +798,6 @@ html body .side-project h2 {
   html body .home-hero h1 {
     font-size: clamp(2.7rem, 8.9vw, 4.2rem);
     line-height: 1.07;
-  }
-  .mobile-line-break {
-    display: block;
-  }
-  .desktop-line-break {
-    display: none;
   }
   .hero-bottom {
     flex-direction: column;

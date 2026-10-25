@@ -9,13 +9,13 @@ description: Aral Cimcim — machine learning engineer working on graph neural n
   <header class="home-hero">
     <div class="hero-heading">
     <div class="profile-portrait"><div class="portrait-crop"><img src="{{ '/profile/foto.png' | relative_url }}" alt="Portrait of Aral Cimcim" width="306" height="309" loading="eager" decoding="async"></div></div>
-    <h1><span class="text-highlight">Machine learning</span><span class="mobile-line-break"></span> for&nbsp;<br class="desktop-line-break"><span class="text-highlight">molecules</span> <em>&amp; evidence.</em></h1>
+    <h1><span class="text-highlight">Machine learning</span> for <span class="text-highlight">drug design</span> &amp; <span class="hero-word">large-scale</span> medical data</h1>
     </div>
     <div class="hero-bottom">
       <p>I work on <span class="text-highlight">graph neural networks</span> and <span class="text-highlight">conditional diffusion</span> for molecular property prediction, <span class="text-highlight">vision-language models</span> for computational pathology, and <span class="text-highlight">NLP pipelines</span> for text embeddings and dense retrieval.</p>
       <div class="hero-actions">
         <a class="action-link" href="#selected-work">View selected work <span aria-hidden="true">↓</span></a>
-        <div class="hero-secondary"><a class="text-link" href="https://github.com/{{ site.data.socials.github_username }}">View GitHub <span aria-hidden="true">↗</span></a><a class="text-link" href="{{ '/profile/vita_en.pdf' | relative_url }}">View CV (PDF) <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-secondary"><a class="text-link" href="https://github.com/{{ site.data.socials.github_username }}">View GitHub <span aria-hidden="true">↗</span></a><a class="text-link cv-link" href="{{ '/profile/vita_en.pdf' | relative_url }}"><span class="text-highlight">View CV (PDF) <span aria-hidden="true">↗</span></span></a></div>
       </div>
     </div>
   </header>
