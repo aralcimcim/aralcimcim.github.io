@@ -2,15 +2,9 @@
 <article class="work-row{% unless work.image %} work-row--text{% endunless %}" aria-labelledby="work-{{ work.title | slugify }}">
   <div class="work-copy">
     <div class="work-label">
-      <span class="work-number" aria-hidden="true"
-        ><span class="text-highlight">0{{ include.number }}</span></span
-      ><span
-        ><span class="text-highlight">{{ work.label }}</span></span
-      >
+      <span class="work-number" aria-hidden="true">0{{ include.number }}</span><span>{{ work.label }}</span>
     </div>
-    <span class="work-status"
-      ><span class="text-highlight">{{ work.status }}</span></span
-    >
+    <span class="work-status">{{ work.status }}</span>
     {% if include.heading == 'h2' %}
       <h2 id="work-{{ work.title | slugify }}">
         <a href="{{ work.url | relative_url }}"
@@ -24,23 +18,15 @@
         >
       </h3>
     {% endif %}
-    <p>
-      <span class="text-highlight">{{ work.summary }}</span>
-    </p>
-    <p class="work-metadata">
-      <span class="text-highlight">{{ work.metadata }}</span>
-    </p>
+    <p>{{ work.summary }}</p>
+    <p class="work-metadata">{{ work.metadata }}</p>
     <div class="work-links">
       <a href="{{ work.url | relative_url }}">
-        {%- if work.title == 'Reasoning-guided pathology reports' -%}
-          <span class="text-highlight">Read about the research</span>
-        {%- else -%}
-          <span class="text-highlight">Explore project</span>
-        {%- endif %}
-        <span aria-hidden="true" class="text-highlight">↗</span></a
+        {%- if work.title == 'Reasoning-guided pathology reports' %}Read about the research{% else %}Explore project{% endif %}
+        <span aria-hidden="true">↗</span></a
       >
       {%- if work.code -%}
-        <a href="{{ work.code }}"><span class="text-highlight">View code</span> <span aria-hidden="true" class="text-highlight">↗</span></a>
+        <a href="{{ work.code }}">View code <span aria-hidden="true">↗</span></a>
       {%- endif %}
     </div>
   </div>
@@ -56,13 +42,9 @@
           decoding="async"
       ></a>
       <figcaption>
-        <span
-          ><span class="text-highlight">{{ work.caption }}</span></span
-        >
+        <span>{{ work.caption }}</span>
         {%- if work.screenshot -%}
-          <a href="{{ work.image | relative_url }}"
-            ><span class="text-highlight">Full-size image</span> <span aria-hidden="true" class="text-highlight">↗</span></a
-          >
+          <a href="{{ work.image | relative_url }}">Full-size image <span aria-hidden="true">↗</span></a>
         {%- endif %}
       </figcaption>
     </figure>

@@ -4,19 +4,19 @@ The personal site keeps Jekyll, the pinned al-folio gems, and the existing GitHu
 
 ## Source map
 
-- `_pages/about.md`: homepage introduction, selected work, Research/Industry pathways, and About. The About heading has a permanent green text highlight.
+- `_pages/about.md`: homepage introduction, selected work, Research/Industry pathways, and About. The About heading highlights “foundation models” and “medical data.”
 - `profile/foto.png`, `profile/vita_en.pdf`: the supplied portrait and unmodified personal CV. CSS clips the portrait inside a circular green frame; the original image is retained. The CV link appears beside View GitHub on the homepage.
 - `_data/socials.yml`: GitHub and the contact email verified from the supplied CV.
 - `_data/selected_work.yml`: four curated projects, factual status, metadata, asset paths, and verified project/code links.
 - `_includes/work-preview.liquid`: shared homepage and Industry project previews.
-- `_includes/header.liquid`, `_includes/footer.liquid`: shared navigation and copyright-only footer.
+- `_includes/header.liquid`, `_includes/footer.liquid`: shared navigation and an intentionally empty footer override.
 - `_includes/head.liquid`: retains the pinned theme's integrations, loads the local stylesheet last, and applies `relative_url` to its asset links.
 - `_layouts/default.liquid`: retains the theme layout, adds the skip-link target, and removes its extra top-margin utility.
-- `assets/css/academic.css`: shared color, typography, width, spacing, component, and responsive styles. A green gradient spans the entire page, with dark forest text and green controls and borders. Uses local STIX Two Text and system sans-serif; no new font service.
+- `assets/css/academic.css`: shared color, typography, width, spacing, component, and responsive styles. A green gradient spans the entire page, with dark forest text and green controls and borders. Uses locally hosted Latin Modern Roman for LaTeX-style typography, with CSS highlights limited to key headline phrases, technical terms, and project titles; no external font service.
 - `assets/js/portfolio-nav.js`: menu state, Escape/outside-click handling, focus return, and breakpoint handling. The toggle appears only after its handlers are installed. Navigation stays visible without JavaScript.
 - Research previews: the molecular machine learning and pathology entries use text without images. The original method SVG files are retained but are not rendered in the previews. Application previews keep their original screenshots.
 - `_pages/research.md`, `_pages/industry.md`: coherent section pages. Detailed `_projects` content, project URLs, original screenshots, and downloads remain intact.
-- `_config.yml`: content width, document-flow navigation/footer, and exclusion of test/output directories from deployment.
+- `_config.yml`: content width, document-flow navigation, and exclusion of test/output directories from deployment.
 - `.al-folio-overrides.yml`: the four reviewed theme overrides, with pinned upstream and local hashes for drift checking.
 
 The existing homepage visit notifier is preserved. No analytics or external service was added. Browser checks intercept its endpoint so QA does not send visit notifications.

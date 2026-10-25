@@ -1,7 +1,23 @@
 @font-face {
-  font-family: "STIX Two Text";
-  src: url("../fonts/stix-two-text.ttf") format("truetype");
+  font-family: "Latin Modern Roman";
+  src: url("../fonts/lmroman10-regular.otf") format("opentype");
   font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Latin Modern Roman";
+  src: url("../fonts/lmroman10-bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: 600 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Latin Modern Roman";
+  src: url("../fonts/lmroman10-italic.otf") format("opentype");
+  font-style: italic;
   font-weight: 400 700;
   font-display: swap;
 }
@@ -18,8 +34,8 @@ html[data-theme="light"] {
   --highlight-hover: #b2dc94;
   --line: #8fac8b;
   --wash: #e4efd9;
-  --serif: "STIX Two Text", Georgia, serif;
-  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --serif: "Latin Modern Roman", "Computer Modern", Georgia, serif;
+  --body-font: var(--serif);
   --space-section: clamp(3.5rem, 7vw, 6rem);
   --global-bg-color: var(--paper);
   --global-text-color: var(--ink);
@@ -39,7 +55,7 @@ html {
 }
 body {
   margin: 0;
-  font-family: var(--sans);
+  font-family: var(--body-font);
   font-size: 17px;
   font-weight: 400;
   line-height: 1.75;
@@ -149,9 +165,6 @@ html body .portfolio-brand {
   letter-spacing: -0.04em;
   white-space: nowrap;
 }
-.portfolio-brand [aria-hidden="true"] {
-  color: var(--accent);
-}
 .portfolio-menu {
   display: flex;
   align-items: center;
@@ -213,7 +226,7 @@ html body .portfolio-menu a[aria-current="page"] {
 }
 .profile-portrait {
   grid-column: 2;
-  grid-row: 1 / span 2;
+  grid-row: 1;
   width: 100%;
   aspect-ratio: 1;
   padding: 7px;
@@ -235,20 +248,12 @@ html body .portrait-crop img {
   /* The supplied image has dark corners outside its existing circular photo. */
   transform: scale(1.1);
 }
-.hero-identity {
-  display: flex;
-  gap: 18px;
-  align-items: baseline;
-  margin-bottom: 22px;
-  font-weight: 600;
-  font-size: 17px;
-}
 html body .home-hero h1 {
   margin: 0;
   max-width: 1000px;
   font-size: clamp(3rem, 6.4vw, 5.5rem);
   line-height: 1.02;
-  letter-spacing: -0.045em;
+  letter-spacing: -0.025em;
 }
 .home-hero em {
   color: var(--accent);
@@ -321,7 +326,7 @@ html body .text-link {
 .research-kicker {
   display: block;
   color: var(--accent);
-  font: 600 11px/1.6 var(--sans);
+  font: 600 11px/1.6 var(--body-font);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -481,10 +486,10 @@ html body .home-about h2 {
   margin: 12px 0 0;
   font-size: clamp(1.9rem, 3.5vw, 2.6rem);
 }
-/* Inline backgrounds follow wrapped text and remain visible without JavaScript. */
+/* Follow each text fragment; limit the fill to avoid overlap with tall TeX font metrics. */
 .text-highlight {
   display: inline;
-  background: var(--highlight-hover);
+  background: linear-gradient(var(--highlight-hover), var(--highlight-hover)) left bottom / 100% 1em no-repeat;
   color: inherit;
   padding-inline: 0.05em;
   -webkit-box-decoration-break: clone;
@@ -718,21 +723,19 @@ html body .side-project h2 {
   html body .portfolio-menu a {
     min-height: 48px;
   }
-  .hero-identity {
-    flex-direction: column;
-    gap: 2px;
-    margin-bottom: 0;
-  }
   .hero-heading {
     grid-template-columns: minmax(0, 1fr) 88px;
     gap: 24px 16px;
   }
   .profile-portrait {
-    grid-row: 1;
+    grid-row: 2;
+    grid-column: 1;
     padding: 4px;
+    width: 88px;
   }
   .hero-heading h1 {
     grid-column: 1 / -1;
+    grid-row: 1;
   }
   html body .home-hero h1 {
     font-size: clamp(2.7rem, 8.9vw, 4.2rem);
