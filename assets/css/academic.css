@@ -27,8 +27,8 @@
 html[data-theme="light"] {
   --paper: #eaf4e1;
   --ink: #18291c;
-  --muted: #3d5143;
-  --accent: #245330;
+  --muted: #293d2e;
+  --accent: #1f4829;
   --accent-hover: #173d22;
   --highlight: #9acb75;
   --highlight-hover: #b2dc94;
@@ -36,6 +36,10 @@ html[data-theme="light"] {
   --wash: #e4efd9;
   --serif: "Latin Modern Roman", "Computer Modern", Georgia, serif;
   --body-font: var(--serif);
+  --text-size: clamp(1.25rem, 1.8vw, 1.375rem);
+  --text-small: 1.0625rem;
+  --text-label: 1rem;
+  --text-control: 1.125rem;
   --space-section: clamp(3.5rem, 7vw, 6rem);
   --global-bg-color: var(--paper);
   --global-text-color: var(--ink);
@@ -56,13 +60,12 @@ html {
 body {
   margin: 0;
   font-family: var(--body-font);
-  font-size: 17px;
+  font-size: var(--text-size);
   font-weight: 400;
   line-height: 1.75;
   color: var(--ink);
   min-height: 100vh;
   background: linear-gradient(135deg, #eef8e4 0%, #d1e9c7 48%, #accfaa 100%);
-  -webkit-font-smoothing: antialiased;
 }
 html body {
   padding: 0;
@@ -175,7 +178,8 @@ html body .portfolio-menu a {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  font-size: 14px;
+  font-size: var(--text-control);
+  font-weight: 600;
   color: var(--ink);
 }
 html body .portfolio-menu a[aria-current="page"] {
@@ -193,7 +197,8 @@ html body .portfolio-menu a[aria-current="page"] {
   border: 1px solid var(--line);
   padding: 8px 12px;
   color: var(--ink);
-  font-size: 14px;
+  font-size: var(--text-control);
+  font-weight: 600;
   cursor: pointer;
 }
 .portfolio-menu-toggle > [aria-hidden="true"] {
@@ -271,10 +276,10 @@ html body .home-hero h1 {
   padding-bottom: 42px;
 }
 .hero-bottom > p {
-  max-width: 550px;
+  max-width: 650px;
   margin: 0;
   color: var(--muted);
-  font-size: 17px;
+  font-size: var(--text-size);
   line-height: 1.7;
 }
 .hero-actions {
@@ -299,8 +304,8 @@ html body .research-cta {
   padding: 10px 18px;
   background: var(--highlight);
   color: var(--ink);
-  font-size: 14px;
-  font-weight: 500;
+  font-size: var(--text-control);
+  font-weight: 600;
   text-decoration: none;
   border: 1px solid var(--highlight);
 }
@@ -318,16 +323,16 @@ html body .text-link {
   display: inline-block;
   min-height: 44px;
   padding-block: 6px;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: var(--text-control);
+  font-weight: 600;
   text-decoration: underline;
 }
 .eyebrow,
 .research-kicker {
   display: block;
   color: var(--accent);
-  font: 600 11px/1.6 var(--body-font);
-  letter-spacing: 0.1em;
+  font: 600 var(--text-label)/1.6 var(--body-font);
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 .section-heading {
@@ -362,7 +367,7 @@ html body .section-heading h2 {
   gap: 12px;
   align-items: baseline;
   color: var(--accent);
-  font-size: 11px;
+  font-size: var(--text-label);
   font-weight: 600;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -377,7 +382,7 @@ html body .section-heading h2 {
   display: block;
   margin: 14px 0 8px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: var(--text-small);
 }
 html body .work-copy h2,
 html body .work-copy h3 {
@@ -392,11 +397,11 @@ html body .work-copy h3 a {
 .work-copy > p {
   margin: 0 0 16px;
   color: var(--muted);
-  font-size: 15px;
+  font-size: var(--text-size);
   line-height: 1.75;
 }
 .work-copy > .work-metadata {
-  font-size: 11px;
+  font-size: var(--text-small);
   line-height: 1.8;
   letter-spacing: 0.02em;
 }
@@ -410,8 +415,8 @@ html body .work-links a {
   align-items: center;
   gap: 12px;
   min-height: 44px;
-  font-size: 13px;
-  font-weight: 500;
+  font-size: var(--text-control);
+  font-weight: 600;
   text-decoration: underline;
 }
 .work-figure {
@@ -439,7 +444,7 @@ html body .work-image img {
   gap: 8px 16px;
   margin-top: 10px;
   color: var(--muted);
-  font-size: 10px;
+  font-size: var(--text-small);
   line-height: 1.6;
 }
 .work-figure figcaption a {
@@ -477,7 +482,7 @@ html body .pathway-grid h3 {
 .home-about p {
   margin: 0 0 18px;
   color: var(--muted);
-  font-size: 15px;
+  font-size: var(--text-size);
 }
 .home-about {
   padding-top: var(--space-section);
@@ -510,7 +515,7 @@ html body .desc {
   max-width: 720px;
   margin: 0;
   color: var(--muted);
-  font-size: 17px;
+  font-size: var(--text-size);
   line-height: 1.7;
 }
 html body .post > article > h2 {
@@ -544,7 +549,7 @@ html body article li {
   display: flex;
   gap: 12px 24px;
   flex-wrap: wrap;
-  font-size: 12px;
+  font-size: var(--text-small);
   color: var(--muted);
 }
 .research-feature {
@@ -558,7 +563,7 @@ html body .research-feature h2 {
 }
 .research-feature p {
   max-width: 860px;
-  font-size: 16px;
+  font-size: var(--text-size);
   color: var(--muted);
 }
 .research-method {
@@ -567,7 +572,7 @@ html body .research-feature h2 {
   align-items: center;
   gap: 12px;
   margin: 24px 0;
-  font-size: 12px;
+  font-size: var(--text-small);
   color: var(--muted);
 }
 .research-method span {
@@ -587,7 +592,7 @@ html body .research-feature h2 {
   margin-bottom: 24px;
 }
 .research-section-heading > span {
-  font-size: 12px;
+  font-size: var(--text-small);
   color: var(--accent);
 }
 html body .research-section-heading h2 {
@@ -605,7 +610,7 @@ html body .research-section-heading h2 {
 }
 .school-date {
   padding-top: 4px;
-  font-size: 12px;
+  font-size: var(--text-small);
   color: var(--accent);
 }
 html body .school-entry h3 {
@@ -613,12 +618,12 @@ html body .school-entry h3 {
   margin: 0 0 12px;
 }
 .school-entry p {
-  font-size: 15px;
+  font-size: var(--text-size);
   margin: 6px 0;
 }
 .school-entry .school-place {
   color: var(--muted);
-  font-size: 13px;
+  font-size: var(--text-control);
 }
 .course-grid {
   display: grid;
@@ -633,7 +638,8 @@ html body .course-card {
   min-height: 60px;
   padding-block: 16px;
   border-bottom: 1px solid var(--line);
-  font-size: 14px;
+  font-size: var(--text-control);
+  font-weight: 600;
   color: var(--ink);
 }
 .project-preview {
@@ -651,7 +657,7 @@ html body .project-preview img {
 .project-preview figcaption {
   padding: 12px 16px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: var(--text-small);
   border-top: 1px solid var(--line);
 }
 .side-project {
@@ -754,7 +760,7 @@ html body .side-project h2 {
   }
   .hero-bottom > p {
     max-width: 580px;
-    font-size: 16px;
+    font-size: var(--text-size);
   }
   .hero-actions {
     flex-direction: row;
@@ -781,7 +787,7 @@ html body .side-project h2 {
     display: inline-flex;
     align-items: center;
     min-height: 44px;
-    font-size: 11px;
+    font-size: var(--text-small);
   }
   .pathway-grid,
   .home-about {
@@ -799,7 +805,7 @@ html body .side-project h2 {
     gap: 8px;
   }
   .research-feature p {
-    font-size: 16px;
+    font-size: var(--text-size);
   }
   .research-method {
     gap: 8px;
