@@ -5,7 +5,7 @@ permalink: /projects/ragz/
 description: An interactive research canvas connecting clinical trial questions to source evidence.
 img: assets/img/projects/ragz-canvas.png
 importance: 1
-category: Industry
+category: Software
 ---
 
 ## Overview

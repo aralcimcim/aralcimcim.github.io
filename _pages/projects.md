@@ -2,10 +2,10 @@
 layout: page
 title: projects
 permalink: /projects/
-description: Research and industry projects.
+description: Research and software projects.
 nav: false
 nav_order: 3
-display_categories: [Research, Industry]
+display_categories: [Research, Software]
 horizontal: false
 ---
 

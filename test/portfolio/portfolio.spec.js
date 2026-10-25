@@ -98,7 +98,6 @@ test("project routes, images and local downloads remain available", async ({ pag
     "assets/pdf/example_pdf.pdf",
     "assets/img/projects/moleculizer.png",
     "assets/img/projects/ragz-canvas.png",
-    "profile/foto.png",
     "profile/vita_en.pdf",
   ]) {
     expect((await request.get(`./${url}`)).status()).toBe(200);
@@ -110,8 +109,8 @@ test("mobile navigation remains available without JavaScript", async ({ browser 
   const page = await context.newPage();
   await page.goto(`http://127.0.0.1:4188${prefix}/`);
   await expect(page.locator("#portfolio-menu")).toBeVisible();
-  await page.locator("#portfolio-menu").getByRole("link", { name: "Industry", exact: true }).click();
-  await expect(page.locator("h1")).toHaveText("Industry");
+  await page.locator("#portfolio-menu").getByRole("link", { name: "Software", exact: true }).click();
+  await expect(page.locator("h1")).toHaveText("Software");
   await context.close();
 });
 

@@ -4,7 +4,9 @@
     <div class="work-label">
       <span class="work-number" aria-hidden="true">0{{ include.number }}</span><span>{{ work.label }}</span>
     </div>
-    <span class="work-status">{{ work.status }}</span>
+    {% if work.status -%}
+      <span class="work-status">{{ work.status }}</span>
+    {%- endif %}
     {% if include.heading == 'h2' %}
       <h2 id="work-{{ work.title | slugify }}">
         <a href="{{ work.url | relative_url }}"

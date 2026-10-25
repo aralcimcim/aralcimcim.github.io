@@ -28,10 +28,10 @@
       >
       <a
         href="{{ '/industry/' | relative_url }}"
-        {% if page.url contains '/industry/' or page.category == 'Industry' %}
+        {% if page.url contains '/industry/' or page.category == 'Software' %}
           aria-current="page"
         {% endif %}
-        >Industry</a
+        >Software</a
       >
       <a href="{{ '/' | relative_url }}#about">About</a>
       <a href="mailto:{{ site.data.socials.email }}">Contact</a>

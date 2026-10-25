@@ -5,7 +5,7 @@ permalink: /projects/moleculizer/
 description: Molecular evidence retrieval combining chemical similarity, semantic search, and cited summaries.
 img: assets/img/projects/moleculizer.png
 importance: 2
-category: Industry
+category: Software
 ---
 
 ## Overview

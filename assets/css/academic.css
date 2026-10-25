@@ -238,35 +238,7 @@ html body .portfolio-menu a[aria-current="page"] {
 
 /* Homepage: compact introduction, then the work itself. */
 .hero-heading {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) clamp(120px, 14vw, 176px);
-  column-gap: 32px;
-  align-items: center;
   margin-bottom: 26px;
-}
-.profile-portrait {
-  grid-column: 2;
-  grid-row: 1;
-  width: 100%;
-  aspect-ratio: 1;
-  padding: 7px;
-  border: 2px solid var(--highlight);
-  border-radius: 50%;
-  background: var(--paper);
-}
-.portrait-crop {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 50%;
-}
-html body .portrait-crop img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* The supplied image has dark corners outside its existing circular photo. */
-  transform: scale(1.1);
 }
 html body .home-hero h1 {
   margin: 0;
@@ -521,7 +493,7 @@ html body .home-about h2 {
   box-decoration-break: clone;
 }
 
-/* Research, Industry and detailed project pages share the same hierarchy. */
+/* Research, Software and detailed project pages share the same hierarchy. */
 html body .post-header {
   margin-bottom: 3rem;
   padding-bottom: 2rem;
@@ -555,11 +527,11 @@ html body article li {
   margin-bottom: 8px;
 }
 .research-intro,
-.industry-intro {
+.software-intro {
   margin-bottom: 2.5rem;
 }
 .research-intro > p,
-.industry-intro > p {
+.software-intro > p {
   max-width: 800px;
   margin: 12px 0;
   font: 400 1.55rem/1.5 var(--serif);
@@ -730,20 +702,6 @@ html body .project-preview img {
   }
   html body .portfolio-menu a {
     min-height: 48px;
-  }
-  .hero-heading {
-    grid-template-columns: minmax(0, 1fr) 88px;
-    gap: 24px 16px;
-  }
-  .profile-portrait {
-    grid-row: 2;
-    grid-column: 1;
-    padding: 4px;
-    width: 88px;
-  }
-  .hero-heading h1 {
-    grid-column: 1 / -1;
-    grid-row: 1;
   }
   html body .home-hero h1 {
     font-size: clamp(2.7rem, 8.9vw, 4.2rem);

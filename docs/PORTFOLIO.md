@@ -4,18 +4,18 @@ The personal site keeps Jekyll, the pinned al-folio gems, and the existing GitHu
 
 ## Source map
 
-- `_pages/about.md`: homepage introduction, selected work, Research/Industry pathways, and About. The About heading highlights “foundation models” and “medical data.”
-- `profile/foto.png`, `profile/vita_en.pdf`: the supplied portrait and unmodified personal CV. CSS clips the portrait inside a circular green frame; the original image is retained. The CV link appears beside View GitHub on the homepage.
+- `_pages/about.md`: homepage introduction, selected work, Research/Software pathways, and About. The About heading highlights “foundation models” and “medical data.”
+- `profile/vita_en.pdf`: the unmodified personal CV, linked beside View GitHub on the homepage. The profile photo is no longer displayed.
 - `_data/socials.yml`: GitHub and the contact email verified from the supplied CV.
 - `_data/selected_work.yml`: four curated projects, factual status, metadata, asset paths, and verified project/code links.
-- `_includes/work-preview.liquid`: shared homepage and Industry project previews.
+- `_includes/work-preview.liquid`: shared homepage and Software project previews.
 - `_includes/header.liquid`, `_includes/footer.liquid`: shared navigation and an intentionally empty footer override.
 - `_includes/head.liquid`: retains the pinned theme's integrations, loads the local stylesheet last, and applies `relative_url` to its asset links.
 - `_layouts/default.liquid`: retains the theme layout, adds the skip-link target, and removes its extra top-margin utility.
 - `assets/css/academic.css`: shared color, typography, width, spacing, component, and responsive styles. A green base supports a soft, static gradient of pastel pink, amber, mint, and lavender behind dark forest text. The decorative layer ignores pointer events and has no shapes or animation. The CV link has a light purple text highlight. Uses locally hosted Latin Modern Roman for LaTeX-style typography, with CSS highlights limited to key headline phrases, technical terms, and project titles; no external font service. Body copy scales from 20 to 22 pixels, supporting text is at least 16 pixels, and navigation and action links use 18-pixel text. Secondary text uses a darker green for contrast.
 - `assets/js/portfolio-nav.js`: menu state, Escape/outside-click handling, focus return, and breakpoint handling. The toggle appears only after its handlers are installed. Navigation stays visible without JavaScript.
 - Research previews: the molecular machine learning and pathology entries use text without images. The original method SVG files are retained but are not rendered in the previews. Application previews keep their original screenshots.
-- `_pages/research.md`, `_pages/industry.md`: coherent section pages. Detailed `_projects` content, project URLs, original screenshots, and downloads remain intact.
+- `_pages/research.md`, `_pages/industry.md`: coherent section pages. Software retains the `/industry/` URL for existing inbound links. Detailed `_projects` content, project URLs, original screenshots, and downloads remain intact.
 - `_config.yml`: content width, document-flow navigation, and exclusion of test/output directories from deployment.
 - `.al-folio-overrides.yml`: the four reviewed theme overrides, with pinned upstream and local hashes for drift checking.
 
@@ -49,7 +49,7 @@ Validation performed for this redesign:
 
 - Production Jekyll builds at the configured root and at `/portfolio-check`.
 - The same PurgeCSS configuration used by the deployment, followed by the browser suite against both optimized builds.
-- 18 browser checks per build: Home, Research, and Industry at 375, 768, 1024, and 1440 pixels; no horizontal overflow, missing local assets, or console errors; loaded images and heading order; keyboard skip link; mobile menu state and Escape focus; navigation without JavaScript; original project/download routes; local link and fragment targets; visible HTML text contrast and reduced-motion behavior.
+- 18 browser checks per build: Home, Research, and Software at 375, 768, 1024, and 1440 pixels; no horizontal overflow, missing local assets, or console errors; loaded images and heading order; keyboard skip link; mobile menu state and Escape focus; navigation without JavaScript; original project/download routes; local link and fragment targets; visible HTML text contrast and reduced-motion behavior.
 - Desktop and mobile screenshots inspected for composition, wrapping, whitespace, and image treatment. Original screenshots are contained rather than cropped and have full-size links.
 - Repository formatting, JavaScript syntax, and whitespace checks.
 

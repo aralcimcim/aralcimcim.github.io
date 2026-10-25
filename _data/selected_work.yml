@@ -1,7 +1,6 @@
 - title: Chemprop-conditioned diffusion
   category: Research
   label: Molecular machine learning
-  status: Research code
   summary: Predicting molecular toxicity with score-based diffusion conditioned on Chemprop graph representations.
   metadata: Tox21 · Graph neural networks · PyTorch
   url: /projects/chemprop-diffusion/
@@ -16,7 +15,7 @@
   url: /research/#pathology
 
 - title: Molescope
-  category: Industry
+  category: Software
   label: Molecular evidence retrieval
   status: Application
   summary: Exploring molecular measurements with chemical similarity, semantic search, and inspectable source records.
@@ -31,7 +30,7 @@
   screenshot: true
 
 - title: TrialTrace
-  category: Industry
+  category: Software
   label: Clinical trial evidence retrieval
   status: Research prototype
   summary: A visual research canvas connecting clinical trial questions to retrieved protocols and cited source passages.

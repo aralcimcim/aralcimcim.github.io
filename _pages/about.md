@@ -8,8 +8,7 @@ description: Aral Cimcim — machine learning engineer working on graph neural n
 <article class="portfolio-home">
   <header class="home-hero">
     <div class="hero-heading">
-    <div class="profile-portrait"><div class="portrait-crop"><img src="{{ '/profile/foto.png' | relative_url }}" alt="Portrait of Aral Cimcim" width="306" height="309" loading="eager" decoding="async"></div></div>
-    <h1><span class="text-highlight">Machine learning</span> for <span class="text-highlight">drug design</span> &amp; <span class="hero-word">large-scale</span> medical data</h1>
+    <h1><span class="text-highlight">Machine learning</span> for <span class="text-highlight hero-word">drug design</span> &amp; <span class="hero-word">large-scale</span> medical data</h1>
     </div>
     <div class="hero-bottom">
       <p>I work on <span class="text-highlight">graph neural networks</span> and <span class="text-highlight">conditional diffusion</span> for molecular property prediction, <span class="text-highlight">vision-language models</span> for computational pathology, and <span class="text-highlight">NLP pipelines</span> for text embeddings and dense retrieval.</p>
@@ -21,7 +20,7 @@ description: Aral Cimcim — machine learning engineer working on graph neural n
   </header>
 
   <section id="selected-work" class="home-work" aria-labelledby="work-heading">
-    <div class="section-heading"><div><span class="eyebrow">A closer look</span><h2 id="work-heading">Selected work</h2></div></div>
+    <div class="section-heading"><div><h2 id="work-heading">Selected work</h2></div></div>
     {% for work in site.data.selected_work %}
       {% include work-preview.liquid work=work number=forloop.index %}
     {% endfor %}
@@ -32,7 +31,7 @@ description: Aral Cimcim — machine learning engineer working on graph neural n
     <h2 id="explore-heading">Questions, experiments, applications.</h2>
     <div class="pathway-grid">
       <div><h3><a href="{{ '/research/' | relative_url }}">Research <span aria-hidden="true">↗</span></a></h3><p>Molecular representations, conditional diffusion, and reasoning-guided pathology reports. Methods, experiments, and the questions behind them.</p><a class="text-link" href="{{ '/research/' | relative_url }}">Explore research <span aria-hidden="true">→</span></a></div>
-      <div><h3><a href="{{ '/industry/' | relative_url }}">Industry <span aria-hidden="true">↗</span></a></h3><p>Molecular evidence search and a clinical trial research canvas. Software, source inspection, and practical retrieval workflows.</p><a class="text-link" href="{{ '/industry/' | relative_url }}">Explore applications <span aria-hidden="true">→</span></a></div>
+      <div><h3><a href="{{ '/industry/' | relative_url }}">Software <span aria-hidden="true">↗</span></a></h3><p>Molecular evidence search and a clinical trial research canvas. Software, source inspection, and practical retrieval workflows.</p><a class="text-link" href="{{ '/industry/' | relative_url }}">Explore applications <span aria-hidden="true">→</span></a></div>
     </div>
   </section>
 
