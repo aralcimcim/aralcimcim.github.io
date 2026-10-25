@@ -1,5 +1,5 @@
 {% assign work = include.work %}
-<article class="work-row" aria-labelledby="work-{{ work.title | slugify }}">
+<article class="work-row{% unless work.image or work.visual %} work-row--text{% endunless %}" aria-labelledby="work-{{ work.title | slugify }}">
   <div class="work-copy">
     <div class="work-label">
       <span class="work-number" aria-hidden="true">0{{ include.number }}</span><span>{{ work.label }}</span>
@@ -26,21 +26,25 @@
       {%- endif %}
     </div>
   </div>
-  <figure class="work-figure">
-    <a class="work-image" href="{{ work.url | relative_url }}"
-      ><img
-        src="{{ work.image | relative_url }}"
-        alt="{{ work.alt }}"
-        width="{{ work.width }}"
-        height="{{ work.height }}"
-        loading="lazy"
-        decoding="async"
-    ></a>
-    <figcaption>
-      <span>{{ work.caption }}</span>
-      {%- if work.screenshot -%}
-        <a href="{{ work.image | relative_url }}">Full-size image <span aria-hidden="true">↗</span></a>
-      {%- endif %}
-    </figcaption>
-  </figure>
+  {% if work.image %}
+    <figure class="work-figure">
+      <a class="work-image" href="{{ work.url | relative_url }}"
+        ><img
+          src="{{ work.image | relative_url }}"
+          alt="{{ work.alt }}"
+          width="{{ work.width }}"
+          height="{{ work.height }}"
+          loading="lazy"
+          decoding="async"
+      ></a>
+      <figcaption>
+        <span>{{ work.caption }}</span>
+        {%- if work.screenshot -%}
+          <a href="{{ work.image | relative_url }}">Full-size image <span aria-hidden="true">↗</span></a>
+        {%- endif %}
+      </figcaption>
+    </figure>
+  {% elsif work.visual == 'red-gradient' %}
+    <div class="work-gradient" aria-hidden="true"></div>
+  {% endif %}
 </article>

@@ -6,11 +6,7 @@
   metadata: Tox21 · Graph neural networks · PyTorch
   url: /projects/chemprop-diffusion/
   code: https://github.com/aralcimcim/bsc/tree/main/thesis_code/diffpred_MODDED
-  image: /assets/img/projects/chemprop-method.svg
-  alt: Method overview from molecular graph through Chemprop representations and conditional diffusion to Tox21 toxicity predictions.
-  width: 720
-  height: 420
-  caption: Method overview · Molecular property prediction
+  visual: red-gradient
 
 - title: Reasoning-guided pathology reports
   category: Research
@@ -19,11 +15,6 @@
   summary: Developing vision-language models that connect whole-slide images to structured reports and supporting visual evidence.
   metadata: Whole-slide images · Vision-language models · JKU Linz
   url: /research/#pathology
-  image: /assets/img/projects/pathology-method.svg
-  alt: Research goal connecting whole-slide images with visual reasoning, supporting evidence, and structured pathology reports.
-  width: 720
-  height: 420
-  caption: Research framework · Reasoning and visual evidence
 
 - title: Molescope
   category: Industry

@@ -14,7 +14,7 @@ The personal site keeps Jekyll, the pinned al-folio gems, and the existing GitHu
 - `_layouts/default.liquid`: retains the theme layout, adds the skip-link target, and removes its extra top-margin utility.
 - `assets/css/academic.css`: shared color, typography, width, spacing, component, and responsive styles. Neon cyan marks buttons, borders, and highlights; darker cyan keeps links and headings readable against the light background. Uses local STIX Two Text and system sans-serif; no new font service.
 - `assets/js/portfolio-nav.js`: menu state, Escape/outside-click handling, focus return, and breakpoint handling. The toggle appears only after its handlers are installed. Navigation stays visible without JavaScript.
-- `assets/img/projects/{chemprop,pathology}-method.svg`: schematic methods based on the existing research descriptions. These are diagrams, not research results or medical images.
+- Research previews: the molecular machine learning entry uses a decorative CSS red gradient, and the pathology entry uses text without an image. The original method SVG files are retained but are not rendered in the previews. Application previews keep their original screenshots.
 - `_pages/research.md`, `_pages/industry.md`: coherent section pages. Detailed `_projects` content, project URLs, original screenshots, and downloads remain intact.
 - `_config.yml`: content width, document-flow navigation/footer, and exclusion of test/output directories from deployment.
 - `.al-folio-overrides.yml`: the four reviewed theme overrides, with pinned upstream and local hashes for drift checking.
@@ -61,4 +61,4 @@ Screenshots are generated under ignored `output/playwright/`. The text-contrast 
 
 The supplied personal CV is linked directly at `/profile/vita_en.pdf`, with the configured base URL applied. The existing template CV data and sample PDFs remain separate and are not promoted. The contact email is verified from the personal CV. No verified LinkedIn URL was supplied, so that link is omitted.
 
-The pathology project has no existing project screenshot or dedicated project page. Its preview links to the ongoing research section and uses a labeled framework diagram. No publication, performance result, completed degree, or professional history was inferred.
+The pathology project has no existing project screenshot or dedicated project page. Its text preview links to the ongoing research section. No publication, performance result, completed degree, or professional history was inferred.
