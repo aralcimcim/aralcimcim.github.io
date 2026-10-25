@@ -4,12 +4,12 @@ The personal site keeps Jekyll, the pinned al-folio gems, and the existing GitHu
 
 ## Source map
 
-- `_pages/about.md`: homepage introduction, selected work, Research/Industry pathways, and About.
-- `profile/foto.png`, `profile/vita_en.pdf`: the supplied portrait and unmodified personal CV. CSS clips the portrait inside a circular green frame; the original image is retained. The CV link appears beside View GitHub on the homepage and in the footer.
+- `_pages/about.md`: homepage introduction, selected work, Research/Industry pathways, and About. The About heading has a permanent green text highlight.
+- `profile/foto.png`, `profile/vita_en.pdf`: the supplied portrait and unmodified personal CV. CSS clips the portrait inside a circular green frame; the original image is retained. The CV link appears beside View GitHub on the homepage.
 - `_data/socials.yml`: GitHub and the contact email verified from the supplied CV.
 - `_data/selected_work.yml`: four curated projects, factual status, metadata, asset paths, and verified project/code links.
 - `_includes/work-preview.liquid`: shared homepage and Industry project previews.
-- `_includes/header.liquid`, `_includes/footer.liquid`: shared navigation and footer.
+- `_includes/header.liquid`, `_includes/footer.liquid`: shared navigation and copyright-only footer.
 - `_includes/head.liquid`: retains the pinned theme's integrations, loads the local stylesheet last, and applies `relative_url` to its asset links.
 - `_layouts/default.liquid`: retains the theme layout, adds the skip-link target, and removes its extra top-margin utility.
 - `assets/css/academic.css`: shared color, typography, width, spacing, component, and responsive styles. A green gradient spans the entire page, with dark forest text and green controls and borders. Uses local STIX Two Text and system sans-serif; no new font service.
