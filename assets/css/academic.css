@@ -357,6 +357,17 @@ html body .section-heading h2 {
   padding-block: 36px;
   border-top: 1px solid var(--line);
 }
+.work-row--text {
+  grid-template-columns: minmax(0, 1fr);
+}
+.work-row--text .work-copy {
+  max-width: 760px;
+}
+.work-gradient {
+  width: 100%;
+  aspect-ratio: 12 / 7;
+  background: linear-gradient(135deg, #40040f 0%, #a10f2b 40%, #ed3d55 72%, #ff9ba7 100%);
+}
 .work-label {
   display: flex;
   gap: 12px;
