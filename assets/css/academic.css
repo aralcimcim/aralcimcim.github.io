@@ -494,6 +494,13 @@ html body .home-about h2 {
   margin: 12px 0 0;
   font-size: clamp(1.9rem, 3.5vw, 2.6rem);
 }
+.heading-highlight {
+  background: var(--highlight-hover);
+  color: inherit;
+  padding-inline: 0.05em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
 
 /* Research, Industry and detailed project pages share the same hierarchy. */
 html body .post-header {
@@ -678,31 +685,11 @@ html body .side-project h2 {
   background: transparent;
 }
 .footer-inner {
-  display: flex;
-  justify-content: space-between;
-  gap: 32px;
   padding-block: 32px;
   font-size: 12px;
 }
 .footer-inner p {
   margin: 0;
-}
-.footer-inner p > span {
-  display: block;
-  margin-top: 5px;
-  color: var(--muted);
-}
-.footer-inner > div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  align-items: flex-start;
-}
-.footer-inner a {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  min-height: 44px;
 }
 
 @media (max-width: 1023px) {
@@ -849,10 +836,6 @@ html body .side-project h2 {
   .side-project-content {
     grid-template-columns: 1fr;
     gap: 24px;
-  }
-  .footer-inner {
-    flex-direction: column;
-    gap: 16px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
