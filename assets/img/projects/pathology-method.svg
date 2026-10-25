@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">Reasoning-guided pathology report generation</title>
+  <desc id="desc">Schematic research framework: a whole-slide image connects through visual reasoning to a structured report. Report statements are linked back to supporting slide evidence.</desc>
+  <rect width="720" height="420" fill="#eef1ea"/>
+  <g font-family="system-ui, sans-serif" fill="#5c6661" font-size="11" letter-spacing="1.5"><text x="36" y="38">RESEARCH FRAMEWORK / COMPUTATIONAL PATHOLOGY</text><text x="36" y="389">RESEARCH AIM: LINK REPORT STATEMENTS TO SLIDE EVIDENCE</text></g>
+  <path d="M36 58H684M36 361H684" stroke="#d0d8ce"/>
+  <g fill="none" stroke="#aebfb2"><rect x="58" y="115" width="142" height="126"/><path d="M58 147H200M58 178H200M58 210H200M93 115V241M129 115V241M165 115V241"/></g>
+  <g fill="#165f55"><path d="M94 148H128V177H94Z" opacity=".18"/><path d="M130 179H164V209H130Z" opacity=".32"/><path d="M130 148H164V177H130Z" opacity=".1"/></g>
+  <rect x="93" y="147" width="36" height="32" fill="none" stroke="#165f55" stroke-width="2"/>
+  <path d="M220 178H267M259 172L267 178L259 184M438 178H485M477 172L485 178L477 184" fill="none" stroke="#165f55" stroke-width="1.5"/>
+  <g fill="#eef1ea" stroke="#165f55"><circle cx="352" cy="178" r="49"/><circle cx="333" cy="165" r="4"/><circle cx="374" cy="160" r="4"/><circle cx="354" cy="196" r="4"/><path d="M337 165L370 160M335 169L351 192M371 164L357 192"/></g>
+  <rect x="507" y="109" width="132" height="138" fill="#f8f7f3" stroke="#aebfb2"/>
+  <g stroke="#aebfb2" stroke-width="2"><path d="M526 132H581M526 151H620M526 174H620M526 195H603M526 218H613"/></g>
+  <path d="M526 174H596" stroke="#165f55" stroke-width="4"/>
+  <path d="M515 250V263H111V247M106 253L111 247L116 253" fill="none" stroke="#165f55" stroke-dasharray="4 4"/>
+  <g font-family="system-ui, sans-serif" text-anchor="middle"><g fill="#252b29" font-size="15"><text x="129" y="303">Whole-slide image</text><text x="352" y="303">Visual reasoning</text><text x="573" y="303">Structured report</text></g><g fill="#5c6661" font-size="11"><text x="129" y="324">Image regions</text><text x="352" y="324">Vision-language model</text><text x="573" y="324">Statements + evidence</text></g></g>
+</svg>
