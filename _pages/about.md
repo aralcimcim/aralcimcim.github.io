@@ -16,7 +16,7 @@ description: Aral Cimcim — machine learning engineer working on graph neural n
       <p>I work on graph neural networks and conditional diffusion for molecular property prediction, vision-language models for computational pathology, and NLP pipelines for text embeddings and dense retrieval.</p>
       <div class="hero-actions">
         <a class="action-link" href="#selected-work">View selected work <span aria-hidden="true">↓</span></a>
-        <div class="hero-secondary"><a class="text-link" href="https://github.com/{{ site.data.socials.github_username }}">View GitHub <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-secondary"><a class="text-link" href="https://github.com/{{ site.data.socials.github_username }}">View GitHub <span aria-hidden="true">↗</span></a><a class="text-link" href="{{ '/profile/vita_en.pdf' | relative_url }}">View CV (PDF) <span aria-hidden="true">↗</span></a></div>
       </div>
     </div>
   </header>

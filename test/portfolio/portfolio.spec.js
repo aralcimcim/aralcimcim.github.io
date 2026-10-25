@@ -136,19 +136,30 @@ test("text contrast and reduced motion across the main pages", async ({ page }) 
         .flatMap((el) => {
           const style = getComputedStyle(el);
           let parent = el;
-          let background;
+          let backgrounds;
           while (parent) {
-            const color = rgb(getComputedStyle(parent).backgroundColor);
+            const surface = getComputedStyle(parent);
+            // Check every stop of the page gradient, including its darkest green.
+            const stops = (surface.backgroundImage.match(/rgba?\([^)]*\)/g) || []).map(rgb);
+            if (stops.length) {
+              backgrounds = stops;
+              break;
+            }
+            const color = rgb(surface.backgroundColor);
             if (color.length === 3 || color[3] === 1) {
-              background = color;
+              backgrounds = [color];
               break;
             }
             parent = parent.parentElement;
           }
-          if (!background) background = [255, 255, 255];
-          const a = luminance(rgb(style.color)),
-            b = luminance(background);
-          const ratio = (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05);
+          if (!backgrounds) backgrounds = [[255, 255, 255]];
+          const a = luminance(rgb(style.color));
+          const ratio = Math.min(
+            ...backgrounds.map((color) => {
+              const b = luminance(color);
+              return (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05);
+            })
+          );
           const large = parseFloat(style.fontSize) >= 24 || (parseFloat(style.fontSize) >= 18.66 && parseInt(style.fontWeight) >= 700);
           return ratio >= (large ? 3 : 4.5) ? [] : [{ text: el.textContent.trim().slice(0, 60), ratio }];
         });

@@ -1,5 +1,5 @@
 {% assign work = include.work %}
-<article class="work-row{% unless work.image or work.visual %} work-row--text{% endunless %}" aria-labelledby="work-{{ work.title | slugify }}">
+<article class="work-row{% unless work.image %} work-row--text{% endunless %}" aria-labelledby="work-{{ work.title | slugify }}">
   <div class="work-copy">
     <div class="work-label">
       <span class="work-number" aria-hidden="true">0{{ include.number }}</span><span>{{ work.label }}</span>
@@ -44,7 +44,5 @@
         {%- endif %}
       </figcaption>
     </figure>
-  {% elsif work.visual == 'red-gradient' %}
-    <div class="work-gradient" aria-hidden="true"></div>
   {% endif %}
 </article>
