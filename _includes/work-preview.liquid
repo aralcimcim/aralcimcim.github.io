@@ -1,0 +1,46 @@
+{% assign work = include.work %}
+<article class="work-row" aria-labelledby="work-{{ work.title | slugify }}">
+  <div class="work-copy">
+    <div class="work-label">
+      <span class="work-number" aria-hidden="true">0{{ include.number }}</span><span>{{ work.label }}</span>
+    </div>
+    <span class="work-status">{{ work.status }}</span>
+    {% if include.heading == 'h2' %}
+      <h2 id="work-{{ work.title | slugify }}">
+        <a href="{{ work.url | relative_url }}">{{ work.title }}</a>
+      </h2>
+    {% else %}
+      <h3 id="work-{{ work.title | slugify }}">
+        <a href="{{ work.url | relative_url }}">{{ work.title }}</a>
+      </h3>
+    {% endif %}
+    <p>{{ work.summary }}</p>
+    <p class="work-metadata">{{ work.metadata }}</p>
+    <div class="work-links">
+      <a href="{{ work.url | relative_url }}">
+        {%- if work.title == 'Reasoning-guided pathology reports' %}Read about the research{% else %}Explore project{% endif %}
+        <span aria-hidden="true">↗</span></a
+      >
+      {%- if work.code -%}
+        <a href="{{ work.code }}">View code <span aria-hidden="true">↗</span></a>
+      {%- endif %}
+    </div>
+  </div>
+  <figure class="work-figure">
+    <a class="work-image" href="{{ work.url | relative_url }}"
+      ><img
+        src="{{ work.image | relative_url }}"
+        alt="{{ work.alt }}"
+        width="{{ work.width }}"
+        height="{{ work.height }}"
+        loading="lazy"
+        decoding="async"
+    ></a>
+    <figcaption>
+      <span>{{ work.caption }}</span>
+      {%- if work.screenshot -%}
+        <a href="{{ work.image | relative_url }}">Full-size image <span aria-hidden="true">↗</span></a>
+      {%- endif %}
+    </figcaption>
+  </figure>
+</article>

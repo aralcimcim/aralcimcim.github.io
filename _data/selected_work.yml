@@ -1,0 +1,56 @@
+- title: Chemprop-conditioned diffusion
+  category: Research
+  label: Molecular machine learning
+  status: Research code
+  summary: Predicting molecular toxicity with score-based diffusion conditioned on Chemprop graph representations.
+  metadata: Tox21 · Graph neural networks · PyTorch
+  url: /projects/chemprop-diffusion/
+  code: https://github.com/aralcimcim/bsc/tree/main/thesis_code/diffpred_MODDED
+  image: /assets/img/projects/chemprop-method.svg
+  alt: Method overview from molecular graph through Chemprop representations and conditional diffusion to Tox21 toxicity predictions.
+  width: 720
+  height: 420
+  caption: Method overview · Molecular property prediction
+
+- title: Reasoning-guided pathology reports
+  category: Research
+  label: Computational pathology
+  status: Ongoing research · 2026–2027
+  summary: Developing vision-language models that connect whole-slide images to structured reports and supporting visual evidence.
+  metadata: Whole-slide images · Vision-language models · JKU Linz
+  url: /research/#pathology
+  image: /assets/img/projects/pathology-method.svg
+  alt: Research goal connecting whole-slide images with visual reasoning, supporting evidence, and structured pathology reports.
+  width: 720
+  height: 420
+  caption: Research framework · Reasoning and visual evidence
+
+- title: Molescope
+  category: Industry
+  label: Molecular evidence retrieval
+  status: Application
+  summary: Exploring molecular measurements with chemical similarity, semantic search, and inspectable source records.
+  metadata: RDKit · Streamlit · ChEMBL / Tox21 / ESOL
+  url: /projects/moleculizer/
+  code: https://github.com/aralcimcim/moleculizer
+  image: /assets/img/projects/moleculizer.png
+  alt: Molescope molecular evidence explorer showing dataset selection and molecular search controls.
+  width: 1440
+  height: 861
+  caption: Application workspace · Molecular evidence explorer
+  screenshot: true
+
+- title: TrialTrace
+  category: Industry
+  label: Clinical trial evidence retrieval
+  status: Research prototype
+  summary: A visual research canvas connecting clinical trial questions to retrieved protocols and cited source passages.
+  metadata: ClinicalTrials.gov · FastEmbed · Streamlit
+  url: /projects/ragz/
+  code: https://github.com/aralcimcim/ragz
+  image: /assets/img/projects/ragz-canvas.png
+  alt: TrialTrace research canvas with connected question cards, topic cards, and retrieved trial source records.
+  width: 1440
+  height: 793
+  caption: Application workspace · Clinical trial research canvas
+  screenshot: true

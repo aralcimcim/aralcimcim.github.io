@@ -2,7 +2,7 @@
 layout: page
 title: Research
 permalink: /research/
-description: Research projects, summer schools, and coursework in machine learning and artificial intelligence.
+description: Molecular representations, conditional diffusion, and reasoning-guided pathology reports. Research, experiments, and learning.
 nav: true
 nav_order: 1
 ---
@@ -10,8 +10,8 @@ nav_order: 1
 <div class="research-workspace">
 <div class="research-intro"><span class="research-kicker">RESEARCH & LEARNING</span><p>Exploring the connections between molecular machine learning, computational pathology, and intelligent systems.</p><div class="research-tags"><span>Molecular ML</span><span>Computational pathology</span><span>Evidence retrieval</span><span>Generative models</span></div></div>
 
-<section class="research-feature">
-<span class="research-kicker">2026–2027 · JKU LINZ</span>
+<section id="pathology" class="research-feature">
+<span class="research-kicker">ONGOING RESEARCH · 2026–2027 · JKU LINZ</span>
 <h2>Reasoning-Guided Vision-Language Models for WSI Report Generation</h2>
 <p>This project develops a machine learning framework that analyzes pathology whole-slide images (WSIs) to generate structured medical reports. The model aims to make its reasoning explicit and link report statements to supporting visual evidence on the slide. The goal is to support pathologists with accurate, interpretable reports whose conclusions can be checked against the original images.</p>
 <div class="research-method"><span>Whole-slide images</span><b aria-hidden="true">→</b><span>Reasoning &amp; visual evidence</span><b aria-hidden="true">→</b><span>Structured reports</span></div>

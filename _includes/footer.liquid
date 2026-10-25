@@ -1,1 +1,10 @@
-{% comment %}Footer intentionally omitted on this personal portfolio.{% endcomment %}
+<footer class="portfolio-footer">
+  <div class="container footer-inner">
+    <p>© {{ site.time | date: '%Y' }} Aral Cimcim<span>Machine learning, mathematics &amp; software.</span></p>
+    <div>
+      <a href="mailto:{{ site.data.socials.email }}">Email</a><a href="{{ '/profile/vita_en.pdf' | relative_url }}">CV (PDF)</a>
+      <a href="https://github.com/{{ site.data.socials.github_username }}">GitHub <span aria-hidden="true">↗</span></a
+      ><a href="{{ '/research/' | relative_url }}">Research</a><a href="{{ '/industry/' | relative_url }}">Industry</a>
+    </div>
+  </div>
+</footer>

@@ -90,15 +90,15 @@ al_folio:
 # Layout
 # -----------------------------------------------------------------------------
 
-navbar_fixed: true
-footer_fixed: true
+navbar_fixed: false
+footer_fixed: false
 search_enabled: false
 socials_in_search: true
 posts_in_search: true
 bib_search: true
 
 # Dimensions
-max_width: 930px
+max_width: 1120px
 
 # -----------------------------------------------------------------------------
 # Open Graph & Schema.org
@@ -226,6 +226,8 @@ kramdown:
 # Includes & excludes
 include: ["_pages"]
 exclude:
+  - test/
+  - output/
   - _services/
   - _posts/
   - _news/
@@ -566,7 +568,7 @@ third_party_libraries:
     version: "5.5.0"
   google_fonts:
     url:
-      fonts: "/assets/css/academic.css?v=20261023-home-fix" # Versioned local font and portfolio styles.
+      fonts: "/assets/css/academic.css" # Loaded last, with relative_url, by the local head include.
   highlightjs:
     integrity:
       css:

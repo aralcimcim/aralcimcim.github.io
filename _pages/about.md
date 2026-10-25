@@ -1,24 +1,47 @@
 ---
-layout: about
+layout: default
 title: About
 permalink: /
-subtitle: Machine learning engineer
-
-selected_papers: false
-social: false
-
-announcements:
-  enabled: false
-
-latest_posts:
-  enabled: false
+description: Aral Cimcim — machine learning engineer working on molecular property prediction, computational pathology, and evidence retrieval.
 ---
 
-<div class="home-intro">
-  <p class="home-lead">Machine learning for molecules.</p>
-  <p>My work combines applied machine learning, mathematics, and software engineering. My research explores molecular property prediction with graph neural networks and diffusion models, alongside vision-language models for computational pathology.</p>
-  <p>I also build applications for searching and inspecting source evidence, with retrieval evaluations that make their strengths and limitations visible.</p>
-</div>
+<article class="portfolio-home">
+  <header class="home-hero">
+    <div class="hero-heading">
+    <div class="hero-identity"><span>Aral Cimcim</span><span>Machine learning engineer</span></div>
+    <div class="profile-portrait"><div class="portrait-crop"><img src="{{ '/profile/foto.png' | relative_url }}" alt="Portrait of Aral Cimcim" width="306" height="309" loading="eager" decoding="async"></div></div>
+    <h1>Machine learning<span class="mobile-line-break"></span> for&nbsp;<br class="desktop-line-break">molecules <em>&amp; evidence.</em></h1>
+    </div>
+    <div class="hero-bottom">
+      <p>I work on molecular property prediction, vision-language models for pathology, and software that connects questions to source evidence.</p>
+      <div class="hero-actions">
+        <a class="action-link" href="#selected-work">View selected work <span aria-hidden="true">↓</span></a>
+        <div class="hero-secondary"><a class="text-link" href="https://github.com/{{ site.data.socials.github_username }}">View GitHub <span aria-hidden="true">↗</span></a><a class="text-link" href="{{ '/profile/vita_en.pdf' | relative_url }}">View CV (PDF) <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </div>
+  </header>
+
+  <section id="selected-work" class="home-work" aria-labelledby="work-heading">
+    <div class="section-heading"><div><span class="eyebrow">A closer look</span><h2 id="work-heading">Selected work</h2></div><p>Research methods. Working software.<br>Sources you can inspect.</p></div>
+    {% for work in site.data.selected_work %}
+      {% include work-preview.liquid work=work number=forloop.index %}
+    {% endfor %}
+  </section>
+
+  <section class="explore-pathways" aria-labelledby="explore-heading">
+    <span class="eyebrow">Two ways into the work</span>
+    <h2 id="explore-heading">Questions, experiments, applications.</h2>
+    <div class="pathway-grid">
+      <div><h3><a href="{{ '/research/' | relative_url }}">Research <span aria-hidden="true">↗</span></a></h3><p>Molecular representations, conditional diffusion, and reasoning-guided pathology reports. Methods, experiments, and the questions behind them.</p><a class="text-link" href="{{ '/research/' | relative_url }}">Explore research <span aria-hidden="true">→</span></a></div>
+      <div><h3><a href="{{ '/industry/' | relative_url }}">Industry <span aria-hidden="true">↗</span></a></h3><p>Molecular evidence search and a clinical trial research canvas. Software, source inspection, and practical retrieval workflows.</p><a class="text-link" href="{{ '/industry/' | relative_url }}">Explore applications <span aria-hidden="true">→</span></a></div>
+    </div>
+  </section>
+
+  <section id="about" class="home-about" aria-labelledby="about-heading">
+    <div><span class="eyebrow">About</span><h2 id="about-heading">At the intersection of<br>models and software.</h2></div>
+    <div><p>My work combines applied machine learning, mathematics, and software engineering. I study how graph representations and generative models can support scientific prediction, and build tools for exploring the underlying evidence.</p><p>I care about making methods, source records, and evaluation limitations visible alongside the results.</p><a class="text-link" href="mailto:{{ site.data.socials.email }}">Have a question or a project in mind? Get in touch <span aria-hidden="true">↗</span></a></div>
+  </section>
+</article>
 
 {% if site.visit_notification_url and site.visit_notification_url != "" %}
 <script defer src="{{ '/assets/js/visit-notifier.js' | relative_url }}" data-endpoint="{{ site.visit_notification_url | escape }}"></script>

@@ -1,0 +1,47 @@
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="portfolio-header">
+  <nav class="portfolio-nav container" aria-label="Main navigation">
+    <a
+      class="portfolio-brand"
+      href="{{ '/' | relative_url }}"
+      {% if page.url == '/' %}
+        aria-current="page"
+      {% endif %}
+      >Aral Cimcim<span aria-hidden="true">.</span></a
+    >
+    <button
+      class="portfolio-menu-toggle collapsed"
+      type="button"
+      aria-controls="portfolio-menu"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      Menu <span aria-hidden="true">+</span>
+    </button>
+    <div class="portfolio-menu" id="portfolio-menu">
+      <a
+        href="{{ '/research/' | relative_url }}"
+        {% if page.url contains '/research/' or page.category == 'Research' %}
+          aria-current="page"
+        {% endif %}
+        >Research</a
+      >
+      <a
+        href="{{ '/industry/' | relative_url }}"
+        {% if page.url contains '/industry/' or page.category == 'Industry' %}
+          aria-current="page"
+        {% endif %}
+        >Industry</a
+      >
+      <a href="{{ '/' | relative_url }}#about">About</a>
+      <a href="{{ '/profile/vita_en.pdf' | relative_url }}" aria-label="CV (PDF)">CV</a>
+      <a href="mailto:{{ site.data.socials.email }}">Contact</a>
+      <a class="nav-github" href="https://github.com/{{ site.data.socials.github_username }}">GitHub <span aria-hidden="true">↗</span></a>
+    </div>
+  </nav>
+  {% if site.enable_progressbar %}
+    <progress id="progress" value="0" aria-label="Reading progress">
+      <div class="progress-container"><span class="progress-bar"></span></div>
+    </progress>
+  {% endif %}
+</header>
