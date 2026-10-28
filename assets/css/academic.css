@@ -409,7 +409,7 @@ html body .work-links a {
   min-height: 44px;
   font-size: var(--text-control);
   font-weight: 600;
-  text-decoration: underline;
+  text-decoration: none;
 }
 .work-figure {
   margin: 0;
