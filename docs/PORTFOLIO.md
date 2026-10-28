@@ -5,7 +5,7 @@ The personal site keeps Jekyll, the pinned al-folio gems, and the existing GitHu
 ## Source map
 
 - `_pages/home.md`: homepage introduction, selected work, and Research/Software pathways.
-- `_pages/about.md`: dedicated `/about/` page with biography, tech stack, and contact link, reached from the top navigation.
+- `_pages/about.md`: dedicated `/about/` page with biography and contact link, reached from the top navigation.
 - `profile/vita_en.pdf`: the unmodified personal CV, linked beside View GitHub on the homepage. The profile photo is no longer displayed.
 - `_data/socials.yml`: GitHub and the contact email verified from the supplied CV.
 - `_data/selected_work.yml`: four curated projects, factual status, metadata, asset paths, and verified project/code links.
