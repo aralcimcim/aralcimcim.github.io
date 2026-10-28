@@ -11,8 +11,10 @@ nav_order: 1
 <div class="research-intro"><span class="research-kicker">RESEARCH & LEARNING</span><p>Exploring the connections between molecular machine learning, computational pathology, and intelligent systems.</p><div class="research-tags"><span>Molecular ML</span><span>Computational pathology</span><span>Evidence retrieval</span><span>Generative models</span></div></div>
 
 <section id="reproduced-papers" class="research-feature">
-<h2>reproduced papers</h2>
-<p>Code for reproducing papers on toxicity prediction and computational pathology. Paper reproductions will be added here.</p>
+<h2>Reproduced Papers</h2>
+<h3>Grounded Oncology Walker (GOW)</h3>
+<p>Planned reproduction.</p>
+<p><a href="https://papers.miccai.org/miccai-2026-sat/paper/REG2026_007.pdf">Paper (PDF)</a> · <a href="https://github.com/TurocratesAI/GOW-Reg2026">Original code</a></p>
 </section>
 
 <section id="pathology" class="research-feature">
