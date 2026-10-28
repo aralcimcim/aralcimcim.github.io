@@ -8,13 +8,13 @@ description: Aral Cimcim — machine learning engineer working on graph neural n
 <article class="portfolio-home">
   <header class="home-hero">
     <div class="hero-heading">
-    <h1><span class="text-highlight">Machine learning</span> for <span class="text-highlight hero-word">drug design</span> &amp; <span class="hero-word">large-scale</span> medical data</h1>
+    <h1>Machine learning for <span class="hero-word">drug design</span> &amp; <span class="hero-word">large-scale</span> medical data</h1>
     </div>
     <div class="hero-bottom">
-      <p>I work on <span class="text-highlight">graph neural networks</span> and <span class="text-highlight">conditional diffusion</span> for molecular property prediction, <span class="text-highlight">vision-language models</span> for computational pathology, and <span class="text-highlight">NLP pipelines</span> for text embeddings and dense retrieval.</p>
+      <p>I work on graph neural networks and conditional diffusion for molecular property prediction, vision-language models for computational pathology, and NLP pipelines for text embeddings and dense retrieval.</p>
       <div class="hero-actions">
         <a class="action-link" href="#selected-work">View selected work <span aria-hidden="true">↓</span></a>
-        <div class="hero-secondary"><a class="text-link" href="https://github.com/{{ site.data.socials.github_username }}">View GitHub <span aria-hidden="true">↗</span></a><a class="text-link cv-link" href="{{ '/profile/vita_en.pdf' | relative_url }}"><span class="text-highlight">View CV (PDF) <span aria-hidden="true">↗</span></span></a></div>
+        <div class="hero-secondary"><a class="text-link" href="https://github.com/{{ site.data.socials.github_username }}">View GitHub <span aria-hidden="true">↗</span></a><a class="text-link cv-link" href="{{ '/profile/vita_en.pdf' | relative_url }}">View CV (PDF) <span aria-hidden="true">↗</span></a></div>
       </div>
     </div>
   </header>
@@ -35,7 +35,7 @@ description: Aral Cimcim — machine learning engineer working on graph neural n
   </section>
 
   <section id="about" class="home-about" aria-labelledby="about-heading">
-    <div><span class="eyebrow">About</span><h2 id="about-heading">At the intersection of <span class="text-highlight">foundation models</span> and <span class="text-highlight">medical data</span></h2></div>
-    <div><p>My work combines applied machine learning, mathematics, and software engineering. I study how graph representations and generative models can support scientific prediction.</p><p>My background includes multivariate calculus, numerical optimization, software development with a specialization on machine learning in Life Sciences; in particular, <span class="text-highlight">geometric deep learning and diffusion models</span> trained on large-scale molecular datasets.</p><a class="text-link" href="mailto:{{ site.data.socials.email }}">Have a question or a project in mind? Get in touch <span aria-hidden="true">↗</span></a></div>
+    <div><span class="eyebrow">About</span><h2 id="about-heading">At the intersection of foundation models and medical data</h2></div>
+    <div><p>My work combines applied machine learning, mathematics, and software engineering. I study how graph representations and generative models can support scientific prediction.</p><p>My background includes multivariate calculus, numerical optimization, software development with a specialization on machine learning in Life Sciences; in particular, geometric deep learning and diffusion models trained on large-scale molecular datasets.</p><a class="text-link" href="mailto:{{ site.data.socials.email }}">Have a question or a project in mind? Get in touch <span aria-hidden="true">↗</span></a></div>
   </section>
 </article>
