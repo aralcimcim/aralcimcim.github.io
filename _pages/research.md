@@ -12,8 +12,7 @@ nav_order: 1
 
 <section id="reproduced-papers" class="research-feature">
 <h2>Reproduced Papers</h2>
-<h3>Grounded Oncology Walker (GOW)</h3>
-<p>Planned reproduction.</p>
+<h3>Grounded Ontology Walker: Interpretable Diagnostic Reasoning and Report Generation for Whole Slide Images</h3>
 <p><a href="https://papers.miccai.org/miccai-2026-sat/paper/REG2026_007.pdf">Paper (PDF)</a> · <a href="https://github.com/TurocratesAI/GOW-Reg2026">Original code</a></p>
 </section>
 
