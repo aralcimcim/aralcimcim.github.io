@@ -26,7 +26,7 @@
   alt: Molescope molecular evidence explorer showing dataset selection and molecular search controls.
   width: 1440
   height: 861
-  caption: Application workspace · Molecular evidence explorer
+  caption: "Proof of concept: Application Workspace"
   screenshot: true
 
 - title: TrialTrace
@@ -41,5 +41,5 @@
   alt: TrialTrace research canvas with connected question cards, topic cards, and retrieved trial source records.
   width: 1440
   height: 793
-  caption: Application workspace · Clinical trial research canvas
+  caption: "Proof of concept: Application Workspace"
   screenshot: true
