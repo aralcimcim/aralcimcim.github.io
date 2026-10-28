@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Research
 permalink: /research/
 nav: true
@@ -7,11 +7,9 @@ nav_order: 1
 ---
 
 <div class="research-workspace">
-<div class="research-intro"><span class="research-kicker">RESEARCH & LEARNING</span><p>Exploring the connections between molecular machine learning, computational pathology, and intelligent systems.</p><div class="research-tags"><span>Molecular ML</span><span>Computational pathology</span><span>Evidence retrieval</span><span>Generative models</span></div></div>
-
-<section id="reproduced-papers" class="research-feature">
-<h2>Reproduced Papers</h2>
-<h3>Grounded Ontology Walker: Interpretable Diagnostic Reasoning and Report Generation for Whole Slide Images</h3>
+<section id="reproduced-papers" class="research-feature research-feature--first">
+<h1>Reproduced Papers</h1>
+<h2>Grounded Ontology Walker: Interpretable Diagnostic Reasoning and Report Generation for Whole Slide Images</h2>
 <p><a href="https://papers.miccai.org/miccai-2026-sat/paper/REG2026_007.pdf">Paper (PDF)</a> · <a href="https://github.com/TurocratesAI/GOW-Reg2026">Original code</a></p>
 </section>
 

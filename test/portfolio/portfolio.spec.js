@@ -62,7 +62,7 @@ test("mobile menu opens, closes with Escape and returns keyboard focus", async (
   await toggle.click();
   await menu.getByRole("link", { name: "Research", exact: true }).click();
   await expect(page).toHaveURL(new RegExp(`${prefix}/research/$`));
-  await expect(page.getByRole("heading", { name: "Research", exact: true })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Reproduced Papers", exact: true, level: 1 })).toBeVisible();
   await toggle.click();
   await expect(toggle).toHaveAttribute("aria-expanded", "true");
   await expect(menu.getByRole("link", { name: "Research", exact: true })).toHaveAttribute("aria-current", "page");

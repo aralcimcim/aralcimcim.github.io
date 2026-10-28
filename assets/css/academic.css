@@ -548,6 +548,10 @@ html body article li {
   padding-block: 2.5rem;
   border-top: 1px solid var(--line);
 }
+.research-feature--first {
+  padding-top: 0;
+  border-top: 0;
+}
 html body .research-feature h2 {
   max-width: 860px;
   margin: 14px 0 20px;
