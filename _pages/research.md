@@ -10,6 +10,11 @@ nav_order: 1
 <div class="research-workspace">
 <div class="research-intro"><span class="research-kicker">RESEARCH & LEARNING</span><p>Exploring the connections between molecular machine learning, computational pathology, and intelligent systems.</p><div class="research-tags"><span>Molecular ML</span><span>Computational pathology</span><span>Evidence retrieval</span><span>Generative models</span></div></div>
 
+<section id="reproduced-papers" class="research-feature">
+<h2>reproduced papers</h2>
+<p>Code for reproducing papers on toxicity prediction and computational pathology. Paper reproductions will be added here.</p>
+</section>
+
 <section id="pathology" class="research-feature">
 <span class="research-kicker">ONGOING RESEARCH · 2026–2027 · JKU LINZ</span>
 <h2>Reasoning-Guided Vision-Language Models for WSI Report Generation</h2>
