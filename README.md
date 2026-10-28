@@ -8,7 +8,7 @@ Personal portfolio for research and software in molecular machine learning, comp
 
 - `_pages/home.md`: homepage and selected work.
 - `_pages/about.md`: biography and contact link.
-- `_pages/research.md`: research, reproduced papers, summer schools, and coursework.
+- `_pages/research.md`: research, reproduced papers, and summer schools.
 - `_pages/industry.md`: software projects.
 - `_projects/`: project descriptions.
 - `_data/selected_work.yml`: featured projects.
