@@ -526,12 +526,10 @@ html body .post > article > h2:first-child {
 html body article li {
   margin-bottom: 8px;
 }
-.research-intro,
-.software-intro {
+.research-intro {
   margin-bottom: 2.5rem;
 }
-.research-intro > p,
-.software-intro > p {
+.research-intro > p {
   max-width: 800px;
   margin: 12px 0;
   font: 400 1.55rem/1.5 var(--serif);
