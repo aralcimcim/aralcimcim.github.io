@@ -87,7 +87,7 @@ test("skip link and selected work CTA lead to real targets", async ({ page }) =>
   await expect(page.locator("#main-content")).toBeFocused();
   await page.getByRole("link", { name: "View selected work" }).click();
   await expect(page).toHaveURL(/#selected-work$/);
-  await expect(page.locator(".home-work .work-row")).toHaveCount(4);
+  await expect(page.locator(".home-work .work-row")).toHaveCount(2);
   await expect(page.locator(".hero-secondary").getByRole("link", { name: "View CV (PDF)" })).toHaveAttribute("href", `${prefix}/profile/vita_en.pdf`);
 });
 
