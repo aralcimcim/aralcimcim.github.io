@@ -36,6 +36,19 @@ description: Aral Cimcim — machine learning engineer working on graph neural n
 
   <section id="about" class="home-about" aria-labelledby="about-heading">
     <div><span id="about-heading" class="eyebrow">About</span></div>
-    <div><p>I am a machine learning researcher and software engineer specializing in AI for drug discovery and computational biology. I develop geometric deep learning and generative diffusion models to decode molecular structures and power next-generation therapeutics.</p><p>Rooted in multivariate calculus and numerical optimization, my background centers on building scalable, production-ready machine learning systems for large-scale biomedical datasets.</p><a class="text-link" href="mailto:{{ site.data.socials.email }}">Have a question or a project in mind? Get in touch <span aria-hidden="true">↗</span></a></div>
+    <div>
+      <p>I am a machine learning researcher and software engineer specializing in AI for drug discovery and computational biology. I develop geometric deep learning and generative diffusion models to decode molecular structures and power next-generation therapeutics.</p>
+      <p>Rooted in multivariate calculus and numerical optimization, my background centers on building scalable, production-ready machine learning systems for large-scale biomedical datasets.</p>
+      <p><strong>Tech stack</strong></p>
+      <ul>
+        <li>PyTorch</li>
+        <li>Geometric Deep Learning</li>
+        <li>Diffusion Models</li>
+        <li>Graph Neural Networks</li>
+        <li>C++ / Python</li>
+        <li>Molecular Dynamics</li>
+      </ul>
+      <a class="text-link" href="mailto:{{ site.data.socials.email }}">Have a question or a project in mind? Get in touch <span aria-hidden="true">↗</span></a>
+    </div>
   </section>
 </article>
