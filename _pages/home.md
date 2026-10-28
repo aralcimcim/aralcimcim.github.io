@@ -26,12 +26,4 @@ description: Aral Cimcim — machine learning engineer working on graph neural n
     {% endfor %}
   </section>
 
-  <section class="explore-pathways" aria-labelledby="explore-heading">
-    <h2 id="explore-heading">Experiments, applications.</h2>
-    <div class="pathway-grid">
-      <div><h3><a href="{{ '/research/' | relative_url }}">Research <span aria-hidden="true">↗</span></a></h3><p>Molecular representations, conditional diffusion, and reasoning-guided pathology reports. Methods, experiments, and the questions behind them.</p><a class="text-link" href="{{ '/research/' | relative_url }}">Explore research <span aria-hidden="true">→</span></a></div>
-      <div><h3><a href="{{ '/industry/' | relative_url }}">Software <span aria-hidden="true">↗</span></a></h3><p>Molecular evidence search and a clinical trial research canvas. Software, source inspection, and practical retrieval workflows.</p><a class="text-link" href="{{ '/industry/' | relative_url }}">Explore applications <span aria-hidden="true">→</span></a></div>
-    </div>
-  </section>
-
 </article>
