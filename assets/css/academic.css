@@ -586,23 +586,6 @@ html body .school-entry h3 {
   color: var(--muted);
   font-size: var(--text-control);
 }
-.course-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 40px;
-}
-html body .course-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  min-height: 60px;
-  padding-block: 16px;
-  border-bottom: 1px solid var(--line);
-  font-size: var(--text-control);
-  font-weight: 600;
-  color: var(--ink);
-}
 .project-preview {
   margin: 2rem 0;
   border: 1px solid var(--line);
@@ -720,8 +703,7 @@ html body .project-preview img {
     border-top: 1px solid var(--line);
     padding: 28px 0 0;
   }
-  .school-entry,
-  .course-grid {
+  .school-entry {
     grid-template-columns: 1fr;
     gap: 8px;
   }
