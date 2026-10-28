@@ -11,7 +11,14 @@ description: Aral Cimcim — machine learning engineer working on graph neural n
     <h1>Machine learning for <span class="hero-word">drug design</span> &amp; <span class="hero-word">large-scale</span> medical data</h1>
     </div>
     <div class="hero-bottom">
-      <p>I work on graph neural networks and conditional diffusion for molecular property prediction, vision-language models for computational pathology, and NLP pipelines for text embeddings and dense retrieval.</p>
+      <div class="hero-research">
+        <p><strong>Research Areas:</strong></p>
+        <ol>
+          <li><strong>Geometric Deep Learning &amp; Generative Models:</strong> Geometric graph neural networks (GNNs) and SE(3)/E(3)-equivariant conditional diffusion models for molecular property prediction and structure-conditioned de novo drug design.</li>
+          <li><strong>Multimodal Vision-Language:</strong> Vision-Language Models (VLMs) and multi-gigapixel whole-slide image (WSI) representation models for computational pathology.</li>
+          <li><strong>Information Retrieval &amp; NLP:</strong> End-to-end neural IR pipelines, fine-tuning dense retrievers and cross-encoders for domain-based embeddings, semantic search, and RAG architectures.</li>
+        </ol>
+      </div>
       <div class="hero-actions">
         <a class="action-link" href="#selected-work">View selected work <span aria-hidden="true">↓</span></a>
         <div class="hero-secondary"><a class="text-link" href="https://github.com/{{ site.data.socials.github_username }}">View GitHub <span aria-hidden="true">↗</span></a><a class="text-link cv-link" href="{{ '/profile/vita_en.pdf' | relative_url }}">View CV (PDF) <span aria-hidden="true">↗</span></a></div>

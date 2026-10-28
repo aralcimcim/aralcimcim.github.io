@@ -258,12 +258,19 @@ html body .home-hero h1 {
   gap: 32px;
   padding-bottom: 42px;
 }
-.hero-bottom > p {
+.hero-research {
   max-width: 650px;
   margin: 0;
   color: var(--muted);
   font-size: var(--text-size);
   line-height: 1.7;
+}
+.hero-research > p {
+  margin: 0 0 12px;
+}
+.hero-research ol {
+  margin: 0;
+  padding-left: 1.4em;
 }
 .hero-actions {
   display: flex;
@@ -661,7 +668,7 @@ html body .project-preview img {
   .hero-bottom {
     align-items: flex-start;
   }
-  .hero-bottom > p {
+  .hero-research {
     max-width: 440px;
   }
   .pathway-grid,
@@ -716,7 +723,7 @@ html body .project-preview img {
     gap: 24px;
     padding-bottom: 32px;
   }
-  .hero-bottom > p {
+  .hero-research {
     max-width: 580px;
     font-size: var(--text-size);
   }
