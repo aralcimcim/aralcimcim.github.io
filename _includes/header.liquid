@@ -33,7 +33,13 @@
         {% endif %}
         >Software</a
       >
-      <a href="{{ '/' | relative_url }}#about">About</a>
+      <a
+        href="{{ '/about/' | relative_url }}"
+        {% if page.url == '/about/' %}
+          aria-current="page"
+        {% endif %}
+        >About</a
+      >
       <a href="mailto:{{ site.data.socials.email }}">Contact</a>
     </div>
   </nav>

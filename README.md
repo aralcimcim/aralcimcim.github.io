@@ -6,7 +6,8 @@ Personal portfolio for research and software in molecular machine learning, comp
 
 ## Content
 
-- `_pages/about.md`: homepage and selected work.
+- `_pages/home.md`: homepage and selected work.
+- `_pages/about.md`: biography and tech stack.
 - `_pages/research.md`: research, reproduced papers, summer schools, and coursework.
 - `_pages/industry.md`: software projects.
 - `_projects/`: project descriptions.

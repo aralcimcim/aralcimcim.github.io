@@ -3,7 +3,7 @@ const path = require("node:path");
 const prefix = process.env.PORTFOLIO_BASE_PATH || "";
 
 for (const width of [375, 768, 1024, 1440]) {
-  for (const route of ["", "research/", "industry/"]) {
+  for (const route of ["", "research/", "industry/", "about/"]) {
     test(`${route || "home"} at ${width}px: layout, assets, headings and console`, async ({ page }) => {
       await page.setViewportSize({ width, height: 1000 });
       const errors = [];
@@ -68,6 +68,11 @@ test("mobile menu opens, closes with Escape and returns keyboard focus", async (
   await expect(menu.getByRole("link", { name: "Research", exact: true })).toHaveAttribute("aria-current", "page");
   await toggle.click();
   await expect(menu).toBeHidden();
+  await toggle.click();
+  await menu.getByRole("link", { name: "About", exact: true }).click();
+  await expect(page).toHaveURL(new RegExp(`${prefix}/about/$`));
+  await expect(page.getByRole("heading", { name: "About", exact: true })).toBeVisible();
+  await expect(menu.getByRole("link", { name: "About", exact: true })).toHaveAttribute("aria-current", "page");
 });
 
 test("skip link and selected work CTA lead to real targets", async ({ page }) => {
@@ -111,7 +116,7 @@ test("mobile navigation remains available without JavaScript", async ({ browser 
 
 test("text contrast and reduced motion across the main pages", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
-  for (const route of ["./", "./research/", "./industry/"]) {
+  for (const route of ["./", "./research/", "./industry/", "./about/"]) {
     await page.goto(route);
     const failures = await page.evaluate(() => {
       const rgb = (value) => (value.match(/[\d.]+/g) || []).map(Number);
@@ -162,7 +167,7 @@ test("text contrast and reduced motion across the main pages", async ({ page }) 
 });
 
 test("local calls to action and their fragment targets exist", async ({ page, request }) => {
-  for (const route of ["./", "./research/", "./industry/"]) {
+  for (const route of ["./", "./research/", "./industry/", "./about/"]) {
     await page.goto(route);
     const links = await page.locator("a[href]").evaluateAll((items) => [...new Set(items.map((item) => item.href))]);
     for (const href of links.filter((url) => url.startsWith("http://127.0.0.1:4188"))) {

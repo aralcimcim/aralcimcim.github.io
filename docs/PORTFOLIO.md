@@ -4,7 +4,8 @@ The personal site keeps Jekyll, the pinned al-folio gems, and the existing GitHu
 
 ## Source map
 
-- `_pages/about.md`: homepage introduction, selected work, Research/Software pathways, and About. The About heading highlights “foundation models” and “medical data.”
+- `_pages/home.md`: homepage introduction, selected work, and Research/Software pathways.
+- `_pages/about.md`: dedicated `/about/` page with biography, tech stack, and contact link, reached from the top navigation.
 - `profile/vita_en.pdf`: the unmodified personal CV, linked beside View GitHub on the homepage. The profile photo is no longer displayed.
 - `_data/socials.yml`: GitHub and the contact email verified from the supplied CV.
 - `_data/selected_work.yml`: four curated projects, factual status, metadata, asset paths, and verified project/code links.
@@ -12,7 +13,7 @@ The personal site keeps Jekyll, the pinned al-folio gems, and the existing GitHu
 - `_includes/header.liquid`, `_includes/footer.liquid`: shared navigation and an intentionally empty footer override.
 - `_includes/head.liquid`: retains the pinned theme's integrations, loads the local stylesheet last, and applies `relative_url` to its asset links.
 - `_layouts/default.liquid`: retains the theme layout, adds the skip-link target, and removes its extra top-margin utility.
-- `assets/css/academic.css`: shared color, typography, width, spacing, component, and responsive styles. A green base supports a soft, static gradient of pastel pink, amber, mint, and lavender behind dark forest text. The decorative layer ignores pointer events and has no shapes or animation. The CV link has a light purple text highlight. Uses locally hosted Latin Modern Roman for LaTeX-style typography, with CSS highlights limited to key headline phrases, technical terms, and project titles; no external font service. Body copy scales from 20 to 22 pixels, supporting text is at least 16 pixels, and navigation and action links use 18-pixel text. Secondary text uses a darker green for contrast.
+- `assets/css/academic.css`: shared color, typography, width, spacing, component, and responsive styles. A green base supports a soft, static gradient of pastel pink, amber, mint, and lavender behind dark forest text. The decorative layer ignores pointer events and has no shapes or animation. Uses locally hosted Latin Modern Roman for LaTeX-style typography, without text highlights or an external font service. Body copy scales from 20 to 22 pixels, supporting text is at least 16 pixels, and navigation and action links use 18-pixel text. Secondary text uses a darker green for contrast.
 - `assets/js/portfolio-nav.js`: menu state, Escape/outside-click handling, focus return, and breakpoint handling. The toggle appears only after its handlers are installed. Navigation stays visible without JavaScript.
 - Research previews: the molecular machine learning and pathology entries use text without images. The original method SVG files are retained but are not rendered in the previews. Application previews keep their original screenshots.
 - `_pages/research.md`, `_pages/industry.md`: coherent section pages. Software retains the `/industry/` URL for existing inbound links. Detailed `_projects` content, project URLs, original screenshots, and downloads remain intact.

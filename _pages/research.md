@@ -2,7 +2,6 @@
 layout: page
 title: Research
 permalink: /research/
-description: Molecular representations, conditional diffusion, and reasoning-guided pathology reports. Research, experiments, and learning.
 nav: true
 nav_order: 1
 ---
