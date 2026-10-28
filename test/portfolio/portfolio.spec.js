@@ -72,7 +72,10 @@ test("mobile menu opens, closes with Escape and returns keyboard focus", async (
   await menu.getByRole("link", { name: "About", exact: true }).click();
   await expect(page).toHaveURL(new RegExp(`${prefix}/about/$`));
   await expect(page.getByRole("heading", { name: "About", exact: true })).toBeVisible();
+  await toggle.click();
   await expect(menu.getByRole("link", { name: "About", exact: true })).toHaveAttribute("aria-current", "page");
+  await toggle.click();
+  await expect(menu).toBeHidden();
 });
 
 test("skip link and selected work CTA lead to real targets", async ({ page }) => {
