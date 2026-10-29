@@ -98,7 +98,7 @@ posts_in_search: true
 bib_search: true
 
 # Dimensions
-max_width: 1120px
+max_width: 960px
 
 # -----------------------------------------------------------------------------
 # Open Graph & Schema.org

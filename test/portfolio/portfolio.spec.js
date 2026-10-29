@@ -139,7 +139,7 @@ test("text contrast and reduced motion across the main pages", async ({ page }) 
           let backgrounds;
           while (parent) {
             const surface = getComputedStyle(parent);
-            // Check every stop of the page gradient, including its darkest green.
+            // Include every gradient stop if a theme supplies a layered background.
             const stops = (surface.backgroundImage.match(/rgba?\([^)]*\)/g) || []).map(rgb);
             if (stops.length) {
               backgrounds = stops;

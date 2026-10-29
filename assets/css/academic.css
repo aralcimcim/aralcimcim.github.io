@@ -1,46 +1,20 @@
-@font-face {
-  font-family: "Latin Modern Roman";
-  src: url("../fonts/lmroman10-regular.otf") format("opentype");
-  font-style: normal;
-  font-weight: 400 500;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Latin Modern Roman";
-  src: url("../fonts/lmroman10-bold.otf") format("opentype");
-  font-style: normal;
-  font-weight: 600 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Latin Modern Roman";
-  src: url("../fonts/lmroman10-italic.otf") format("opentype");
-  font-style: italic;
-  font-weight: 400 700;
-  font-display: swap;
-}
-
 /* The site's shared design system. Loaded after the theme; no second CSS build. */
 :root,
 html[data-theme="light"] {
-  --paper: #eaf4e1;
-  --ink: #18291c;
-  --muted: #293d2e;
-  --accent: #1f4829;
-  --accent-hover: #173d22;
-  --highlight: #9acb75;
-  --highlight-hover: #b2dc94;
-  --line: #8fac8b;
-  --wash: #e4efd9;
-  --serif: "Latin Modern Roman", "Computer Modern", Georgia, serif;
-  --body-font: var(--serif);
-  --text-size: clamp(1.25rem, 1.8vw, 1.375rem);
-  --text-small: 1.0625rem;
-  --text-label: 1rem;
-  --text-control: 1.125rem;
-  --space-section: clamp(3.5rem, 7vw, 6rem);
+  --paper: #fff;
+  --ink: #20242a;
+  --muted: #525a65;
+  --accent: #174ea6;
+  --accent-hover: #123a7c;
+  --line: #d8dce1;
+  --wash: #f6f7f9;
+  --body-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --heading-font: var(--body-font);
+  --text-size: clamp(1rem, 1.3vw, 1.0625rem);
+  --text-small: 0.9375rem;
+  --text-label: 0.8125rem;
+  --text-control: 0.9375rem;
+  --space-section: 3rem;
   --global-bg-color: var(--paper);
   --global-text-color: var(--ink);
   --global-text-color-light: var(--muted);
@@ -49,7 +23,7 @@ html[data-theme="light"] {
   --global-hover-text-color: #fff;
   --global-divider-color: var(--line);
   --global-code-bg-color: var(--wash);
-  --max-content-width: 1120px;
+  --max-content-width: 960px;
 }
 
 html {
@@ -62,24 +36,10 @@ body {
   font-family: var(--body-font);
   font-size: var(--text-size);
   font-weight: 400;
-  line-height: 1.75;
+  line-height: 1.65;
   color: var(--ink);
   min-height: 100vh;
-  position: relative;
-  isolation: isolate;
-  background: linear-gradient(135deg, #eef8e4 0%, #d1e9c7 48%, #accfaa 100%);
-}
-/* A soft, static wash of pastel colors sits behind the real page text. */
-body::before {
-  content: "";
-  position: fixed;
-  inset: -12vmax;
-  pointer-events: none;
-  z-index: -1;
-  background:
-    radial-gradient(ellipse at 12% 20%, #efbddb 0%, transparent 40%), radial-gradient(ellipse at 88% 18%, #f7ce9e 0%, transparent 36%),
-    radial-gradient(ellipse at 72% 82%, #c8b8ed 0%, transparent 38%), radial-gradient(ellipse at 22% 84%, #b1dfc6 0%, transparent 42%);
-  filter: blur(18px);
+  background: var(--paper);
 }
 
 html body {
@@ -91,7 +51,7 @@ html body {
   box-sizing: border-box;
 }
 ::selection {
-  background: #b2dc94;
+  background: #dce7f6;
   color: var(--ink);
 }
 html body .container {
@@ -102,27 +62,27 @@ html body .container {
 }
 html body .container[role="main"] {
   margin-top: 0;
-  padding-block: 3.5rem var(--space-section);
+  padding-block: 2.5rem var(--space-section);
   min-height: 65vh;
 }
 html body h1,
 html body h2,
 html body h3,
 html body h4 {
-  font-family: var(--serif);
-  font-weight: 500;
-  line-height: 1.12;
-  letter-spacing: -0.025em;
+  font-family: var(--heading-font);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: normal;
   color: var(--ink);
 }
 html body h1 {
-  font-size: clamp(2.8rem, 6vw, 4.7rem);
+  font-size: clamp(1.75rem, 3vw, 2.125rem);
 }
 html body h2 {
-  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
 }
 html body h3 {
-  font-size: 1.65rem;
+  font-size: 1.125rem;
 }
 html body a {
   color: var(--accent);
@@ -142,7 +102,7 @@ html body [tabindex="-1"]:focus-visible {
 }
 a,
 button {
-  -webkit-tap-highlight-color: #b2dc94;
+  -webkit-tap-highlight-color: #dce7f6;
   transition:
     color 160ms ease,
     background-color 160ms ease,
@@ -165,11 +125,10 @@ button {
 
 /* Header: progressive navigation stays usable without JavaScript. */
 .portfolio-header {
-  border-top: 3px solid var(--highlight);
   border-bottom: 1px solid var(--line);
 }
 .portfolio-nav {
-  min-height: 84px;
+  min-height: 76px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -178,15 +137,15 @@ button {
 }
 html body .portfolio-brand {
   padding-block: 14px;
-  font: 600 25px/1.2 var(--serif);
+  font: 600 22px/1.3 var(--heading-font);
   color: var(--ink);
-  letter-spacing: -0.04em;
+  letter-spacing: normal;
   white-space: nowrap;
 }
 .portfolio-menu {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 28px;
 }
 html body .portfolio-menu a {
   min-height: 44px;
@@ -194,14 +153,14 @@ html body .portfolio-menu a {
   align-items: center;
   gap: 7px;
   font-size: var(--text-control);
-  font-weight: 600;
+  font-weight: 500;
   color: var(--ink);
 }
 html body .portfolio-menu a[aria-current="page"] {
   color: var(--accent);
   text-decoration: underline;
-  text-underline-offset: 8px;
-  text-decoration-color: var(--highlight);
+  text-underline-offset: 5px;
+  text-decoration-color: var(--accent);
 }
 .portfolio-menu-toggle {
   display: none;
@@ -238,14 +197,14 @@ html body .portfolio-menu a[aria-current="page"] {
 
 /* Homepage: compact introduction, then the work itself. */
 .hero-heading {
-  margin-bottom: 26px;
+  margin-bottom: 24px;
 }
 html body .home-hero h1 {
   margin: 0;
-  max-width: 1000px;
-  font-size: clamp(3rem, 6.4vw, 5.5rem);
-  line-height: 1.08;
-  letter-spacing: -0.025em;
+  max-width: 900px;
+  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  line-height: 1.3;
+  letter-spacing: normal;
 }
 .hero-word {
   color: inherit;
@@ -253,17 +212,17 @@ html body .home-hero h1 {
 }
 .hero-bottom {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 32px;
-  padding-bottom: 42px;
+  padding-bottom: 28px;
 }
 .hero-research {
   max-width: 650px;
   margin: 0;
-  color: var(--muted);
+  color: var(--ink);
   font-size: var(--text-size);
-  line-height: 1.7;
+  line-height: 1.65;
 }
 .hero-research > p {
   margin: 0 0 12px;
@@ -289,20 +248,21 @@ html body .research-cta {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
-  min-height: 46px;
-  padding: 10px 18px;
-  background: var(--highlight);
-  color: var(--ink);
+  gap: 10px;
+  min-height: 44px;
+  padding: 6px 0;
+  background: transparent;
+  color: var(--accent);
   font-size: var(--text-control);
   font-weight: 600;
   text-decoration: none;
-  border: 1px solid var(--highlight);
+  border: 0;
 }
 html body .action-link:hover,
 html body .research-cta:hover {
-  background: var(--highlight-hover);
-  border-color: var(--highlight-hover);
+  background: transparent;
+  color: var(--accent-hover);
+  text-decoration: underline;
 }
 /* The theme assigns a color directly to every span; controls inherit their label color. */
 html body a > span[aria-hidden="true"],
@@ -317,29 +277,19 @@ html body .text-link {
   font-weight: 600;
   text-decoration: underline;
 }
-html body .cv-link {
-  --highlight-hover: #e2ccf6;
-  color: #352347;
-}
-html body .cv-link:hover {
-  --highlight-hover: #d5b6ee;
-  color: #352347;
-}
-
 .eyebrow,
 .research-kicker {
   display: block;
-  color: var(--accent);
+  color: var(--muted);
   font: 600 var(--text-label)/1.6 var(--body-font);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  letter-spacing: normal;
 }
 .section-heading {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   gap: 24px;
-  padding-block: 25px;
+  padding-block: 16px;
   border-top: 1px solid var(--line);
 }
 html body .section-heading h2 {
@@ -350,9 +300,9 @@ html body .section-heading h2 {
 .work-row {
   display: grid;
   grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-  gap: clamp(28px, 4vw, 64px);
-  align-items: center;
-  padding-block: 36px;
+  gap: 32px;
+  align-items: start;
+  padding-block: 24px;
   border-top: 1px solid var(--line);
 }
 .work-row--text {
@@ -365,12 +315,11 @@ html body .section-heading h2 {
   display: flex;
   gap: 12px;
   align-items: baseline;
-  color: var(--accent);
+  color: var(--muted);
   font-size: var(--text-label);
   font-weight: 600;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  line-height: 1.7;
+  letter-spacing: normal;
+  line-height: 1.5;
 }
 .work-number {
   font-variant-numeric: tabular-nums;
@@ -379,30 +328,31 @@ html body .section-heading h2 {
 }
 .work-status {
   display: block;
-  margin: 14px 0 8px;
+  margin: 6px 0;
   color: var(--muted);
   font-size: var(--text-small);
 }
 html body .work-copy h2,
 html body .work-copy h3 {
-  margin: 0 0 16px;
-  font-size: clamp(1.7rem, 2.7vw, 2.2rem);
-  line-height: 1.15;
+  margin: 6px 0 10px;
+  font-size: 1.25rem;
+  line-height: 1.35;
 }
 html body .work-copy h2 a,
 html body .work-copy h3 a {
-  color: var(--ink);
+  color: var(--accent);
 }
 .work-copy > p {
-  margin: 0 0 16px;
-  color: var(--muted);
+  margin: 0 0 10px;
+  color: var(--ink);
   font-size: var(--text-size);
-  line-height: 1.75;
+  line-height: 1.65;
 }
 .work-copy > .work-metadata {
   font-size: var(--text-small);
-  line-height: 1.8;
-  letter-spacing: 0.02em;
+  line-height: 1.6;
+  letter-spacing: normal;
+  color: var(--muted);
 }
 .work-links {
   display: flex;
@@ -415,7 +365,7 @@ html body .work-links a {
   gap: 12px;
   min-height: 44px;
   font-size: var(--text-control);
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
 }
 .work-figure {
@@ -490,24 +440,14 @@ html body .home-about h2 {
   margin: 12px 0 0;
   font-size: clamp(1.9rem, 3.5vw, 2.6rem);
 }
-/* Follow each text fragment; limit the fill to avoid overlap with tall TeX font metrics. */
-.text-highlight {
-  display: inline;
-  background: linear-gradient(var(--highlight-hover), var(--highlight-hover)) left bottom / 100% 1em no-repeat;
-  color: inherit;
-  padding-inline: 0.05em;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-}
-
 /* Research, Software and detailed project pages share the same hierarchy. */
 html body .post-header {
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1rem;
   border-bottom: 1px solid var(--line);
 }
 html body .post-title {
-  margin: 0 0 16px;
+  margin: 0 0 10px;
 }
 html body .post-description,
 html body .desc {
@@ -518,9 +458,9 @@ html body .desc {
   line-height: 1.7;
 }
 html body .post > article > h2 {
-  font-size: 2rem;
-  margin: 2.8rem 0 1.2rem;
-  padding-top: 1.5rem;
+  font-size: 1.375rem;
+  margin: 2rem 0 1rem;
+  padding-top: 1rem;
   border-top: 1px solid var(--line);
 }
 html body .post > article > h2:first-child {
@@ -541,7 +481,7 @@ html body article li {
 .software-intro > p {
   max-width: 800px;
   margin: 12px 0;
-  font: 400 1.55rem/1.5 var(--serif);
+  font: 400 var(--text-size)/1.65 var(--heading-font);
   color: var(--ink);
 }
 .research-tags {
@@ -552,7 +492,7 @@ html body article li {
   color: var(--muted);
 }
 .research-feature {
-  padding-block: 2.5rem;
+  padding-block: 1.75rem;
   border-top: 1px solid var(--line);
 }
 .research-feature--first {
@@ -561,8 +501,8 @@ html body article li {
 }
 html body .research-feature h2 {
   max-width: 860px;
-  margin: 14px 0 20px;
-  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  margin: 12px 0;
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
 }
 .research-feature p {
   max-width: 860px;
@@ -586,13 +526,13 @@ html body .research-feature h2 {
   color: var(--accent);
 }
 .research-section {
-  margin-top: 2.5rem;
+  margin-top: 1.75rem;
 }
 .research-section-heading {
   display: flex;
   align-items: baseline;
   gap: 18px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 .research-section-heading > span {
   font-size: var(--text-small);
@@ -606,9 +546,9 @@ html body .research-section-heading h2 {
 }
 .school-entry {
   display: grid;
-  grid-template-columns: 160px minmax(0, 1fr);
-  gap: 32px;
-  padding-block: 28px;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 24px;
+  padding-block: 20px;
   border-bottom: 1px solid var(--line);
 }
 .school-date {
@@ -617,8 +557,8 @@ html body .research-section-heading h2 {
   color: var(--accent);
 }
 html body .school-entry h3 {
-  font-size: 1.45rem;
-  margin: 0 0 12px;
+  font-size: 1.0625rem;
+  margin: 0 0 8px;
 }
 .school-entry p {
   font-size: var(--text-size);
@@ -687,10 +627,10 @@ html body .project-preview img {
     width: calc(100% - 40px);
   }
   html body .container[role="main"] {
-    padding-top: 2.5rem;
+    padding-top: 1.75rem;
   }
   .portfolio-nav {
-    min-height: 74px;
+    min-height: 68px;
     gap: 0;
   }
   .portfolio-menu {
@@ -715,8 +655,8 @@ html body .project-preview img {
     min-height: 48px;
   }
   html body .home-hero h1 {
-    font-size: clamp(2.7rem, 8.9vw, 4.2rem);
-    line-height: 1.07;
+    font-size: clamp(1.625rem, 5vw, 2rem);
+    line-height: 1.3;
   }
   .hero-bottom {
     flex-direction: column;
@@ -736,11 +676,11 @@ html body .project-preview img {
   .work-row {
     grid-template-columns: 1fr;
     gap: 20px;
-    padding-block: 30px;
+    padding-block: 22px;
   }
   html body .work-copy h2,
   html body .work-copy h3 {
-    font-size: 1.9rem;
+    font-size: 1.25rem;
   }
   .work-copy > p {
     max-width: 600px;
