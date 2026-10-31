@@ -20,7 +20,7 @@
   status: Application
   summary: Exploring molecular measurements with chemical similarity, semantic search, and inspectable source records.
   metadata: RDKit · Streamlit · ChEMBL / Tox21 / ESOL
-  url: /projects/moleculizer/
+  url: /projects/molescope/
   code: https://github.com/aralcimcim/moleculizer
   image: /assets/img/projects/moleculizer.png
   alt: Molescope molecular evidence explorer showing dataset selection and molecular search controls.

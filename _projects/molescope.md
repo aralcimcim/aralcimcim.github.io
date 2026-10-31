@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Molescope
-permalink: /projects/moleculizer/
+permalink: /projects/molescope/
 description: Molecular evidence retrieval combining chemical similarity, semantic search, and cited summaries.
 img: assets/img/projects/moleculizer.png
 importance: 2
