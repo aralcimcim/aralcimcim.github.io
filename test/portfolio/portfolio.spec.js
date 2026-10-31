@@ -103,12 +103,7 @@ test("project routes, images and local downloads remain available", async ({ pag
   await page.goto("./projects/ragz/");
   await expect(page).toHaveURL(new RegExp(`${prefix}/projects/trialtrace/$`));
   await expect(page.locator("h1")).toHaveText("TrialTrace");
-  for (const url of [
-    "assets/pdf/example_pdf.pdf",
-    "assets/img/projects/moleculizer.png",
-    "assets/img/projects/ragz-canvas.png",
-    "profile/vita_en.pdf",
-  ]) {
+  for (const url of ["assets/pdf/example_pdf.pdf", "assets/img/projects/ragz-canvas.png", "profile/vita_en.pdf"]) {
     expect((await request.get(`./${url}`)).status()).toBe(200);
   }
 });

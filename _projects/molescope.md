@@ -3,7 +3,6 @@ layout: page
 title: Molescope
 permalink: /projects/molescope/
 description: Molecular evidence retrieval combining chemical similarity, semantic search, and cited summaries.
-img: assets/img/projects/moleculizer.png
 importance: 2
 category: Software
 ---
@@ -13,13 +12,6 @@ category: Software
 Molescope explores public molecular evidence using a molecule's SMILES representation and an evidence question. It combines structure-based retrieval with semantic search, keeping the source measurements and assay context visible.
 
 [View the code on GitHub](https://github.com/aralcimcim/molescope)
-
-<figure class="project-preview">
-  <a href="{{ '/assets/img/projects/moleculizer.png' | relative_url }}" target="_blank" rel="noopener">
-    <img src="{{ '/assets/img/projects/moleculizer.png' | relative_url }}" alt="Molescope interface with dataset selection and molecular search controls" width="1440" height="861" loading="lazy">
-  </a>
-  <figcaption>Application workspace. Select the image to view it at full resolution.</figcaption>
-</figure>
 
 ## Datasets
 

@@ -19,7 +19,7 @@ The layout takes its reading density and restrained hierarchy from [Andreas Geig
 - `_layouts/default.liquid`: retains the theme layout, adds the skip-link target, and removes its extra top-margin utility.
 - `assets/css/academic.css`: shared academic color, typography, width, spacing, component, and responsive styles. Uses Helvetica/Arial system fonts without an external font service. Project action links retain the requested lack of underlines.
 - `assets/js/portfolio-nav.js`: menu state, Escape/outside-click handling, focus return, and breakpoint handling. The toggle appears only after its handlers are installed. Navigation stays visible without JavaScript.
-- Research previews: the molecular machine learning and pathology entries use text without images. The original method SVG files are retained but are not rendered in the previews. Application previews keep their original screenshots.
+- Research previews: the molecular machine learning and pathology entries use text without images. The original method SVG files are retained but are not rendered in the previews. Molescope uses a text-only preview; TrialTrace keeps its original screenshot.
 - `_pages/research.md`, `_pages/industry.md`: coherent section pages. Software retains the `/industry/` URL for existing inbound links. Detailed `_projects` content, project URLs, original screenshots, and downloads remain intact.
 - `_config.yml`: content width, document-flow navigation, and exclusion of test/output directories from deployment.
 - `.al-folio-overrides.yml`: the four reviewed theme overrides, with pinned upstream and local hashes for drift checking.

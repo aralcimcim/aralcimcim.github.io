@@ -22,12 +22,6 @@
   metadata: RDKit · Streamlit · ChEMBL / Tox21 / ESOL
   url: /projects/molescope/
   code: https://github.com/aralcimcim/molescope
-  image: /assets/img/projects/moleculizer.png
-  alt: Molescope molecular evidence explorer showing dataset selection and molecular search controls.
-  width: 1440
-  height: 861
-  caption: "Proof of concept: Application Workspace"
-  screenshot: true
 
 - title: TrialTrace
   category: Software
