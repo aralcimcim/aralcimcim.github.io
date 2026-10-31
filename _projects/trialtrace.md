@@ -12,7 +12,7 @@ category: Software
 
 TrialTrace is a visual research workspace for public clinical trial protocols across 13 neuroscience topics, including neurodegeneration, epilepsy, multiple sclerosis, stroke, brain injury, migraine, sleep disorders, ADHD, and autism. Users combine topic, question, and study-filter cards on a draggable canvas to define the evidence they want to explore.
 
-[View the code on GitHub](https://github.com/aralcimcim/ragz)
+[View the code on GitHub](https://github.com/aralcimcim/trialtrace)
 
 <figure class="project-preview">
   <a href="{{ '/assets/img/projects/ragz-canvas.png' | relative_url }}" target="_blank" rel="noopener">

@@ -12,7 +12,7 @@ category: Software
 
 Molescope explores public molecular evidence using a molecule's SMILES representation and an evidence question. It combines structure-based retrieval with semantic search, keeping the source measurements and assay context visible.
 
-[View the code on GitHub](https://github.com/aralcimcim/moleculizer)
+[View the code on GitHub](https://github.com/aralcimcim/molescope)
 
 <figure class="project-preview">
   <a href="{{ '/assets/img/projects/moleculizer.png' | relative_url }}" target="_blank" rel="noopener">
