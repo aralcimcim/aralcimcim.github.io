@@ -1,7 +1,7 @@
 ---
 layout: page
 title: TrialTrace
-permalink: /projects/ragz/
+permalink: /projects/trialtrace/
 description: An interactive research canvas connecting clinical trial questions to source evidence.
 img: assets/img/projects/ragz-canvas.png
 importance: 1
@@ -39,13 +39,5 @@ Optional Gemini explanations use only the retrieved passages. Each generated cla
 - Optional structured Gemini output validated with Pydantic.
 - Public data only, without patient uploads or personal health questions.
 - A tested Docker image with bundled starter data and a CPU embedding model.
-
-## Testing and limitations
-
-Nineteen automated tests cover record normalization, passage splitting, retrieval filters, vector storage, map validation, combined-question retrieval, and citation validation. Browser checks verify dragging, node movement, map search, source inspection, export, undo, and mobile layout. The packaged Docker app was also checked with real public trial records.
-
-**Retrieval evaluation:** On 12 assistant-authored, passage-labelled questions over a frozen snapshot of 119 trials and 911 passages, the supporting passage appeared in the top five for **9/12 questions (75% Hit@5)**. The three misses retrieved the correct trial's overview but not the labelled supporting passage. This evaluates the underlying retriever without topic filters, rather than the preset-question canvas. [Labels, results, and reproducible evaluation](https://github.com/aralcimcim/ragz/tree/main/evaluation) are available. The small development set needs independent review and does not measure answer quality.
-
-TrialTrace is a research education prototype. It describes study protocols, not clinical recommendations. Planned outcomes are not study findings, and results tables are not indexed. The snapshot is limited and may become outdated. Matching a quotation does not guarantee that the model interprets it correctly.
 
 **Tools:** Python, Streamlit, JavaScript, SVG, ClinicalTrials.gov API, FastEmbed, NumPy, SQLite, Pydantic, Gemini API, and Docker.

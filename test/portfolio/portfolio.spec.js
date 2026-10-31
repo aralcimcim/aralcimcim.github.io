@@ -92,11 +92,14 @@ test("skip link and selected work CTA lead to real targets", async ({ page }) =>
 });
 
 test("project routes, images and local downloads remain available", async ({ page, request }) => {
-  for (const route of ["projects/chemprop-diffusion/", "projects/moleculizer/", "projects/ragz/"]) {
+  for (const route of ["projects/chemprop-diffusion/", "projects/moleculizer/", "projects/trialtrace/"]) {
     const response = await page.goto(`./${route}`);
     expect(response.status()).toBe(200);
     await expect(page.locator("h1")).toHaveCount(1);
   }
+  await page.goto("./projects/ragz/");
+  await expect(page).toHaveURL(new RegExp(`${prefix}/projects/trialtrace/$`));
+  await expect(page.locator("h1")).toHaveText("TrialTrace");
   for (const url of [
     "assets/pdf/example_pdf.pdf",
     "assets/img/projects/moleculizer.png",

@@ -35,7 +35,7 @@
   status: Research prototype
   summary: A visual research canvas connecting clinical trial questions to retrieved protocols and cited source passages.
   metadata: ClinicalTrials.gov · FastEmbed · Streamlit
-  url: /projects/ragz/
+  url: /projects/trialtrace/
   code: https://github.com/aralcimcim/ragz
   image: /assets/img/projects/ragz-canvas.png
   alt: TrialTrace research canvas with connected question cards, topic cards, and retrieved trial source records.
