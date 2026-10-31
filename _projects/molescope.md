@@ -2,7 +2,6 @@
 layout: page
 title: Molescope
 permalink: /projects/molescope/
-description: Molecular evidence retrieval combining chemical similarity, semantic search, and cited summaries.
 importance: 2
 category: Software
 ---
