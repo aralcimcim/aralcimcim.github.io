@@ -365,24 +365,6 @@ html body .research-feature h2 {
   max-width: 74ch;
   color: var(--muted);
 }
-.research-method {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 13px;
-  margin: 26px 0;
-  color: var(--muted);
-  font: 400 var(--text-control)/1.5 var(--mono-font);
-}
-.research-method span {
-  padding: 8px 10px;
-  border: 1px solid var(--line);
-  background: var(--surface);
-}
-.research-method b {
-  font-weight: 400;
-  color: var(--accent);
-}
 .research-section {
   margin-top: 30px;
 }
@@ -637,13 +619,6 @@ code {
   .school-entry {
     grid-template-columns: 1fr;
     gap: 8px;
-  }
-  .research-method {
-    gap: 8px;
-    font-size: 0.6875rem;
-  }
-  .research-method span {
-    padding: 7px;
   }
   .post table {
     font-size: 0.875rem;
