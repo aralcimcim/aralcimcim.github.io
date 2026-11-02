@@ -29,3 +29,12 @@
   height: 793
   caption: "Proof of concept: Application Workspace"
   screenshot: true
+
+- title: German Pathology AI
+  category: Software
+  label: Computational pathology
+  status: Interactive evaluation dashboard
+  summary: Inspecting tissue classification errors, prediction confidence, and review thresholds on held-out histology patches.
+  metadata: PyTorch · JavaScript · Power BI · NCT-CRC-HE
+  url: /projects/pathology-ai/
+  code: https://github.com/aralcimcim/german-pathology-ai

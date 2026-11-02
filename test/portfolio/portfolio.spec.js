@@ -89,7 +89,7 @@ test("skip link leads to main content and selected work remains available", asyn
 });
 
 test("project routes, images and local downloads remain available", async ({ page, request }) => {
-  for (const route of ["projects/chemprop-diffusion/", "projects/molescope/", "projects/trialtrace/"]) {
+  for (const route of ["projects/chemprop-diffusion/", "projects/molescope/", "projects/trialtrace/", "projects/pathology-ai/"]) {
     const response = await page.goto(`./${route}`);
     expect(response.status()).toBe(200);
     await expect(page.locator("h1")).toHaveCount(1);
