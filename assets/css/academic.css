@@ -264,19 +264,6 @@ html body button > span[aria-hidden="true"] {
   font: 600 var(--text-label)/1.6 var(--body-font);
   letter-spacing: normal;
 }
-.section-heading {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 24px;
-  padding-block: 16px;
-  border-top: 1px solid var(--line);
-}
-html body .section-heading h2 {
-  margin: 6px 0 0;
-  border: 0;
-  padding: 0;
-}
 .work-row {
   display: grid;
   grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
