@@ -6,7 +6,7 @@ description: An interactive research canvas connecting clinical trial questions 
 importance: 1
 category: Software
 portfolio: true
-tools: ["Python", "Streamlit", "JavaScript", "SVG", "ClinicalTrials.gov API", "FastEmbed", "NumPy", "SQLite", "Pydantic", "Gemini API", "Docker"]
+tools: ["Python", "Streamlit", "JavaScript", "FastEmbed", "NumPy", "SQLite", "Pydantic", "Gemini API", "Docker"]
 ---
 
 ## Overview
@@ -31,7 +31,5 @@ Optional Gemini explanations use only the retrieved passages. Each generated cla
 - Local CPU embeddings and an SQLite vector store.
 - Trial comparisons and evidence passages linked to registry records.
 - Optional structured Gemini output validated with Pydantic.
-- Public data only, without patient uploads or personal health questions.
-- A tested Docker image with bundled starter data and a CPU embedding model.
 
 {% include tools.liquid names=page.tools %}
