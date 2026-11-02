@@ -6,14 +6,6 @@
   url: /projects/chemprop-diffusion/
   code: https://github.com/aralcimcim/bsc/tree/main/thesis_code/diffpred_MODDED
 
-- title: Reasoning-guided pathology reports
-  category: Research
-  label: Computational pathology
-  status: Ongoing research · 2026–2027
-  summary: Developing vision-language models that connect whole-slide images to structured reports and supporting visual evidence.
-  metadata: Whole-slide images · Vision-language models · JKU Linz
-  url: /research/#pathology
-
 - title: Molescope
   category: Software
   label: Molecular evidence retrieval

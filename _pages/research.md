@@ -13,14 +13,6 @@ nav_order: 1
 <p><a href="https://papers.miccai.org/miccai-2026-sat/paper/REG2026_007.pdf">Paper (PDF)</a> · <a href="https://github.com/TurocratesAI/GOW-Reg2026">Original code</a></p>
 </section>
 
-<section id="pathology" class="research-feature">
-<span class="research-kicker">ONGOING RESEARCH · 2026–2027 · JKU LINZ</span>
-<h2>Reasoning-Guided Vision-Language Models for WSI Report Generation</h2>
-<p>This project develops a machine learning framework that analyzes pathology whole-slide images (WSIs) to generate structured medical reports. The model aims to make its reasoning explicit and link report statements to supporting visual evidence on the slide. The goal is to support pathologists with accurate, interpretable reports whose conclusions can be checked against the original images.</p>
-<div class="research-method"><span>Whole-slide images</span><b aria-hidden="true">→</b><span>Reasoning &amp; visual evidence</span><b aria-hidden="true">→</b><span>Structured reports</span></div>
-<p><strong>Supervisors</strong><br>Prof. Erich Kobler — Institute of Machine Learning (IML), JKU Linz<br>Dr. Sabina Köfler — Institute for Pathology and Molecular Pathology, JKU Linz</p>
-</section>
-
 <section class="research-feature research-section">
 <span class="research-kicker">FEATURED RESEARCH</span>
 <h2>Chemprop-conditioned diffusion</h2>
