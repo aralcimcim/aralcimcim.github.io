@@ -506,12 +506,49 @@ html body .work-copy :is(h2, h3) a:hover {
   margin: 20px 0;
 }
 .work-chip {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   padding: 4px 8px;
   color: var(--accent);
   background: var(--paper);
   border: 1px solid var(--line);
   font: 400 var(--text-label)/1.5 var(--mono-font);
+}
+/* Tool names remain readable alongside the locally embedded icons. */
+.tool-icon {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  flex: 0 0 auto;
+  color: var(--accent);
+}
+.project-tools {
+  margin-top: 2rem;
+}
+.project-tools .tools-label {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font: 400 var(--text-control)/1.5 var(--mono-font);
+}
+.tool-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.post .tool-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  margin: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font: 400 var(--text-control)/1.5 var(--mono-font);
 }
 .work-links {
   display: flex;
@@ -529,24 +566,6 @@ html body .work-links a {
 }
 html body .work-links a:hover {
   color: var(--accent-hover);
-}
-.project-preview {
-  margin: 28px 0;
-  border: 1px solid var(--line);
-  background: var(--surface);
-}
-html body .project-preview img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 650px;
-  object-fit: contain;
-}
-.project-preview figcaption {
-  padding: 12px 16px;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 0.8125rem;
 }
 code {
   font-family: var(--mono-font);
