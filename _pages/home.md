@@ -22,12 +22,4 @@ description: Aral Cimcim — machine learning engineer working on graph neural n
     </div>
   </header>
 
-  <section id="selected-work" class="home-work" aria-labelledby="work-heading">
-    <div class="section-heading"><div><h2 id="work-heading">Selected work</h2></div></div>
-    {% assign selected_research = site.data.selected_work | where: 'category', 'Research' %}
-    {% for work in selected_research %}
-      {% include work-preview.liquid work=work number=forloop.index %}
-    {% endfor %}
-  </section>
-
 </article>

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: German Pathology AI
+title: Dashboard
 permalink: /projects/pathology-ai/
 description: An interactive dashboard for tissue classification errors, confidence, and review thresholds.
 importance: 3
@@ -11,14 +11,7 @@ category: Software
 
 An interactive model evaluation dashboard built from 7,180 held-out colorectal histology patches. It brings together a confusion matrix, recall by tissue class, confidence distributions, and a searchable table of individual misclassifications.
 
-[Open the interactive dashboard](https://aralcimcim.github.io/german-pathology-ai/) · [View the code on GitHub](https://github.com/aralcimcim/german-pathology-ai)
-
-<figure class="project-preview">
-  <a href="https://aralcimcim.github.io/german-pathology-ai/">
-    <img src="{{ '/assets/img/projects/pathology-ai-dashboard.png' | relative_url }}" alt="Pathology evaluation dashboard showing actual results, independent review and tumour controls, a confusion matrix, and class recall" width="1440" height="1254" loading="lazy">
-  </a>
-  <figcaption>Model evaluation workspace. Open the dashboard to explore the results.</figcaption>
-</figure>
+[Open the interactive dashboard](https://aralcimcim.github.io/patho_dash/) · [View the code on GitHub](https://github.com/aralcimcim/patho_dash)
 
 ## How it works
 
@@ -36,10 +29,10 @@ The dashboard runs in the browser using the exported predictions. Independent co
 | Tumour sensitivity at threshold 0.50 | 82.40% |
 | Tumour specificity at threshold 0.50 | 98.35% |
 
-The browser checks all 54 saved metrics before showing the results. The repository includes the Colab notebook, fitted classifier, run metadata, prediction CSVs, Power BI measures, and automated dashboard checks.
+The browser checks all 54 saved metrics before showing the results. The repository contains the static dashboard, exported predictions, saved metrics, and automated dashboard checks.
 
 Results describe image patches, not patient diagnoses. Patches within a patient are correlated, confidence scores are uncalibrated, and threshold changes are exploratory.
 
 **Data:** Kather, Halama and Marx (2018), [100,000 histological images of human colorectal cancer and healthy tissue](https://doi.org/10.5281/zenodo.1214456), Zenodo, CC BY 4.0.
 
-**Tools:** Python, PyTorch, scikit-learn, JavaScript, and Power BI.
+**Tools:** JavaScript, HTML, and CSS.

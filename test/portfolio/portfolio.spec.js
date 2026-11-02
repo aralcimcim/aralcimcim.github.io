@@ -78,14 +78,15 @@ test("mobile menu opens, closes with Escape and returns keyboard focus", async (
   await expect(menu).toBeHidden();
 });
 
-test("skip link leads to main content and selected work remains available", async ({ page }) => {
+test("skip link leads to main content and research areas remain available", async ({ page }) => {
   await page.goto("./");
   await page.keyboard.press("Tab");
   const skip = page.getByRole("link", { name: "Skip to content" });
   await expect(skip).toBeFocused();
   await page.keyboard.press("Enter");
   await expect(page.locator("#main-content")).toBeFocused();
-  await expect(page.locator(".home-work .work-row")).toHaveCount(1);
+  await expect(page.locator(".home-work")).toHaveCount(0);
+  await expect(page.locator("#main-content")).toContainText("Research Areas:");
 });
 
 test("project routes, images and local downloads remain available", async ({ page, request }) => {
