@@ -15,7 +15,7 @@ An interactive model evaluation dashboard built from 7,180 held-out colorectal h
 
 <figure class="project-preview">
   <a href="https://aralcimcim.github.io/german-pathology-ai/">
-    <img src="{{ '/assets/img/projects/pathology-ai-dashboard.png' | relative_url }}" alt="Pathology evaluation dashboard showing actual results, independent review and tumour controls, a confusion matrix, and class recall" width="1440" height="1100" loading="lazy">
+    <img src="{{ '/assets/img/projects/pathology-ai-dashboard.png' | relative_url }}" alt="Pathology evaluation dashboard showing actual results, independent review and tumour controls, a confusion matrix, and class recall" width="1440" height="1254" loading="lazy">
   </a>
   <figcaption>Model evaluation workspace. Open the dashboard to explore the results.</figcaption>
 </figure>
