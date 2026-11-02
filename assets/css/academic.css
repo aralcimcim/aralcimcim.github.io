@@ -231,19 +231,7 @@ html body .home-hero h1 {
   margin: 0;
   padding-left: 1.4em;
 }
-.hero-actions {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  flex-shrink: 0;
-}
-.hero-secondary {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 24px;
-}
-html body .action-link,
+
 html body .research-cta {
   display: inline-flex;
   align-items: center;
@@ -258,7 +246,7 @@ html body .research-cta {
   text-decoration: none;
   border: 0;
 }
-html body .action-link:hover,
+
 html body .research-cta:hover {
   background: transparent;
   color: var(--accent-hover);
@@ -268,14 +256,6 @@ html body .research-cta:hover {
 html body a > span[aria-hidden="true"],
 html body button > span[aria-hidden="true"] {
   color: inherit;
-}
-html body .text-link {
-  display: inline-block;
-  min-height: 44px;
-  padding-block: 6px;
-  font-size: var(--text-control);
-  font-weight: 600;
-  text-decoration: underline;
 }
 
 .research-kicker {
@@ -583,12 +563,6 @@ html body .project-preview img {
   .hero-research {
     max-width: 580px;
     font-size: var(--text-size);
-  }
-  .hero-actions {
-    flex-direction: row;
-    align-items: center;
-    gap: 24px;
-    flex-wrap: wrap;
   }
   .work-row {
     grid-template-columns: 1fr;
