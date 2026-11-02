@@ -78,17 +78,14 @@ test("mobile menu opens, closes with Escape and returns keyboard focus", async (
   await expect(menu).toBeHidden();
 });
 
-test("skip link and selected work CTA lead to real targets", async ({ page }) => {
+test("skip link leads to main content and selected work remains available", async ({ page }) => {
   await page.goto("./");
   await page.keyboard.press("Tab");
   const skip = page.getByRole("link", { name: "Skip to content" });
   await expect(skip).toBeFocused();
   await page.keyboard.press("Enter");
   await expect(page.locator("#main-content")).toBeFocused();
-  await page.getByRole("link", { name: "View selected work" }).click();
-  await expect(page).toHaveURL(/#selected-work$/);
   await expect(page.locator(".home-work .work-row")).toHaveCount(1);
-  await expect(page.locator(".hero-secondary").getByRole("link", { name: "View CV (PDF)" })).toHaveAttribute("href", `${prefix}/profile/vita_en.pdf`);
 });
 
 test("project routes, images and local downloads remain available", async ({ page, request }) => {

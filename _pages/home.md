@@ -19,10 +19,6 @@ description: Aral Cimcim — machine learning engineer working on graph neural n
           <li><strong>Information Retrieval &amp; NLP:</strong> End-to-end neural IR pipelines, fine-tuning dense retrievers and cross-encoders for domain-based embeddings, semantic search, and RAG architectures.</li>
         </ol>
       </div>
-      <div class="hero-actions">
-        <a class="action-link" href="#selected-work">View selected work <span aria-hidden="true">↓</span></a>
-        <div class="hero-secondary"><a class="text-link" href="https://github.com/{{ site.data.socials.github_username }}">View GitHub <span aria-hidden="true">↗</span></a><a class="text-link cv-link" href="{{ '/profile/vita_en.pdf' | relative_url }}">View CV (PDF) <span aria-hidden="true">↗</span></a></div>
-      </div>
     </div>
   </header>
 
