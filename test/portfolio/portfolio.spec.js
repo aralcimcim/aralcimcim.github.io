@@ -110,8 +110,8 @@ test("project routes, tool icons and local downloads remain available", async ({
   await page.goto("./projects/ragz/");
   await expect(page).toHaveURL(new RegExp(`${prefix}/projects/trialtrace/$`));
   await expect(page.locator("h1")).toHaveText("TrialTrace");
-  await page.goto("./projects/pathology-ai/");
-  await expect(page).toHaveURL(new RegExp(`${prefix}/projects/patho_dat/$`));
+  expect((await request.get("./projects/pathology-ai/")).status()).toBe(404);
+  await page.goto("./projects/patho_dat/");
   await expect(page.getByRole("heading", { name: "Model selection", exact: true })).toBeVisible();
   for (const url of ["assets/pdf/example_pdf.pdf", "assets/img/projects/ragz-canvas.png", "profile/vita_en.pdf"]) {
     expect((await request.get(`./${url}`)).status()).toBe(200);

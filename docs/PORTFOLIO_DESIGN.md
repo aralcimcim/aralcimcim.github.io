@@ -15,7 +15,7 @@ All portfolio pages share the same dark background, surfaces, text and neon gree
 | Accent          | `#39ff14` |
 | Hover accent    | `#9aff85` |
 
-An 18 px root font size enlarges text consistently, including headings. Body text is about 20 px on desktop and 19 px on mobile; Software metadata labels are at least 13.5 px. System serif fonts serve the main text, with system monospace fonts for navigation and metadata. No web fonts or animation libraries are downloaded. Software listings are static entries with locally embedded tool icons and visible labels, including TrialTrace, Molescope and Pathology Dashboard. Existing project descriptions and links are preserved. The pathology project uses `/projects/patho_dat/`, with the old project URL redirecting there. The separate `patho_dash` dashboard shares the portfolio palette and includes a Model selection section for future models.
+An 18 px root font size enlarges text consistently, including headings. Body text is about 20 px on desktop and 19 px on mobile; Software metadata labels are at least 13.5 px. System serif fonts serve the main text, with system monospace fonts for navigation and metadata. No web fonts or animation libraries are downloaded. Software listings are static entries with locally embedded tool icons and visible labels, including TrialTrace, Molescope and Pathology Dashboard. Existing project descriptions and links are preserved. The pathology project is available only at `/projects/patho_dat/`. The separate `patho_dash` dashboard shares the portfolio palette and includes a Model selection section for future models.
 
 ## Source and validation
 
