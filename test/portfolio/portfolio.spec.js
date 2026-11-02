@@ -118,53 +118,56 @@ test("mobile navigation remains available without JavaScript", async ({ browser 
 
 test("text contrast and reduced motion across the main pages", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
-  for (const route of ["./", "./research/", "./industry/", "./about/"]) {
-    await page.goto(route);
-    const failures = await page.evaluate(() => {
-      const rgb = (value) => (value.match(/[\d.]+/g) || []).map(Number);
-      const luminance = (color) =>
-        color
-          .slice(0, 3)
-          .map((n) => {
-            const c = n / 255;
-            return c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
-          })
-          .reduce((sum, c, i) => sum + c * [0.2126, 0.7152, 0.0722][i], 0);
-      return Array.from(document.querySelectorAll("p,span,a,h1,h2,h3,button"))
-        .filter((el) => el.getClientRects().length && Array.from(el.childNodes).some((n) => n.nodeType === Node.TEXT_NODE && n.textContent.trim()))
-        .flatMap((el) => {
-          const style = getComputedStyle(el);
-          let parent = el;
-          let backgrounds;
-          while (parent) {
-            const surface = getComputedStyle(parent);
-            // Include every gradient stop if a theme supplies a layered background.
-            const stops = (surface.backgroundImage.match(/rgba?\([^)]*\)/g) || []).map(rgb);
-            if (stops.length) {
-              backgrounds = stops;
-              break;
-            }
-            const color = rgb(surface.backgroundColor);
-            if (color.length === 3 || color[3] === 1) {
-              backgrounds = [color];
-              break;
-            }
-            parent = parent.parentElement;
-          }
-          if (!backgrounds) backgrounds = [[255, 255, 255]];
-          const a = luminance(rgb(style.color));
-          const ratio = Math.min(
-            ...backgrounds.map((color) => {
-              const b = luminance(color);
-              return (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05);
+  for (const theme of ["light", "dark"]) {
+    await page.emulateMedia({ colorScheme: theme });
+    for (const route of ["./", "./research/", "./industry/", "./about/"]) {
+      await page.goto(route);
+      const failures = await page.evaluate(() => {
+        const rgb = (value) => (value.match(/[\d.]+/g) || []).map(Number);
+        const luminance = (color) =>
+          color
+            .slice(0, 3)
+            .map((n) => {
+              const c = n / 255;
+              return c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
             })
-          );
-          const large = parseFloat(style.fontSize) >= 24 || (parseFloat(style.fontSize) >= 18.66 && parseInt(style.fontWeight) >= 700);
-          return ratio >= (large ? 3 : 4.5) ? [] : [{ text: el.textContent.trim().slice(0, 60), ratio }];
-        });
-    });
-    expect(failures).toEqual([]);
-    expect(await page.locator(".portfolio-brand").evaluate((el) => getComputedStyle(el).transitionDuration)).toBe("0s");
+            .reduce((sum, c, i) => sum + c * [0.2126, 0.7152, 0.0722][i], 0);
+        return Array.from(document.querySelectorAll("p,span,a,h1,h2,h3,button"))
+          .filter((el) => el.getClientRects().length && Array.from(el.childNodes).some((n) => n.nodeType === Node.TEXT_NODE && n.textContent.trim()))
+          .flatMap((el) => {
+            const style = getComputedStyle(el);
+            let parent = el;
+            let backgrounds;
+            while (parent) {
+              const surface = getComputedStyle(parent);
+              // Include every gradient stop if a theme supplies a layered background.
+              const stops = (surface.backgroundImage.match(/rgba?\([^)]*\)/g) || []).map(rgb);
+              if (stops.length) {
+                backgrounds = stops;
+                break;
+              }
+              const color = rgb(surface.backgroundColor);
+              if (color.length === 3 || color[3] === 1) {
+                backgrounds = [color];
+                break;
+              }
+              parent = parent.parentElement;
+            }
+            if (!backgrounds) backgrounds = [[255, 255, 255]];
+            const a = luminance(rgb(style.color));
+            const ratio = Math.min(
+              ...backgrounds.map((color) => {
+                const b = luminance(color);
+                return (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05);
+              })
+            );
+            const large = parseFloat(style.fontSize) >= 24 || (parseFloat(style.fontSize) >= 18.66 && parseInt(style.fontWeight) >= 700);
+            return ratio >= (large ? 3 : 4.5) ? [] : [{ text: el.textContent.trim().slice(0, 60), ratio }];
+          });
+      });
+      expect(failures).toEqual([]);
+      expect(await page.locator(".portfolio-brand").evaluate((el) => getComputedStyle(el).transitionDuration)).toBe("0s");
+    }
   }
 });
 

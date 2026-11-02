@@ -1,20 +1,29 @@
 <a class="skip-link" href="#main-content">Skip to content</a>
 <header class="portfolio-header">
   <nav class="portfolio-nav container" aria-label="Main navigation">
-    <a
-      class="portfolio-brand"
-      href="{{ '/' | relative_url }}"
-      {% if page.url == '/' %}
-        aria-current="page"
+    <div class="brand-group">
+      {% if page.url == '/' and page.portfolio %}
+        <button class="brand-mark" data-cycle-molecule type="button" aria-label="Change the molecule in Figure 1" title="Change molecule" hidden>
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path d="m16 3 11 6.5v13L16 29 5 22.5v-13Z"/><circle cx="16" cy="3" r="2.5"/><circle cx="27" cy="22.5" r="2.5"/><circle cx="5" cy="22.5" r="2.5"/>
+          </svg>
+        </button>
       {% endif %}
-      >Aral Cimcim</a
-    >
+      <a
+        class="portfolio-brand"
+        href="{{ '/' | relative_url }}"
+        {% if page.url == '/' %}
+          aria-current="page"
+        {% endif %}
+        >Aral Cimcim</a
+      >
+    </div>
     <button
       class="portfolio-menu-toggle collapsed"
       type="button"
       aria-controls="portfolio-menu"
       aria-expanded="false"
-      aria-label="Toggle navigation"
+      aria-label="Toggle navigation menu"
     >
       Menu <span aria-hidden="true">+</span>
     </button>
@@ -42,8 +51,16 @@
       >
       <a href="mailto:{{ site.data.socials.email }}">Contact</a>
     </div>
+    {% if page.portfolio %}
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/><path d="M12 1v3m0 16v3M1 12h3m16 0h3M4 4l2 2m12 12 2 2M4 20l2-2M18 6l2-2"/>
+        </svg>
+        <span data-theme-label>Dark</span>
+      </button>
+    {% endif %}
   </nav>
-  {% if site.enable_progressbar %}
+  {% if site.enable_progressbar and page.portfolio != true %}
     <progress id="progress" value="0" aria-label="Reading progress">
       <div class="progress-container"><span class="progress-bar"></span></div>
     </progress>

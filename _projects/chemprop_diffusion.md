@@ -5,6 +5,7 @@ permalink: /projects/chemprop-diffusion/
 description: Molecular toxicity prediction using Chemprop graph representations and score-based diffusion.
 importance: 1
 category: Research
+portfolio: true
 ---
 
 ## Overview

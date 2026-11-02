@@ -1,5 +1,10 @@
 {% assign work = include.work %}
-<article class="work-row{% unless work.image %} work-row--text{% endunless %}" aria-labelledby="work-{{ work.title | slugify }}">
+<article
+  class="work-row{% unless work.image %} work-row--text{% endunless %}"
+  aria-labelledby="work-{{ work.title | slugify }}"
+  data-tilt
+  data-field="{% if work.label contains 'pathology' %}pathology{% elsif work.category == 'Research' %}geometry{% else %}retrieval{% endif %}"
+>
   <div class="work-copy">
     <div class="work-label">
       <span class="work-number" aria-hidden="true">0{{ include.number }}</span><span>{{ work.label }}</span>
@@ -17,7 +22,12 @@
       </h3>
     {% endif %}
     <p>{{ work.summary }}</p>
-    <p class="work-metadata">{{ work.metadata }}</p>
+    <p class="work-metadata">
+      {% assign facts = work.metadata | split: ' · ' -%}
+      {%- for fact in facts -%}
+        <span class="work-chip">{{ fact }}</span>
+      {%- endfor %}
+    </p>
     <div class="work-links">
       <a href="{{ work.url | relative_url }}">
         Explore project

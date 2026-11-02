@@ -4,6 +4,7 @@ title: Molescope
 permalink: /projects/molescope/
 importance: 2
 category: Software
+portfolio: true
 ---
 
 ## Overview

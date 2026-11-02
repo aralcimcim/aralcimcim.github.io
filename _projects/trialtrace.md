@@ -6,6 +6,7 @@ description: An interactive research canvas connecting clinical trial questions 
 img: assets/img/projects/ragz-canvas.png
 importance: 1
 category: Software
+portfolio: true
 ---
 
 ## Overview

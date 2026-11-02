@@ -5,6 +5,7 @@ permalink: /projects/pathology-ai/
 description: An interactive dashboard for tissue classification errors, confidence, and review thresholds.
 importance: 3
 category: Software
+portfolio: true
 ---
 
 ## Overview

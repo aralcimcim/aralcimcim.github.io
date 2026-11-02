@@ -4,6 +4,7 @@ title: Research
 permalink: /research/
 nav: true
 nav_order: 1
+portfolio: true
 ---
 
 <div class="research-workspace">

@@ -5,6 +5,7 @@ permalink: /industry/
 description: Applied machine learning and evidence retrieval. Software for searching, inspecting, and comparing source records.
 nav: true
 nav_order: 2
+portfolio: true
 ---
 
 {% assign applications = site.data.selected_work | where: 'category', 'Software' %}

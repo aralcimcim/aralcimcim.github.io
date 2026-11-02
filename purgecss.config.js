@@ -3,6 +3,8 @@ module.exports = {
   css: ["_site/assets/css/*.css"],
   output: "_site/assets/css/",
   skippedContentGlobs: ["_site/assets/**/*.html"],
+  // These values change after page load through the portfolio controls.
+  dynamicAttributes: ["data-theme", "aria-expanded", "aria-pressed"],
   safelist: [
     "collapse",
     "collapsing",
