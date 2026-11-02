@@ -23,12 +23,6 @@
   metadata: ClinicalTrials.gov · FastEmbed · Streamlit
   url: /projects/trialtrace/
   code: https://github.com/aralcimcim/trialtrace
-  image: /assets/img/projects/ragz-canvas.png
-  alt: TrialTrace research canvas with connected question cards, topic cards, and retrieved trial source records.
-  width: 1440
-  height: 793
-  caption: "Proof of concept: Application Workspace"
-  screenshot: true
 
 - title: Pathology Dashboard
   category: Software

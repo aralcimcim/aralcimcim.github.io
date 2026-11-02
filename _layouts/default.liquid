@@ -82,10 +82,8 @@
     {% include footer.liquid %}
 
     <!-- JavaScripts -->
-    {% if page.portfolio %}
-      <script defer src="{{ '/assets/js/lab-notebook.js' | relative_url | bust_file_cache }}"></script>
-    {% else %}
+    {% unless page.portfolio %}
       {% include scripts.liquid %}
-    {% endif %}
+    {% endunless %}
   </body>
 </html>

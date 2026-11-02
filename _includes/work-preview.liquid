@@ -2,8 +2,6 @@
 <article
   class="work-row{% unless work.image %} work-row--text{% endunless %}"
   aria-labelledby="work-{{ work.title | slugify }}"
-  data-tilt
-  data-field="{% if work.label contains 'pathology' %}pathology{% elsif work.category == 'Research' %}geometry{% else %}retrieval{% endif %}"
 >
   <div class="work-copy">
     <div class="work-label">

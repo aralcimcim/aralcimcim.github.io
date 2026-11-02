@@ -11,7 +11,6 @@ portfolio: true
     <div class="hero-copy">
       <h1>Machine learning for drug design &amp; large-scale medical data</h1>
     </div>
-    {% include molecule-figure.liquid %}
   </header>
 
   <section class="research-areas-section" aria-labelledby="areas-heading">
