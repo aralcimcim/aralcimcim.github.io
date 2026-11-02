@@ -230,10 +230,6 @@ html body .portfolio-menu a[aria-current="page"] {
   transform: translateY(0);
 }
 /* A simple text introduction and numbered research areas. */
-.research-kicker {
-  font: 400 var(--text-label)/1.6 var(--mono-font);
-  letter-spacing: 0.065em;
-}
 .home-hero {
   margin-bottom: clamp(2.5rem, 5vw, 4rem);
 }
@@ -369,9 +365,6 @@ html body .research-feature h2 {
   max-width: 74ch;
   color: var(--muted);
 }
-.research-kicker {
-  color: var(--accent);
-}
 .research-method {
   display: flex;
   align-items: center;
@@ -389,18 +382,6 @@ html body .research-feature h2 {
 .research-method b {
   font-weight: 400;
   color: var(--accent);
-}
-html body .research-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  min-height: 44px;
-  color: var(--accent);
-  font: 400 0.8125rem/1.5 var(--mono-font);
-  text-decoration: none;
-}
-.research-cta:hover {
-  text-decoration: underline;
 }
 .research-section {
   margin-top: 30px;
