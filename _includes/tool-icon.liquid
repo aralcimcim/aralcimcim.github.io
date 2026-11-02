@@ -1,0 +1,16 @@
+{%- assign tool_icon = site.data.tools[include.name] -%}
+{%- if tool_icon -%}
+  <svg
+    class="tool-icon"
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+    focusable="false"
+    {% if tool_icon.stroke %}
+      fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"
+    {% else %}
+      fill="currentColor"
+    {% endif %}
+  >
+    <path d="{{ tool_icon.path }}"/>
+  </svg>
+{%- endif -%}

@@ -6,6 +6,7 @@ description: An interactive dashboard for tissue classification errors, confiden
 importance: 3
 category: Software
 portfolio: true
+tools: ["JavaScript", "HTML", "CSS"]
 ---
 
 ## Overview
@@ -36,4 +37,4 @@ Results describe image patches, not patient diagnoses. Patches within a patient 
 
 **Data:** Kather, Halama and Marx (2018), [100,000 histological images of human colorectal cancer and healthy tissue](https://doi.org/10.5281/zenodo.1214456), Zenodo, CC BY 4.0.
 
-**Tools:** JavaScript, HTML, and CSS.
+{% include tools.liquid names=page.tools %}

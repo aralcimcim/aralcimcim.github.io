@@ -6,6 +6,7 @@ description: Molecular toxicity prediction using Chemprop graph representations 
 importance: 1
 category: Research
 portfolio: true
+tools: ["Python", "PyTorch", "PyTorch Lightning", "Chemprop", "Hydra"]
 ---
 
 ## Overview
@@ -38,4 +39,4 @@ The repository includes the modified DiffPred implementation, experiment configu
 - [Chemprop tuning procedure](https://github.com/aralcimcim/bsc/blob/main/thesis_code/diffpred_MODDED/diffpred/TUNING_CHEMPROP.md)
 - [Five-seed baseline and diffusion runs](https://github.com/aralcimcim/bsc/tree/main/diffpred_runs/retuned_unrounded_5seeds)
 
-**Tools:** Python, PyTorch, PyTorch Lightning, Chemprop, and Hydra.
+{% include tools.liquid names=page.tools %}

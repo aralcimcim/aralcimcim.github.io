@@ -5,6 +5,7 @@ permalink: /projects/molescope/
 importance: 2
 category: Software
 portfolio: true
+tools: ["Python", "Streamlit", "RDKit", "FastEmbed", "NumPy", "SQLite", "Pydantic", "Gemini API", "Docker"]
 ---
 
 ## Overview
@@ -38,4 +39,4 @@ The similarity cutoff updates the displayed matches immediately after the first 
 - Pydantic validation of generated summaries and source quotations.
 - A tested Docker image with starter indexes for all four datasets.
 
-**Tools:** Python, Streamlit, RDKit, FastEmbed, NumPy, SQLite, Pydantic, Gemini API, and Docker.
+{% include tools.liquid names=page.tools %}

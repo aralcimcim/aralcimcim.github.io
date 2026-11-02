@@ -26,7 +26,7 @@ portfolio: true
       </li>
       <li class="area-card" data-field="retrieval">
         <span class="field-index" aria-hidden="true">03</span>
-        <div class="field-copy"><h3>Information Retrieval &amp; NLP</h3><p>End-to-end neural IR pipelines, fine-tuning dense retrievers and cross-encoders for domain-based embeddings, semantic search, and RAG architectures.</p></div>
+        <div class="field-copy"><h3>Information Retrieval &amp; NLP</h3><p>End-to-end ML pipelines, fine-tuning dense retrievers for domain-based embeddings, semantic search, and RAG architectures.</p></div>
       </li>
     </ol>
   </section>

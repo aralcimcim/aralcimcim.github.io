@@ -1,0 +1,11 @@
+<div class="project-tools">
+  <p class="tools-label">Tools</p>
+  <ul class="tool-list" aria-label="Tools">
+    {% for tool_name in include.names %}
+      <li class="tool-badge">
+        {% include tool-icon.liquid name=tool_name -%}
+        <span>{{ tool_name }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

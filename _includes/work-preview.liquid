@@ -23,7 +23,10 @@
     <p class="work-metadata">
       {% assign facts = work.metadata | split: ' · ' -%}
       {%- for fact in facts -%}
-        <span class="work-chip">{{ fact }}</span>
+        <span class="work-chip">
+          {%- include tool-icon.liquid name=fact -%}
+          <span>{{ fact }}</span></span
+        >
       {%- endfor %}
     </p>
     <div class="work-links">

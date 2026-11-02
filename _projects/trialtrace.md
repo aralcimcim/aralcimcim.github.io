@@ -3,10 +3,10 @@ layout: page
 title: TrialTrace
 permalink: /projects/trialtrace/
 description: An interactive research canvas connecting clinical trial questions to source evidence.
-img: assets/img/projects/ragz-canvas.png
 importance: 1
 category: Software
 portfolio: true
+tools: ["Python", "Streamlit", "JavaScript", "SVG", "ClinicalTrials.gov API", "FastEmbed", "NumPy", "SQLite", "Pydantic", "Gemini API", "Docker"]
 ---
 
 ## Overview
@@ -14,13 +14,6 @@ portfolio: true
 TrialTrace is a visual research workspace for public clinical trial protocols across 13 neuroscience topics, including neurodegeneration, epilepsy, multiple sclerosis, stroke, brain injury, migraine, sleep disorders, ADHD, and autism. Users combine topic, question, and study-filter cards on a draggable canvas to define the evidence they want to explore.
 
 [View the code on GitHub](https://github.com/aralcimcim/trialtrace)
-
-<figure class="project-preview">
-  <a href="{{ '/assets/img/projects/ragz-canvas.png' | relative_url }}" target="_blank" rel="noopener">
-    <img src="{{ '/assets/img/projects/ragz-canvas.png' | relative_url }}" alt="TrialTrace canvas connecting topics and question cards to retrieved trial records" width="1440" height="793" loading="lazy">
-  </a>
-  <figcaption>Application workspace. Select the image to view it at full resolution.</figcaption>
-</figure>
 
 ## How it works
 
@@ -41,4 +34,4 @@ Optional Gemini explanations use only the retrieved passages. Each generated cla
 - Public data only, without patient uploads or personal health questions.
 - A tested Docker image with bundled starter data and a CPU embedding model.
 
-**Tools:** Python, Streamlit, JavaScript, SVG, ClinicalTrials.gov API, FastEmbed, NumPy, SQLite, Pydantic, Gemini API, and Docker.
+{% include tools.liquid names=page.tools %}

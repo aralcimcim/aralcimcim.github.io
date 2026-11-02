@@ -89,11 +89,20 @@ test("skip link leads to main content and research areas remain available", asyn
   await expect(page.locator("#main-content")).toContainText("Research Areas:");
 });
 
-test("project routes, images and local downloads remain available", async ({ page, request }) => {
+test("project routes, tool icons and local downloads remain available", async ({ page, request }) => {
+  await page.setViewportSize({ width: 375, height: 900 });
   for (const route of ["projects/chemprop-diffusion/", "projects/molescope/", "projects/trialtrace/", "projects/pathology-ai/"]) {
     const response = await page.goto(`./${route}`);
     expect(response.status()).toBe(200);
     await expect(page.locator("h1")).toHaveCount(1);
+    const tools = page.getByRole("list", { name: "Tools", exact: true });
+    await expect(tools).toBeVisible();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+    await page.screenshot({ path: path.join("output/playwright", `${route.split("/")[1]}-tools-mobile.png`), fullPage: true });
+    for (const badge of await tools.getByRole("listitem").all()) {
+      expect((await badge.innerText()).trim()).not.toBe("");
+      expect(await badge.locator("svg path").evaluate((path) => path.getBBox().width)).toBeGreaterThan(0);
+    }
   }
   await page.goto("./projects/moleculizer/");
   await expect(page).toHaveURL(new RegExp(`${prefix}/projects/molescope/$`));
