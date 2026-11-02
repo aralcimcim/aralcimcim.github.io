@@ -1,30 +1,26 @@
 <figure class="molecule-figure" data-molecule-figure aria-labelledby="molecule-caption">
-  <div class="figure-meta"><span>FIG. 01 / MOLECULAR COORDINATES</span><span data-noise-label>σ = 0.00</span></div>
-  <svg class="molecule-canvas" viewBox="0 0 480 370" role="img" aria-labelledby="molecule-title molecule-description">
-    <title id="molecule-title">Illustrative benzene molecular graph</title>
-    <desc id="molecule-description">A heavy-atom graph with hydrogen atoms omitted. This is an interactive illustration, not a molecular simulation or model output.</desc>
-    <defs><pattern id="molecular-grid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.7" fill="currentColor"/></pattern></defs>
-    <rect width="480" height="370" fill="url(#molecular-grid)" class="figure-grid"/>
-    <g class="molecule-noise" aria-hidden="true"></g>
+  <div class="figure-meta"><span>COORDINATE DENOISING</span><span data-noise-label>Noise 0%</span></div>
+  <svg class="molecule-canvas" viewBox="0 0 480 320" role="img" aria-labelledby="molecule-title molecule-description">
+    <title id="molecule-title">From noisy coordinates to a benzene ring</title>
+    <desc id="molecule-description">Six carbon atoms settle into a hexagonal ring as coordinate noise decreases. Conceptual illustration, not a trained model output. Hydrogen atoms are omitted.</desc>
+    <path class="molecule-reference" d="M335 160 287.5 242.3 192.5 242.3 145 160 192.5 77.7 287.5 77.7Z" fill="none" stroke="currentColor" stroke-dasharray="3 6" opacity="0" aria-hidden="true"/>
     <g class="molecule-bonds" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8">
-      <path d="M335 185 287.5 267.3 192.5 267.3 145 185 192.5 102.7 287.5 102.7Z"/>
-      <path d="M320 185 280 254M198 254 158 185M198 116 280 116"/>
+      <path d="M335 160 287.5 242.3 192.5 242.3 145 160 192.5 77.7 287.5 77.7Z"/>
+      <path d="M320 160 280 229M198 229 158 160M198 91 280 91"/>
     </g>
     <g class="molecule-atoms" aria-hidden="true" text-anchor="middle" dominant-baseline="central">
-      <g transform="translate(335 185)"><circle r="14"/><text>C</text></g><g transform="translate(287.5 267.3)"><circle r="14"/><text>C</text></g>
-      <g transform="translate(192.5 267.3)"><circle r="14"/><text>C</text></g><g transform="translate(145 185)"><circle r="14"/><text>C</text></g>
-      <g transform="translate(192.5 102.7)"><circle r="14"/><text>C</text></g><g transform="translate(287.5 102.7)"><circle r="14"/><text>C</text></g>
+      <g transform="translate(335 160)"><circle r="14"/><text>C</text></g><g transform="translate(287.5 242.3)"><circle r="14"/><text>C</text></g>
+      <g transform="translate(192.5 242.3)"><circle r="14"/><text>C</text></g><g transform="translate(145 160)"><circle r="14"/><text>C</text></g>
+      <g transform="translate(192.5 77.7)"><circle r="14"/><text>C</text></g><g transform="translate(287.5 77.7)"><circle r="14"/><text>C</text></g>
     </g>
-    <g class="coordinate-axes" aria-hidden="true"><path d="M42 322h38M42 322v-38M42 322l-17 17"/><text x="85" y="326">x</text><text x="38" y="276">y</text><text x="16" y="348">z</text></g>
-    <text class="figure-equation" x="455" y="331" text-anchor="end" aria-hidden="true">f(Rx) = f(x)</text>
   </svg>
   <div class="figure-controls" data-molecule-controls hidden>
-    <button class="small-control" type="button" data-denoise aria-pressed="false">Denoise graph</button>
-    <button class="small-control" type="button" data-pause aria-pressed="false">Pause motion</button>
+    <label class="noise-control" for="coordinate-noise"
+      >Noise level<input id="coordinate-noise" data-noise-input type="range" min="0" max="100" value="0" step="1"
+    ></label>
+    <button class="small-control" type="button" data-denoise>Replay denoising</button>
   </div>
   <figcaption id="molecule-caption">
-    <strong data-molecule-name>Benzene</strong> <span class="caption-divider" aria-hidden="true">/</span> Different coordinates. Same graph.<span class="figure-footnote"
-      >Illustrative graph · hydrogens omitted. Hover or focus to denoise.</span
-    >
+    Noisy coordinates → benzene<span class="figure-footnote">Conceptual illustration · hydrogens omitted.</span>
   </figcaption>
 </figure>

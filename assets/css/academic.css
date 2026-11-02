@@ -1,18 +1,18 @@
-/* Living Lab Notebook. A single stylesheet, served directly by Jekyll. */
+/* Dark academic portfolio, served directly by Jekyll. */
 :root {
-  color-scheme: light;
-  --paper: #f7f4ee;
-  --surface: #fffcf7;
-  --ink: #292732;
-  --muted: #625d6a;
-  --line: #d8d1d9;
-  --wash: #eee9ef;
-  --accent: #68438a;
-  --accent-hover: #4e2a70;
-  --geometry: #68438a;
-  --pathology: #9b4567;
-  --retrieval: #28685b;
-  --dot: #d8d0da;
+  color-scheme: dark;
+  --paper: #191820;
+  --surface: #211f29;
+  --ink: #eee9e4;
+  --muted: #bcb4c3;
+  --line: #44404d;
+  --wash: #2b2635;
+  --accent: #c7a7ea;
+  --accent-hover: #e0c8f7;
+  --geometry: #c7a7ea;
+  --pathology: #eda7c4;
+  --retrieval: #8bcdbb;
+  --dot: #393440;
   --body-font: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
   --mono-font: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   --heading-font: var(--body-font);
@@ -30,38 +30,6 @@
   --global-hover-text-color: var(--surface);
   --global-divider-color: var(--line);
   --global-code-bg-color: var(--wash);
-}
-html[data-theme="dark"] {
-  color-scheme: dark;
-  --paper: #191820;
-  --surface: #211f29;
-  --ink: #eee9e4;
-  --muted: #bcb4c3;
-  --line: #44404d;
-  --wash: #2b2635;
-  --accent: #c7a7ea;
-  --accent-hover: #e0c8f7;
-  --geometry: #c7a7ea;
-  --pathology: #eda7c4;
-  --retrieval: #8bcdbb;
-  --dot: #393440;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    color-scheme: dark;
-    --paper: #191820;
-    --surface: #211f29;
-    --ink: #eee9e4;
-    --muted: #bcb4c3;
-    --line: #44404d;
-    --wash: #2b2635;
-    --accent: #c7a7ea;
-    --accent-hover: #e0c8f7;
-    --geometry: #c7a7ea;
-    --pathology: #eda7c4;
-    --retrieval: #8bcdbb;
-    --dot: #393440;
-  }
 }
 *,
 *::before,
@@ -214,33 +182,6 @@ html body .portfolio-brand:hover {
   text-decoration: none;
   color: var(--accent);
 }
-.brand-mark {
-  width: 36px;
-  height: 44px;
-  padding: 5px 1px;
-  border: 0;
-  background: none;
-  color: var(--geometry);
-}
-.brand-mark svg {
-  width: 30px;
-  height: 32px;
-  overflow: visible;
-}
-.brand-mark path {
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.2;
-}
-.brand-mark circle {
-  fill: var(--paper);
-  stroke: currentColor;
-  stroke-width: 1.4;
-}
-.brand-mark:hover svg {
-  transform: rotate(30deg);
-  transition: transform 240ms ease;
-}
 .portfolio-menu {
   display: flex;
   align-items: center;
@@ -258,30 +199,6 @@ html body .portfolio-menu a[aria-current="page"] {
   color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 6px;
-}
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  min-height: 44px;
-  min-width: 80px;
-  padding: 7px 10px;
-  border: 1px solid var(--line);
-  background: transparent;
-  color: var(--muted);
-  font: 400 0.6875rem/1.2 var(--mono-font);
-}
-.theme-toggle:hover {
-  color: var(--ink);
-  border-color: var(--accent);
-}
-.theme-toggle svg {
-  width: 17px;
-  height: 17px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.25;
 }
 .portfolio-menu-toggle {
   display: none;
@@ -315,29 +232,11 @@ html body .portfolio-menu a[aria-current="page"] {
 .skip-link:focus {
   transform: translateY(0);
 }
-/* Field labels and marginalia share a quiet monospace voice. */
-.eyebrow,
+/* A simple introduction and one finite denoising demonstration. */
 .research-kicker,
-.section-index,
-.field-category,
-.figure-meta,
-.category-chip {
+.figure-meta {
   font: 400 var(--text-label)/1.6 var(--mono-font);
   letter-spacing: 0.065em;
-}
-.eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  color: var(--muted);
-  margin-bottom: 25px;
-}
-.label-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--pathology);
-  flex-shrink: 0;
 }
 .home-hero {
   display: grid;
@@ -351,68 +250,14 @@ html body .portfolio-menu a[aria-current="page"] {
 }
 html body .home-hero h1 {
   max-width: 680px;
-  margin: 0 0 26px;
+  margin: 0;
   font-size: clamp(2.6rem, 4.5vw, 4.15rem);
-  line-height: 1.08;
+  line-height: 1.1;
   letter-spacing: -0.045em;
   text-wrap: balance;
 }
-.hero-note {
-  max-width: 39ch;
-  font-size: 1.125rem;
-  line-height: 1.6;
-  color: var(--muted);
-  margin-bottom: 23px;
-}
-.decode-word {
-  position: relative;
-  display: inline-block;
-  color: var(--geometry);
-  white-space: nowrap;
-}
-.decode-overlay {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  opacity: 0;
-  white-space: nowrap;
-  pointer-events: none;
-}
-.decode-word.is-decoding > span:first-child {
-  opacity: 0;
-}
-.decode-word.is-decoding .decode-overlay {
-  opacity: 1;
-}
-.hero-categories {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-}
-.category-chip {
-  display: inline-block;
-  padding: 3px 8px;
-  border: 1px solid var(--line);
-  color: var(--muted);
-  background: var(--surface);
-  letter-spacing: 0.025em;
-}
-.margin-note {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-top: 29px;
-  max-width: 37ch;
-  color: var(--muted);
-  font: 400 0.75rem/1.7 var(--mono-font);
-}
-.note-index {
-  color: var(--pathology);
-  font-size: 1.125rem;
-}
-/* Fig. 1 has a stable SVG viewBox and no raster assets. */
 .molecule-figure {
-  margin: 6px 0 0;
+  margin: 0;
   min-width: 0;
   color: var(--geometry);
   border: 1px solid var(--line);
@@ -425,8 +270,8 @@ html body .home-hero h1 {
   padding: 13px 16px;
   border-bottom: 1px solid var(--line);
   color: var(--muted);
-  font-size: 0.5625rem;
-  letter-spacing: 0.045em;
+  font-size: 0.625rem;
+  letter-spacing: 0.025em;
 }
 .figure-meta [data-noise-label] {
   white-space: nowrap;
@@ -436,16 +281,8 @@ html body .home-hero h1 {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 480 / 370;
+  aspect-ratio: 480 / 320;
   overflow: hidden;
-}
-.figure-grid {
-  color: var(--dot);
-  opacity: 0.65;
-}
-.molecule-noise circle {
-  fill: var(--geometry);
-  opacity: 0.4;
 }
 .molecule-atoms circle {
   fill: var(--surface);
@@ -456,84 +293,59 @@ html body .home-hero h1 {
   fill: var(--ink);
   font: 400 12px var(--mono-font);
 }
-.coordinate-axes {
-  stroke: var(--muted);
-  stroke-width: 1;
-  fill: none;
-}
-.coordinate-axes text {
-  fill: var(--muted);
-  stroke: none;
-  font: 400 10px var(--mono-font);
-}
-.figure-equation {
-  fill: var(--muted);
-  font: 400 11px var(--mono-font);
-}
 .figure-controls {
   display: flex;
-  gap: 10px;
-  justify-content: flex-end;
-  padding: 0 14px 12px;
-  min-height: 48px;
+  gap: 18px;
+  align-items: center;
+  padding: 0 16px 16px;
+  min-height: 60px;
+}
+.noise-control {
+  flex: 1;
+  min-width: 0;
+  color: var(--muted);
+  font: 400 0.625rem/1.5 var(--mono-font);
+}
+.noise-control input {
+  display: block;
+  width: 100%;
+  height: 24px;
+  margin: 0;
+  accent-color: var(--accent);
+  cursor: pointer;
 }
 .small-control {
-  min-height: 36px;
-  padding: 7px 10px;
+  min-height: 44px;
+  padding: 8px 10px;
   border: 1px solid var(--line);
   background: var(--surface);
   color: var(--accent);
   font: 400 0.625rem/1.4 var(--mono-font);
 }
-.small-control:hover,
-.small-control[aria-pressed="true"] {
+.small-control:hover {
   background: var(--wash);
   border-color: var(--accent);
 }
-.small-control:disabled {
-  color: var(--muted);
-}
 .molecule-figure figcaption {
-  padding: 15px 17px;
+  padding: 13px 16px;
   color: var(--ink);
   border-top: 1px solid var(--line);
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   line-height: 1.5;
-}
-.molecule-figure figcaption strong {
-  font-weight: 400;
-}
-.caption-divider {
-  margin-inline: 5px;
-  color: var(--muted);
 }
 .figure-footnote {
   display: block;
-  margin-top: 5px;
+  margin-top: 3px;
   color: var(--muted);
-  font: 400 0.5625rem/1.65 var(--mono-font);
+  font: 400 0.625rem/1.65 var(--mono-font);
 }
-/* Three research areas, three scientific visual grammars. */
 .section-heading {
-  display: grid;
-  grid-template-columns: 165px 1fr auto;
-  align-items: baseline;
-  gap: 22px;
-  padding: 20px 0;
-  border-top: 1px solid var(--ink);
-}
-.section-index {
-  color: var(--muted);
-  white-space: nowrap;
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
 }
 html body .section-heading h2 {
   margin: 0;
   font-size: 2rem;
-}
-.section-heading p {
-  margin: 0;
-  font-size: 0.875rem;
-  color: var(--muted);
 }
 .research-areas {
   list-style: none;
@@ -542,31 +354,18 @@ html body .section-heading h2 {
 }
 .area-card {
   display: grid;
-  grid-template-columns: 42px minmax(0, 1fr) 260px;
+  grid-template-columns: 42px minmax(0, 1fr);
   gap: 24px;
-  align-items: center;
-  padding: 30px 0;
+  align-items: baseline;
+  padding: 28px 0;
   border-top: 1px solid var(--line);
-  --field-color: var(--geometry);
-}
-.area-card[data-field="pathology"] {
-  --field-color: var(--pathology);
-}
-.area-card[data-field="retrieval"] {
-  --field-color: var(--retrieval);
 }
 .field-index {
-  align-self: start;
-  margin-top: 5px;
-  color: var(--field-color);
+  color: var(--muted);
   font: 400 0.75rem/1.4 var(--mono-font);
 }
 .field-copy {
-  max-width: 68ch;
-}
-.field-category {
-  margin-bottom: 8px;
-  color: var(--field-color);
+  max-width: 78ch;
 }
 html body .field-copy h3 {
   margin: 0 0 11px;
@@ -578,140 +377,6 @@ html body .field-copy h3 {
   margin: 0;
   font-size: 1.0625rem;
   line-height: 1.65;
-}
-.field-figure {
-  margin: 0;
-  color: var(--field-color);
-}
-.field-diagram {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 260/120;
-  overflow: visible;
-}
-.diagram-rule {
-  fill: none;
-  stroke: var(--muted);
-  stroke-width: 1;
-}
-.diagram-nodes circle {
-  fill: var(--paper);
-}
-.diagram-label {
-  font: 400 12px var(--mono-font);
-  fill: var(--field-color, var(--accent));
-}
-.diagram-caption {
-  font: 400 9px var(--mono-font);
-  fill: var(--muted);
-}
-.geometry-rotor {
-  transform-origin: 78px 65px;
-}
-.slide-base {
-  fill: var(--wash);
-}
-.slide-mid {
-  fill: var(--surface);
-}
-.slide-top {
-  fill: var(--paper);
-}
-.cell-tile ellipse {
-  fill: var(--wash);
-  stroke-width: 1;
-}
-.embedding-points circle {
-  fill: var(--field-color);
-  opacity: 0.75;
-}
-.query-marker circle {
-  fill: var(--paper);
-  stroke: currentColor;
-  stroke-width: 1.8;
-}
-.field-figure figcaption {
-  margin-top: 12px;
-  font-size: 0.75rem;
-  line-height: 1.6;
-  color: var(--muted);
-}
-.field-figure figcaption > span {
-  display: block;
-  margin-bottom: 2px;
-  font: 400 0.5625rem/1.5 var(--mono-font);
-  letter-spacing: 0.04em;
-  color: var(--field-color);
-}
-.figure-disclaimer {
-  padding-top: 16px;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font: 400 0.625rem/1.7 var(--mono-font);
-}
-@media (prefers-reduced-motion: no-preference) {
-  .area-card:hover .geometry-rotor {
-    animation: rotate-graph 2.8s ease-in-out 1;
-  }
-  .area-card:hover .cell-detail {
-    animation: inspect-tile 1.8s ease-in-out 1;
-    transform-origin: 30px 23px;
-  }
-  .area-card:hover .retrieval-links {
-    animation: retrieve-links 1s ease-out 1;
-  }
-}
-@keyframes rotate-graph {
-  0%,
-  100% {
-    transform: rotate(0);
-  }
-  50% {
-    transform: rotate(60deg) scaleX(0.76);
-  }
-}
-@keyframes inspect-tile {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.14);
-  }
-}
-@keyframes retrieve-links {
-  from {
-    stroke-dashoffset: 20;
-    opacity: 0.2;
-  }
-  to {
-    stroke-dashoffset: 0;
-    opacity: 1;
-  }
-}
-.now-note {
-  display: grid;
-  grid-template-columns: 165px 1fr 32px;
-  gap: 22px;
-  align-items: baseline;
-  margin-top: 48px;
-  padding: 27px 0 8px;
-  border-top: 1px solid var(--ink);
-}
-html body .now-note h2 {
-  font-size: 1.75rem;
-  margin-bottom: 10px;
-}
-.now-note p {
-  max-width: 62ch;
-  margin-bottom: 0;
-  font-size: 1.0625rem;
-  color: var(--muted);
-}
-.notebook-mark {
-  font-size: 1.5rem;
-  color: var(--pathology);
 }
 /* Research, software and project articles retain their existing content. */
 .post,
@@ -1024,9 +689,7 @@ code {
   html body .container {
     width: calc(100% - 56px);
   }
-  .portfolio-nav {
-    gap: 18px;
-  }
+  .portfolio-nav,
   .portfolio-menu {
     gap: 18px;
   }
@@ -1035,19 +698,6 @@ code {
   }
   html body .home-hero h1 {
     font-size: clamp(2.4rem, 5vw, 3.25rem);
-  }
-  .area-card {
-    grid-template-columns: 26px minmax(0, 1fr) 215px;
-    gap: 20px;
-  }
-  .section-heading {
-    grid-template-columns: 130px 1fr;
-  }
-  .section-heading > p {
-    display: none;
-  }
-  .now-note {
-    grid-template-columns: 130px 1fr 24px;
   }
   .work-row {
     gap: 25px;
@@ -1068,23 +718,8 @@ code {
     min-height: 68px;
     gap: 12px;
   }
-  .brand-group {
-    gap: 7px;
-  }
   html body .portfolio-brand {
     font-size: 1.3rem;
-  }
-  .brand-mark {
-    width: 27px;
-  }
-  .theme-toggle {
-    min-width: 40px;
-    width: 40px;
-    padding: 8px;
-    order: 2;
-  }
-  .theme-toggle [data-theme-label] {
-    display: none;
   }
   .portfolio-js .portfolio-menu-toggle {
     display: inline-flex;
@@ -1114,35 +749,13 @@ code {
     grid-template-columns: 1fr;
     gap: 28px;
   }
-  .eyebrow {
-    font-size: 0.5625rem;
-    margin-bottom: 19px;
-  }
   html body .home-hero h1 {
     font-size: clamp(2.6rem, 8vw, 3.5rem);
     max-width: 650px;
   }
-  .hero-note {
-    max-width: 40ch;
-    font-size: 1.0625rem;
-    margin-bottom: 20px;
-  }
-  .margin-note {
-    margin-top: 23px;
-    font-size: 0.6875rem;
-  }
   .molecule-figure {
     width: min(100%, 480px);
     justify-self: center;
-    margin-top: 6px;
-  }
-  .figure-meta {
-    font-size: 0.5625rem;
-  }
-  .section-heading {
-    grid-template-columns: 1fr;
-    gap: 14px;
-    padding-top: 20px;
   }
   html body .section-heading h2 {
     font-size: 1.75rem;
@@ -1160,25 +773,6 @@ code {
   }
   html body .field-copy h3 {
     font-size: 1.5rem;
-  }
-  .field-figure {
-    grid-column: 2;
-    width: min(100%, 260px);
-    margin-top: 6px;
-  }
-  .field-figure figcaption {
-    margin-top: 6px;
-  }
-  .now-note {
-    grid-template-columns: 1fr 28px;
-    gap: 12px;
-    margin-top: 35px;
-  }
-  .now-note > .section-index {
-    grid-column: 1/-1;
-  }
-  .now-note p {
-    font-size: 1rem;
   }
   .work-row {
     grid-template-columns: 1fr;
@@ -1217,8 +811,7 @@ code {
 }
 @media print {
   .portfolio-header,
-  .figure-controls,
-  .theme-toggle {
+  .figure-controls {
     display: none;
   }
   html body {
@@ -1234,22 +827,8 @@ code {
     break-inside: avoid;
   }
 }
-/* Reserve progressive controls so hydration never moves the figure or the nav. */
-.brand-mark[hidden] {
-  display: inline-flex !important;
-  visibility: hidden;
-}
-.theme-toggle[hidden] {
-  display: inline-flex !important;
-  visibility: hidden;
-}
+/* Keep the static fallback the same height when controls become available. */
 .figure-controls[hidden] {
   display: flex !important;
   visibility: hidden;
-}
-.small-control {
-  min-width: 120px;
-}
-.lab-paused .area-card * {
-  animation: none !important;
 }
