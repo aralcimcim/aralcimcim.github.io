@@ -34,7 +34,7 @@ test("all portfolio pages share a dark palette under either system preference", 
       const { accents, ...shared } = palette;
       if (!reference) reference = shared;
       expect(shared).toEqual(reference);
-      expect([...new Set(accents)].every((color) => color === "rgb(199, 167, 234)")).toBe(true);
+      expect([...new Set(accents)].every((color) => color === "rgb(57, 255, 20)")).toBe(true);
       await expect(page.locator("[data-theme-toggle]")).toHaveCount(0);
     }
   }

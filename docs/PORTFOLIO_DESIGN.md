@@ -4,7 +4,7 @@ The portfolio uses its existing Jekyll generator, GitHub Pages workflow, URLs, m
 
 ## Appearance
 
-All portfolio pages share the same dark background, surfaces, text and lavender accent. Research and Software use identical link and metadata colors, without category-specific green or pink accents. System preferences and an older stored theme choice do not change the palette. There is no theme switch.
+All portfolio pages share the same dark background, surfaces, text and neon green accent. Research and Software use identical link and metadata colors, without category-specific accent colors. System preferences and an older stored theme choice do not change the palette. There is no theme switch.
 
 | Token           | Color     |
 | --------------- | --------- |
@@ -12,10 +12,10 @@ All portfolio pages share the same dark background, surfaces, text and lavender 
 | Surface         | `#211f29` |
 | Text            | `#eee9e4` |
 | Supporting text | `#bcb4c3` |
-| Accent          | `#c7a7ea` |
-| Hover accent    | `#e0c8f7` |
+| Accent          | `#39ff14` |
+| Hover accent    | `#9aff85` |
 
-System serif fonts serve the main text, with system monospace fonts for navigation and metadata. No web fonts or animation libraries are downloaded. Software listings are static text entries, including TrialTrace, Molescope and Pathology Dashboard. Existing project descriptions and links are preserved. The separate `patho_dash` application is unchanged.
+An 18 px root font size enlarges text consistently, including headings. Body text is about 20 px on desktop and 19 px on mobile; Software metadata labels are at least 13.5 px. System serif fonts serve the main text, with system monospace fonts for navigation and metadata. No web fonts or animation libraries are downloaded. Software listings are static text entries, including TrialTrace, Molescope and Pathology Dashboard. Existing project descriptions and links are preserved. The separate `patho_dash` application is unchanged.
 
 ## Source and validation
 

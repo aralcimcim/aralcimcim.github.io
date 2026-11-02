@@ -1,5 +1,6 @@
 /* Dark academic portfolio, served directly by Jekyll. */
 :root {
+  font-size: 18px;
   color-scheme: dark;
   --paper: #191820;
   --surface: #211f29;
@@ -7,15 +8,15 @@
   --muted: #bcb4c3;
   --line: #44404d;
   --wash: #2b2635;
-  --accent: #c7a7ea;
-  --accent-hover: #e0c8f7;
+  --accent: #39ff14;
+  --accent-hover: #9aff85;
   --body-font: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
   --mono-font: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   --heading-font: var(--body-font);
   --text-size: 1.125rem;
-  --text-small: 0.9375rem;
-  --text-label: 0.6875rem;
-  --text-control: 0.8125rem;
+  --text-small: 1rem;
+  --text-label: 0.75rem;
+  --text-control: 0.875rem;
   --space-section: clamp(3rem, 7vw, 5.5rem);
   --max-content-width: 1200px;
   --global-bg-color: var(--paper);
@@ -378,7 +379,7 @@ html body .research-feature h2 {
   gap: 13px;
   margin: 26px 0;
   color: var(--muted);
-  font: 400 0.75rem/1.5 var(--mono-font);
+  font: 400 var(--text-control)/1.5 var(--mono-font);
 }
 .research-method span {
   padding: 8px 10px;
@@ -470,7 +471,7 @@ html body .school-entry h3 {
   gap: 13px;
   margin-bottom: 10px;
   color: var(--accent);
-  font: 400 0.6875rem/1.6 var(--mono-font);
+  font: 400 var(--text-label)/1.6 var(--mono-font);
   letter-spacing: 0.035em;
 }
 .work-number {
@@ -481,7 +482,7 @@ html body .school-entry h3 {
   margin-bottom: 10px;
   border: 1px solid var(--line);
   color: var(--muted);
-  font: 400 0.625rem/1.5 var(--mono-font);
+  font: 400 var(--text-label)/1.5 var(--mono-font);
 }
 html body .work-copy h2,
 html body .work-copy h3 {
@@ -510,7 +511,7 @@ html body .work-copy :is(h2, h3) a:hover {
   color: var(--accent);
   background: var(--paper);
   border: 1px solid var(--line);
-  font: 400 0.625rem/1.5 var(--mono-font);
+  font: 400 var(--text-label)/1.5 var(--mono-font);
 }
 .work-links {
   display: flex;
@@ -523,7 +524,7 @@ html body .work-links a {
   min-height: 44px;
   gap: 10px;
   color: var(--accent);
-  font: 400 0.75rem/1.5 var(--mono-font);
+  font: 400 var(--text-control)/1.5 var(--mono-font);
   text-decoration: none;
 }
 html body .work-links a:hover {
