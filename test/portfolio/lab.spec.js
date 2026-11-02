@@ -13,7 +13,7 @@ test("all portfolio pages share a dark palette under either system preference", 
       "./projects/chemprop-diffusion/",
       "./projects/molescope/",
       "./projects/trialtrace/",
-      "./projects/pathology-ai/",
+      "./projects/patho_dat/",
     ]) {
       await page.goto(route);
       const palette = await page.evaluate(() => {

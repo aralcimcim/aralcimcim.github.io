@@ -30,5 +30,5 @@
   status: Interactive evaluation dashboard
   summary: Inspecting tissue classification errors, prediction confidence, and review thresholds on held-out histology patches.
   metadata: JavaScript · NCT-CRC-HE
-  url: /projects/pathology-ai/
+  url: /projects/patho_dat/
   code: https://github.com/aralcimcim/patho_dash

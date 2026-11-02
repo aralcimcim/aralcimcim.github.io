@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Dashboard
-permalink: /projects/pathology-ai/
+permalink: /projects/patho_dat/
 description: An interactive dashboard for tissue classification errors, confidence, and review thresholds.
 importance: 3
 category: Software
@@ -14,6 +14,10 @@ tools: ["JavaScript", "HTML", "CSS"]
 An interactive model evaluation dashboard built from 7,180 held-out colorectal histology patches. It brings together a confusion matrix, recall by tissue class, confidence distributions, and a searchable table of individual misclassifications.
 
 [Open the interactive dashboard](https://aralcimcim.github.io/patho_dash/) · [View the code on GitHub](https://github.com/aralcimcim/patho_dash)
+
+## Model selection
+
+Additional models will be added here. The dashboard currently displays the frozen ResNet-18 + logistic regression baseline.
 
 ## How it works
 

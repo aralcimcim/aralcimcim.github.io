@@ -91,7 +91,7 @@ test("skip link leads to main content and research areas remain available", asyn
 
 test("project routes, tool icons and local downloads remain available", async ({ page, request }) => {
   await page.setViewportSize({ width: 375, height: 900 });
-  for (const route of ["projects/chemprop-diffusion/", "projects/molescope/", "projects/trialtrace/", "projects/pathology-ai/"]) {
+  for (const route of ["projects/chemprop-diffusion/", "projects/molescope/", "projects/trialtrace/", "projects/patho_dat/"]) {
     const response = await page.goto(`./${route}`);
     expect(response.status()).toBe(200);
     await expect(page.locator("h1")).toHaveCount(1);
@@ -110,6 +110,9 @@ test("project routes, tool icons and local downloads remain available", async ({
   await page.goto("./projects/ragz/");
   await expect(page).toHaveURL(new RegExp(`${prefix}/projects/trialtrace/$`));
   await expect(page.locator("h1")).toHaveText("TrialTrace");
+  await page.goto("./projects/pathology-ai/");
+  await expect(page).toHaveURL(new RegExp(`${prefix}/projects/patho_dat/$`));
+  await expect(page.getByRole("heading", { name: "Model selection", exact: true })).toBeVisible();
   for (const url of ["assets/pdf/example_pdf.pdf", "assets/img/projects/ragz-canvas.png", "profile/vita_en.pdf"]) {
     expect((await request.get(`./${url}`)).status()).toBe(200);
   }
