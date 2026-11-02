@@ -17,7 +17,6 @@ portfolio: true
 <section class="research-feature research-section">
 <h2>Chemprop-conditioned diffusion</h2>
 <p>Molecular property prediction with score-based diffusion conditioned on Chemprop graph representations. My research code investigates toxicity classification on Tox21 and compares diffusion predictions with a Chemprop baseline.</p>
-<div class="research-method"><span>Molecular graphs</span><b aria-hidden="true">→</b><span>Chemprop representations</span><b aria-hidden="true">→</b><span>Conditional diffusion</span></div>
 </section>
 
 <section class="research-section"><div class="research-section-heading"><span>01</span><h2>Summer schools</h2></div>
