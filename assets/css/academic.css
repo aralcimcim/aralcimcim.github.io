@@ -9,10 +9,6 @@
   --wash: #2b2635;
   --accent: #c7a7ea;
   --accent-hover: #e0c8f7;
-  --geometry: #c7a7ea;
-  --pathology: #eda7c4;
-  --retrieval: #8bcdbb;
-  --dot: #393440;
   --body-font: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
   --mono-font: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   --heading-font: var(--body-font);
@@ -232,112 +228,24 @@ html body .portfolio-menu a[aria-current="page"] {
 .skip-link:focus {
   transform: translateY(0);
 }
-/* A simple introduction and one finite denoising demonstration. */
-.research-kicker,
-.figure-meta {
+/* A simple text introduction and numbered research areas. */
+.research-kicker {
   font: 400 var(--text-label)/1.6 var(--mono-font);
   letter-spacing: 0.065em;
 }
 .home-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-  align-items: center;
-  gap: clamp(32px, 5vw, 78px);
-  margin-bottom: var(--space-section);
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
 }
 .hero-copy {
   min-width: 0;
 }
 html body .home-hero h1 {
-  max-width: 680px;
+  max-width: 1000px;
   margin: 0;
   font-size: clamp(2.6rem, 4.5vw, 4.15rem);
   line-height: 1.1;
   letter-spacing: -0.045em;
   text-wrap: balance;
-}
-.molecule-figure {
-  margin: 0;
-  min-width: 0;
-  color: var(--geometry);
-  border: 1px solid var(--line);
-  background: var(--surface);
-}
-.figure-meta {
-  display: flex;
-  justify-content: space-between;
-  gap: 14px;
-  padding: 13px 16px;
-  border-bottom: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 0.625rem;
-  letter-spacing: 0.025em;
-}
-.figure-meta [data-noise-label] {
-  white-space: nowrap;
-  font-variant-numeric: tabular-nums;
-}
-.molecule-canvas {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 480 / 320;
-  overflow: hidden;
-}
-.molecule-atoms circle {
-  fill: var(--surface);
-  stroke: currentColor;
-  stroke-width: 1.4;
-}
-.molecule-atoms text {
-  fill: var(--ink);
-  font: 400 12px var(--mono-font);
-}
-.figure-controls {
-  display: flex;
-  gap: 18px;
-  align-items: center;
-  padding: 0 16px 16px;
-  min-height: 60px;
-}
-.noise-control {
-  flex: 1;
-  min-width: 0;
-  color: var(--muted);
-  font: 400 0.625rem/1.5 var(--mono-font);
-}
-.noise-control input {
-  display: block;
-  width: 100%;
-  height: 24px;
-  margin: 0;
-  accent-color: var(--accent);
-  cursor: pointer;
-}
-.small-control {
-  min-height: 44px;
-  padding: 8px 10px;
-  border: 1px solid var(--line);
-  background: var(--surface);
-  color: var(--accent);
-  font: 400 0.625rem/1.4 var(--mono-font);
-}
-.small-control:hover {
-  background: var(--wash);
-  border-color: var(--accent);
-}
-.molecule-figure figcaption {
-  padding: 13px 16px;
-  color: var(--ink);
-  border-top: 1px solid var(--line);
-  font-size: 0.9375rem;
-  line-height: 1.5;
-}
-.figure-footnote {
-  display: block;
-  margin-top: 3px;
-  color: var(--muted);
-  font: 400 0.625rem/1.65 var(--mono-font);
 }
 .section-heading {
   padding: 24px 0;
@@ -461,7 +369,7 @@ html body .research-feature h2 {
   color: var(--muted);
 }
 .research-kicker {
-  color: var(--geometry);
+  color: var(--accent);
 }
 .research-method {
   display: flex;
@@ -535,9 +443,8 @@ html body .school-entry h3 {
   color: var(--muted);
   font-size: 0.9375rem;
 }
-/* Project cards are editorial rows, with a small cursor tilt rather than a carousel. */
+/* Project entries share the same accent and surface colors as every page. */
 .work-row {
-  --field-color: var(--retrieval);
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
   align-items: start;
@@ -546,13 +453,10 @@ html body .school-entry h3 {
   padding: 28px;
   border: 1px solid var(--line);
   background: var(--surface);
-  transform: perspective(1100px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
-  transition:
-    transform 220ms ease,
-    border-color 220ms ease;
+  transition: border-color 220ms ease;
 }
 .work-row:hover {
-  border-color: var(--field-color);
+  border-color: var(--accent);
 }
 .work-row--text {
   grid-template-columns: minmax(0, 1fr);
@@ -560,18 +464,12 @@ html body .school-entry h3 {
 .work-row--text .work-copy {
   max-width: 800px;
 }
-.work-row[data-field="geometry"] {
-  --field-color: var(--geometry);
-}
-.work-row[data-field="pathology"] {
-  --field-color: var(--pathology);
-}
 .work-label {
   display: flex;
   align-items: baseline;
   gap: 13px;
   margin-bottom: 10px;
-  color: var(--field-color);
+  color: var(--accent);
   font: 400 0.6875rem/1.6 var(--mono-font);
   letter-spacing: 0.035em;
 }
@@ -594,7 +492,7 @@ html body .work-copy :is(h2, h3) a {
   color: var(--ink);
 }
 html body .work-copy :is(h2, h3) a:hover {
-  color: var(--field-color);
+  color: var(--accent);
 }
 .work-copy > p {
   margin-bottom: 15px;
@@ -609,7 +507,7 @@ html body .work-copy :is(h2, h3) a:hover {
 .work-chip {
   display: inline-block;
   padding: 4px 8px;
-  color: var(--field-color);
+  color: var(--accent);
   background: var(--paper);
   border: 1px solid var(--line);
   font: 400 0.625rem/1.5 var(--mono-font);
@@ -624,44 +522,12 @@ html body .work-links a {
   align-items: center;
   min-height: 44px;
   gap: 10px;
-  color: var(--field-color);
+  color: var(--accent);
   font: 400 0.75rem/1.5 var(--mono-font);
   text-decoration: none;
 }
 html body .work-links a:hover {
   color: var(--accent-hover);
-}
-.work-figure {
-  margin: 0;
-  min-width: 0;
-}
-.work-image {
-  display: flex;
-  aspect-ratio: 12/7;
-  align-items: center;
-  justify-content: center;
-  background: var(--wash);
-  border: 1px solid var(--line);
-}
-html body .work-image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-.work-figure figcaption {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 6px 12px;
-  margin-top: 10px;
-  color: var(--muted);
-  font-size: 0.75rem;
-}
-.work-figure figcaption a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 32px;
 }
 .project-preview {
   margin: 28px 0;
@@ -692,9 +558,6 @@ code {
   .portfolio-nav,
   .portfolio-menu {
     gap: 18px;
-  }
-  .home-hero {
-    gap: 32px;
   }
   html body .home-hero h1 {
     font-size: clamp(2.4rem, 5vw, 3.25rem);
@@ -745,17 +608,8 @@ code {
     min-height: 48px;
     font-size: 0.875rem;
   }
-  .home-hero {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
   html body .home-hero h1 {
     font-size: clamp(2.6rem, 8vw, 3.5rem);
-    max-width: 650px;
-  }
-  .molecule-figure {
-    width: min(100%, 480px);
-    justify-self: center;
   }
   html body .section-heading h2 {
     font-size: 1.75rem;
@@ -778,9 +632,6 @@ code {
     grid-template-columns: 1fr;
     gap: 22px;
     padding: 20px;
-  }
-  .work-figure figcaption a {
-    min-height: 44px;
   }
   .school-entry {
     grid-template-columns: 1fr;
@@ -810,25 +661,15 @@ code {
   }
 }
 @media print {
-  .portfolio-header,
-  .figure-controls {
+  .portfolio-header {
     display: none;
   }
   html body {
     background: white;
     color: black;
   }
-  .home-hero {
-    grid-template-columns: 1fr 1fr;
-  }
   .area-card,
-  .molecule-figure,
   .work-row {
     break-inside: avoid;
   }
-}
-/* Keep the static fallback the same height when controls become available. */
-.figure-controls[hidden] {
-  display: flex !important;
-  visibility: hidden;
 }
