@@ -4,6 +4,7 @@ title: projects
 permalink: /projects/
 description: Research and software projects.
 nav: false
+sitemap: false
 nav_order: 3
 display_categories: [Research, Software]
 horizontal: false
