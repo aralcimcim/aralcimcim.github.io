@@ -229,6 +229,11 @@ html body .portfolio-menu a[aria-current="page"] {
 .skip-link:focus {
   transform: translateY(0);
 }
+html body .about-intro {
+  max-width: 50ch;
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+  line-height: 1.65;
+}
 /* A simple text introduction and numbered research areas. */
 .research-kicker {
   font: 400 var(--text-label)/1.6 var(--mono-font);
